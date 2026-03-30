@@ -502,6 +502,25 @@ h4 {
   background: var(--color-surface-2);
 }
 
+.btn-outline-coral {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-full);
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.btn-outline-coral:hover {
+  background: var(--color-primary-light);
+  color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
 /* Hagglit indicator */
 .hagglit-badge {
   display: inline-flex;
@@ -1637,7 +1656,8 @@ h4 {
   padding: var(--space-4);
 }
 
-.modal-overlay.is-open {
+.modal-overlay.is-open,
+.modal-overlay.active {
   opacity: 1;
   visibility: visible;
 }
@@ -1653,8 +1673,481 @@ h4 {
   transition: transform 0.2s ease;
 }
 
-.modal-overlay.is-open .modal {
+.modal-overlay.is-open .modal,
+.modal-overlay.active .modal,
+.modal-overlay.is-open .modal-box,
+.modal-overlay.active .modal-box {
   transform: translateY(0);
+}
+
+/* Large modals (jobs, tutors, roommates) */
+.modal-box {
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  max-width: 560px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  transform: translateY(12px);
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 1;
+  padding: var(--space-2);
+  transition: color 0.18s ease;
+}
+
+.modal-close:hover {
+  color: var(--color-text);
+}
+
+.modal-box h2,
+.modal-box h3 {
+  padding-right: var(--space-8);
+}
+
+/* Compatibility meter */
+.compatibility-bar {
+  height: 6px;
+  background: var(--color-surface-offset);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-top: var(--space-2);
+}
+
+.compatibility-fill {
+  height: 100%;
+  width: 0;
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+  transition: width 0.55s ease;
+}
+
+.compatibility-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-primary);
+  display: block;
+  margin-top: var(--space-1);
+}
+
+/* Tag pills */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--color-surface-offset);
+  color: var(--color-text-muted);
+}
+
+.tag-coral {
+  background: #fdf0ec;
+  color: #e8704a;
+}
+
+.tag-green {
+  background: #edfaee;
+  color: #4a7c59;
+}
+
+/* Star rating */
+.rating {
+  color: #f59e0b;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.rating-count {
+  color: var(--color-text-faint);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* Employer / verified badges */
+.employer-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-surface-2);
+  color: var(--color-text-muted);
+}
+
+.employer-badge--campus {
+  background: #edfaee;
+  color: #4a7c59;
+}
+
+.employer-badge--local {
+  background: #fdf0ec;
+  color: #e8704a;
+}
+
+.verified-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: #edfaee;
+  color: #4a7c59;
+  margin-left: var(--space-2);
+}
+
+/* Filter option chips (shared) */
+.filter-group {
+  margin-bottom: var(--space-4);
+}
+
+.filter-group h4 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-2);
+}
+
+.filter-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: var(--space-2) var(--space-3);
+  margin-bottom: 4px;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.filter-option:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+.filter-option.active {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* Job board layout */
+.job-page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.job-page-header h1 {
+  font-size: 1.5rem;
+  margin: 0 0 var(--space-2);
+}
+
+.job-page-header p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 15px;
+  max-width: 520px;
+}
+
+.job-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.job-card {
+  cursor: pointer;
+  transition: box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.job-card:hover {
+  border-color: rgba(232, 112, 74, 0.35);
+}
+
+.job-card .job-card__actions button,
+.job-card .job-card__actions .save-btn {
+  cursor: pointer;
+}
+
+.filters-mobile-toggle {
+  display: none;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+  padding: var(--space-3);
+  font-weight: 600;
+}
+
+.filter-drawer-close {
+  display: none;
+  width: 100%;
+  margin-bottom: var(--space-4);
+}
+
+/* Tutors */
+.tutors-page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.tutors-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.tutors-filter-bar label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.tutors-filter-bar select,
+.tutors-filter-bar .top-bar__search input {
+  min-width: 140px;
+}
+
+.tutors-filter-bar .top-bar__search {
+  flex: 1;
+  min-width: 200px;
+  max-width: none;
+}
+
+.tutor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.tutor-card__head {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.tutor-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.availability-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: var(--space-2) 0;
+}
+
+/* Roommates */
+.roommate-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.roommate-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.roommate-card {
+  cursor: default;
+}
+
+/* Campus services (home) */
+.campus-services {
+  margin-bottom: var(--space-8);
+}
+
+.campus-services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.campus-service-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-6);
+  text-align: center;
+  transition: box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.campus-service-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(232, 112, 74, 0.25);
+}
+
+.campus-service-card__icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+.campus-service-card h3 {
+  font-size: 16px;
+  margin: 0 0 var(--space-2);
+  color: var(--color-text);
+}
+
+.campus-service-card__stat {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-3);
+}
+
+.campus-service-card__link {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Form modal fields */
+.modal-form label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin: var(--space-3) 0 var(--space-1);
+}
+
+.modal-form input,
+.modal-form textarea,
+.modal-form select {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.modal-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Booking calendar visual */
+.booking-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin: var(--space-4) 0;
+  text-align: center;
+  font-size: 11px;
+}
+
+.booking-calendar__dow {
+  font-weight: 700;
+  color: var(--color-text-muted);
+  padding: 4px 0;
+}
+
+.booking-calendar__day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-2);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease;
+  border: none;
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.booking-calendar__day:hover,
+.booking-calendar__day.is-selected {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.time-slot-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-3) 0;
+}
+
+.time-slot-row button {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.time-slot-row button:hover,
+.time-slot-row button.active {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.format-toggle-row {
+  display: flex;
+  gap: var(--space-2);
+  margin: var(--space-3) 0;
 }
 
 .modal h3 {
@@ -1742,6 +2235,34 @@ h4 {
   color: var(--color-primary);
 }
 
+.mobile-nav--extended {
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 2px;
+  padding-top: var(--space-2);
+}
+
+.mobile-nav--extended a {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+  min-width: 0;
+  font-size: 9px;
+  padding: 6px 2px;
+}
+
+.filter-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(28, 25, 23, 0.35);
+  z-index: 899;
+  transition: opacity 0.2s ease;
+}
+
+.filter-backdrop.is-open {
+  display: block;
+}
+
 /* -------------------------------------------------------------------------- */
 /* Responsive                                                                  */
 /* -------------------------------------------------------------------------- */
@@ -1786,7 +2307,9 @@ h4 {
     display: none;
   }
 
-  .market-layout {
+  .market-layout,
+  .job-layout,
+  .roommate-layout {
     grid-template-columns: 1fr;
   }
 
@@ -1794,6 +2317,18 @@ h4 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-4);
+  }
+
+  .jobs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tutor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .roommate-grid {
+    grid-template-columns: 1fr;
   }
 
   .market-grid {
@@ -1817,10 +2352,68 @@ h4 {
 
   .main-wrap {
     margin-left: 0;
-    padding-bottom: 72px;
+    padding-bottom: 128px;
   }
 
   .mobile-nav {
+    display: flex;
+  }
+
+  .job-layout,
+  .roommate-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .jobs-grid,
+  .tutor-grid,
+  .roommate-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .campus-services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-mobile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+  }
+
+  .filter-drawer-close {
+    display: block;
+  }
+
+  .job-layout .filter-panel,
+  .roommate-layout .filter-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: min(100%, 380px);
+    z-index: 900;
+    margin: 0;
+    border-radius: 0;
+    max-height: none;
+    overflow-y: auto;
+    transform: translateX(-105%);
+    transition: transform 0.22s ease;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .job-layout.filters-drawer-open .filter-panel,
+  .roommate-layout.filters-drawer-open .filter-panel {
+    transform: translateX(0);
+  }
+
+  .tutors-filter-bar {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tutors-page.filters-drawer-open .tutors-filter-bar {
     display: flex;
   }
 
