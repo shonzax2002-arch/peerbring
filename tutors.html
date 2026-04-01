@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find a Tutor — Peer Bring</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+        <div class="sidebar__brand">
+          <div class="logo-owl" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20 6c-6 0-10 5-10 11 0 3 1 6 3 8-2 2-4 5-4 9h22c0-4-2-7-4-9 2-2 3-5 3-8 0-6-4-11-10-11z"
+                stroke="#E8704A"
+                stroke-width="2.2"
+                stroke-linejoin="round"
+                fill="#FDF0EC"
+              />
+              <circle cx="15" cy="16" r="2.2" fill="#E8704A" />
+              <circle cx="25" cy="16" r="2.2" fill="#E8704A" />
+              <path d="M18 21h4l-1 4-1-4z" fill="#E8704A" />
+            </svg>
+          </div>
+          <span class="sidebar__brand-text">PEER BRING</span>
+        </div>
+        <nav class="sidebar__nav">
+          <a href="index.html" class="nav-item">
+            <i data-lucide="layout-dashboard"></i>
+            <span class="nav-item__label">Home</span>
+          </a>
+          <a href="community.html" class="nav-item">
+            <i data-lucide="users"></i>
+            <span class="nav-item__label">Community</span>
+          </a>
+          <a href="events.html" class="nav-item">
+            <i data-lucide="calendar-days"></i>
+            <span class="nav-item__label">Events</span>
+          </a>
+          <a href="marketplace.html" class="nav-item">
+            <i data-lucide="shopping-bag"></i>
+            <span class="nav-item__label">Marketplace</span>
+          </a>
+          <a href="jobs.html" class="nav-item">
+            <i data-lucide="briefcase"></i>
+            <span class="nav-item__label">Jobs</span>
+          </a>
+          <a href="tutors.html" class="nav-item active">
+            <i data-lucide="graduation-cap"></i>
+            <span class="nav-item__label">Tutors</span>
+          </a>
+          <a href="roommates.html" class="nav-item">
+            <i data-lucide="home"></i>
+            <span class="nav-item__label">Roommates</span>
+          </a>
+          <a href="hagglit.html" class="nav-item">
+            <i data-lucide="bot"></i>
+            <span class="nav-item__label">Hagglit</span>
+            <span class="badge badge--ai">AI</span>
+          </a>
+          <a href="messages.html" class="nav-item">
+            <i data-lucide="message-circle"></i>
+            <span class="nav-item__label">Messages</span>
+            <span class="badge badge--nav-msg">2</span>
+          </a>
+          <a href="profile.html" class="nav-item">
+            <i data-lucide="user"></i>
+            <span class="nav-item__label">Profile</span>
+          </a>
+        </nav>
+        <div class="sidebar__footer">
+          <a href="#" class="settings-link">
+            <i data-lucide="settings" style="width: 18px; height: 18px"></i>
+            Settings
+          </a>
+          <div class="sidebar__footer-user">
+            <div class="sidebar__footer-avatar" aria-hidden="true">AJ</div>
+            <div class="sidebar__footer-meta">
+              <strong>Alex Johnson</strong>
+              <span>Brooklyn College</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="main-wrap">
+        <header class="top-bar">
+          <div class="top-bar__search">
+            <i data-lucide="search"></i>
+            <input type="search" placeholder="Search tutors…" aria-label="Search" />
+          </div>
+          <div class="top-bar__actions">
+            <button type="button" class="icon-btn" aria-label="Notifications">
+              <i data-lucide="bell"></i>
+            </button>
+            <button type="button" class="icon-btn" aria-label="Saved items">
+              <i data-lucide="bookmark"></i>
+            </button>
+          </div>
+        </header>
+
+        <main class="page-content tutors-page" id="tutors-page-root">
+          <div class="filter-backdrop" id="tutor-filter-backdrop" data-for-drawer="tutors-page-root" aria-hidden="true"></div>
+
+          <button
+            type="button"
+            class="filters-mobile-toggle btn-ghost"
+            data-filters-toggle="tutors-page-root"
+            data-filters-backdrop="tutor-filter-backdrop"
+            aria-expanded="false"
+          >
+            <i data-lucide="sliders-horizontal" style="width: 18px; height: 18px"></i>
+            Filters
+          </button>
+
+          <header class="tutors-page-header">
+            <div>
+              <h1 style="font-size: 1.5rem; margin: 0 0 var(--space-2)">Find a Tutor</h1>
+              <p style="margin: 0; color: var(--color-text-muted); font-size: 15px; max-width: 520px">
+                Peer tutors from Brooklyn College — affordable, flexible, student-verified
+              </p>
+            </div>
+            <button type="button" class="btn-outline-coral" data-open-modal="modal-become-tutor">Become a Tutor</button>
+          </header>
+
+          <div class="tutors-filter-bar card">
+            <button
+              type="button"
+              class="filter-drawer-close btn-ghost"
+              data-filters-close="tutors-page-root"
+              data-filters-backdrop="tutor-filter-backdrop"
+            >
+              Close filters
+            </button>
+
+            <div class="filter-group" style="flex: 1; min-width: 200px">
+              <h4>Search</h4>
+              <div class="top-bar__search" style="max-width: none">
+                <i data-lucide="search"></i>
+                <input type="search" placeholder="Search by name or subject…" aria-label="Search tutors" />
+              </div>
+            </div>
+
+            <div class="filter-group" style="flex: 1; min-width: 160px">
+              <h4>Subject</h4>
+              <select aria-label="Subject">
+                <option>All</option>
+                <option>Math</option>
+                <option>Sciences</option>
+                <option>CS</option>
+                <option>English</option>
+                <option>History</option>
+                <option>Business</option>
+                <option>Languages</option>
+                <option>Test Prep</option>
+              </select>
+            </div>
+
+            <div class="filter-group" style="flex: 2; min-width: 220px">
+              <h4>Price</h4>
+              <div style="display: flex; flex-wrap: wrap; gap: 6px">
+                <button type="button" class="filter-option active">Any</button>
+                <button type="button" class="filter-option">Under $20/hr</button>
+                <button type="button" class="filter-option">$20–30/hr</button>
+                <button type="button" class="filter-option">$30+/hr</button>
+              </div>
+            </div>
+
+            <div class="filter-group" style="flex: 2; min-width: 200px">
+              <h4>Availability</h4>
+              <div style="display: flex; flex-wrap: wrap; gap: 6px">
+                <button type="button" class="filter-option active">Any</button>
+                <button type="button" class="filter-option">Weekdays</button>
+                <button type="button" class="filter-option">Evenings</button>
+                <button type="button" class="filter-option">Weekends</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <h4>Rating</h4>
+              <div style="display: flex; flex-wrap: wrap; gap: 6px">
+                <button type="button" class="filter-option active">Any</button>
+                <button type="button" class="filter-option">4.5+★</button>
+                <button type="button" class="filter-option">4.0+★</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <h4>Format</h4>
+              <div style="display: flex; flex-wrap: wrap; gap: 6px">
+                <button type="button" class="filter-option active">Any</button>
+                <button type="button" class="filter-option">In-Person</button>
+                <button type="button" class="filter-option">Online</button>
+                <button type="button" class="filter-option">Both</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tutor-grid">
+            <article class="card">
+              <div class="tutor-card__head">
+                <div class="tutor-avatar" style="background: #7c6f64">MT</div>
+                <div>
+                  <strong>Marcus T.</strong>
+                  <span class="verified-badge">Verified Student</span>
+                  <p style="margin: 4px 0 0; font-size: 13px; color: var(--color-text-muted)">Brooklyn College · Junior</p>
+                </div>
+              </div>
+              <p style="margin: 0 0 8px">
+                <span class="tag tag-coral">Calculus</span>
+                <span class="tag tag-coral">Linear Algebra</span>
+                <span class="tag tag-coral">Discrete Math</span>
+              </p>
+              <p class="price-current" style="margin: 0 0 4px">$28/hr</p>
+              <p class="rating" style="margin: 0 0 8px">4.9★ <span class="rating-count">(31 reviews)</span></p>
+              <p style="font-size: 14px; color: var(--color-text-muted); margin: 0 0 8px">
+                I make math click. Specialize in proof-based courses and exam prep.
+              </p>
+              <div class="availability-chips">
+                <span class="tag">Mon</span>
+                <span class="tag">Wed</span>
+                <span class="tag">Fri evenings</span>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px">
+                <button type="button" class="btn-primary btn-book-session" data-rate="28" data-tutor-name="Marcus T.">Book Session</button>
+                <button type="button" class="btn-ghost">Message</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="tutor-card__head">
+                <div class="tutor-avatar" style="background: #b45309">PS</div>
+                <div>
+                  <strong>Priya S.</strong>
+                  <span class="verified-badge">Verified Student</span>
+                  <p style="margin: 4px 0 0; font-size: 13px; color: var(--color-text-muted)">Brooklyn College · Senior</p>
+                </div>
+              </div>
+              <p style="margin: 0 0 8px">
+                <span class="tag tag-coral">Organic Chem</span>
+                <span class="tag tag-coral">Gen Chem</span>
+                <span class="tag tag-coral">Biology</span>
+              </p>
+              <p class="price-current" style="margin: 0 0 4px">$25/hr</p>
+              <p class="rating" style="margin: 0 0 8px">4.8★ <span class="rating-count">(19 reviews)</span></p>
+              <p style="font-size: 14px; color: var(--color-text-muted); margin: 0 0 8px">
+                Pre-med student. Helped over 20 classmates pass Orgo.
+              </p>
+              <div class="availability-chips">
+                <span class="tag">Tue</span>
+                <span class="tag">Thu</span>
+                <span class="tag">Sat</span>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px">
+                <button type="button" class="btn-primary btn-book-session" data-rate="25" data-tutor-name="Priya S.">Book Session</button>
+                <button type="button" class="btn-ghost">Message</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="tutor-card__head">
+                <div class="tutor-avatar" style="background: #4a7c59">JL</div>
+                <div>
+                  <strong>Jordan L.</strong>
+                  <span class="verified-badge">Verified Student</span>
+                  <p style="margin: 4px 0 0; font-size: 13px; color: var(--color-text-muted)">Brooklyn College · Sophomore</p>
+                </div>
+              </div>
+              <p style="margin: 0 0 8px">
+                <span class="tag tag-coral">Essay Writing</span>
+                <span class="tag tag-coral">MLA/APA</span>
+                <span class="tag tag-coral">Literature</span>
+              </p>
+              <p class="price-current" style="margin: 0 0 4px">$20/hr</p>
+              <p class="rating" style="margin: 0 0 8px">4.7★ <span class="rating-count">(12 reviews)</span></p>
+              <p style="font-size: 14px; color: var(--color-text-muted); margin: 0 0 8px">
+                Strong writer, patient teacher. Specializes in thesis development.
+              </p>
+              <div class="availability-chips">
+                <span class="tag">Mon</span>
+                <span class="tag">Wed</span>
+                <span class="tag">Sun</span>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px">
+                <button type="button" class="btn-primary btn-book-session" data-rate="20" data-tutor-name="Jordan L.">Book Session</button>
+                <button type="button" class="btn-ghost">Message</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="tutor-card__head">
+                <div class="tutor-avatar" style="background: #57534e">SK</div>
+                <div>
+                  <strong>Sarah K.</strong>
+                  <span class="verified-badge">Verified Student</span>
+                  <p style="margin: 4px 0 0; font-size: 13px; color: var(--color-text-muted)">Brooklyn College · Senior</p>
+                </div>
+              </div>
+              <p style="margin: 0 0 8px">
+                <span class="tag tag-coral">Accounting</span>
+                <span class="tag tag-coral">Finance</span>
+                <span class="tag tag-coral">Excel</span>
+              </p>
+              <p class="price-current" style="margin: 0 0 4px">$30/hr</p>
+              <p class="rating" style="margin: 0 0 8px">5.0★ <span class="rating-count">(8 reviews)</span></p>
+              <p style="font-size: 14px; color: var(--color-text-muted); margin: 0 0 8px">
+                CPA track. Will make spreadsheets your best friend.
+              </p>
+              <div class="availability-chips">
+                <span class="tag">Weekday evenings</span>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px">
+                <button type="button" class="btn-primary btn-book-session" data-rate="30" data-tutor-name="Sarah K.">Book Session</button>
+                <button type="button" class="btn-ghost">Message</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="tutor-card__head">
+                <div class="tutor-avatar" style="background: #0369a1">AM</div>
+                <div>
+                  <strong>Alex M.</strong>
+                  <span class="verified-badge">Verified Student</span>
+                  <p style="margin: 4px 0 0; font-size: 13px; color: var(--color-text-muted)">Brooklyn College · Junior</p>
+                </div>
+              </div>
+              <p style="margin: 0 0 8px">
+                <span class="tag tag-coral">Physics I &amp; II</span>
+                <span class="tag tag-coral">Thermodynamics</span>
+              </p>
+              <p class="price-current" style="margin: 0 0 4px">$26/hr</p>
+              <p class="rating" style="margin: 0 0 8px">4.6★ <span class="rating-count">(15 reviews)</span></p>
+              <p style="font-size: 14px; color: var(--color-text-muted); margin: 0 0 8px">
+                Tutored since freshman year. Clear explanations, lots of practice problems.
+              </p>
+              <div class="availability-chips">
+                <span class="tag">Tue</span>
+                <span class="tag">Thu</span>
+                <span class="tag">Sat AM</span>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px">
+                <button type="button" class="btn-primary btn-book-session" data-rate="26" data-tutor-name="Alex M.">Book Session</button>
+                <button type="button" class="btn-ghost">Message</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="tutor-card__head">
+                <div class="tutor-avatar" style="background: #7c3aed">MR</div>
+                <div>
+                  <strong>Maya R.</strong>
+                  <span class="verified-badge">Verified Student</span>
+                  <p style="margin: 4px 0 0; font-size: 13px; color: var(--color-text-muted)">Brooklyn College · Senior</p>
+                </div>
+              </div>
+              <p style="margin: 0 0 8px">
+                <span class="tag tag-coral">Spanish</span>
+                <span class="tag tag-coral">French</span>
+                <span class="tag tag-coral">ESL</span>
+              </p>
+              <p class="price-current" style="margin: 0 0 4px">$22/hr</p>
+              <p class="rating" style="margin: 0 0 8px">4.9★ <span class="rating-count">(27 reviews)</span></p>
+              <p style="font-size: 14px; color: var(--color-text-muted); margin: 0 0 8px">
+                Native Spanish speaker. Conversational and academic prep.
+              </p>
+              <div class="availability-chips">
+                <span class="tag">Mon–Fri</span>
+                <span class="tag">Evenings</span>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px">
+                <button type="button" class="btn-primary btn-book-session" data-rate="22" data-tutor-name="Maya R.">Book Session</button>
+                <button type="button" class="btn-ghost">Message</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="tutor-card__head">
+                <div class="tutor-avatar" style="background: #0d9488">DP</div>
+                <div>
+                  <strong>Dev P.</strong>
+                  <span class="verified-badge">Verified Student</span>
+                  <p style="margin: 4px 0 0; font-size: 13px; color: var(--color-text-muted)">Brooklyn College · Senior</p>
+                </div>
+              </div>
+              <p style="margin: 0 0 8px">
+                <span class="tag tag-coral">Python</span>
+                <span class="tag tag-coral">Java</span>
+                <span class="tag tag-coral">Web Dev</span>
+                <span class="tag tag-coral">Data Structures</span>
+              </p>
+              <p class="price-current" style="margin: 0 0 4px">$32/hr</p>
+              <p class="rating" style="margin: 0 0 8px">4.8★ <span class="rating-count">(22 reviews)</span></p>
+              <p style="font-size: 14px; color: var(--color-text-muted); margin: 0 0 8px">
+                Software intern at Google. Code reviews included.
+              </p>
+              <div class="availability-chips">
+                <span class="tag">Sat</span>
+                <span class="tag">Sun</span>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px">
+                <button type="button" class="btn-primary btn-book-session" data-rate="32" data-tutor-name="Dev P.">Book Session</button>
+                <button type="button" class="btn-ghost">Message</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="tutor-card__head">
+                <div class="tutor-avatar" style="background: #db2777">LN</div>
+                <div>
+                  <strong>Lisa N.</strong>
+                  <span class="verified-badge">Verified Student</span>
+                  <p style="margin: 4px 0 0; font-size: 13px; color: var(--color-text-muted)">Brooklyn College · Junior</p>
+                </div>
+              </div>
+              <p style="margin: 0 0 8px">
+                <span class="tag tag-coral">US History</span>
+                <span class="tag tag-coral">Research Papers</span>
+                <span class="tag tag-coral">Citations</span>
+              </p>
+              <p class="price-current" style="margin: 0 0 4px">$18/hr</p>
+              <p class="rating" style="margin: 0 0 8px">4.5★ <span class="rating-count">(9 reviews)</span></p>
+              <p style="font-size: 14px; color: var(--color-text-muted); margin: 0 0 8px">
+                History major. Loves helping students find their argument.
+              </p>
+              <div class="availability-chips">
+                <span class="tag">Wed</span>
+                <span class="tag">Fri</span>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px">
+                <button type="button" class="btn-primary btn-book-session" data-rate="18" data-tutor-name="Lisa N.">Book Session</button>
+                <button type="button" class="btn-ghost">Message</button>
+              </div>
+            </article>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <nav class="mobile-nav mobile-nav--extended" aria-label="Mobile">
+      <a href="index.html"><i data-lucide="layout-dashboard"></i> Home</a>
+      <a href="community.html"><i data-lucide="users"></i> Community</a>
+      <a href="events.html"><i data-lucide="calendar-days"></i> Events</a>
+      <a href="marketplace.html"><i data-lucide="shopping-bag"></i> Market</a>
+      <a href="jobs.html"><i data-lucide="briefcase"></i> Jobs</a>
+      <a href="tutors.html" class="active"><i data-lucide="graduation-cap"></i> Tutors</a>
+      <a href="roommates.html"><i data-lucide="home"></i> Rooms</a>
+      <a href="hagglit.html"><i data-lucide="bot"></i> Hagglit</a>
+      <a href="messages.html"><i data-lucide="message-circle"></i> Msgs</a>
+      <a href="profile.html"><i data-lucide="user"></i> Profile</a>
+    </nav>
+
+    <!-- Book session -->
+    <div class="modal-overlay" id="modal-book-session" role="dialog" aria-modal="true">
+      <div class="modal-box">
+        <button type="button" class="modal-close" data-modal-close aria-label="Close">&times;</button>
+        <h2>Book Session</h2>
+        <p style="font-size: 14px; color: var(--color-text-muted); margin-top: 0">
+          with <strong id="book-tutor-name">Tutor</strong>
+        </p>
+        <h3 style="font-size: 13px; margin: var(--space-4) 0 var(--space-2)">March 2025</h3>
+        <div class="booking-calendar">
+          <span class="booking-calendar__dow">M</span>
+          <span class="booking-calendar__dow">T</span>
+          <span class="booking-calendar__dow">W</span>
+          <span class="booking-calendar__dow">T</span>
+          <span class="booking-calendar__dow">F</span>
+          <span class="booking-calendar__dow">S</span>
+          <span class="booking-calendar__dow">S</span>
+          <span></span><span></span><span></span><span></span><span></span>
+          <button type="button" class="booking-calendar__day">1</button>
+          <button type="button" class="booking-calendar__day">2</button>
+          <button type="button" class="booking-calendar__day">3</button>
+          <button type="button" class="booking-calendar__day">4</button>
+          <button type="button" class="booking-calendar__day">5</button>
+          <button type="button" class="booking-calendar__day">6</button>
+          <button type="button" class="booking-calendar__day">7</button>
+          <button type="button" class="booking-calendar__day">8</button>
+          <button type="button" class="booking-calendar__day">9</button>
+          <button type="button" class="booking-calendar__day">10</button>
+          <button type="button" class="booking-calendar__day">11</button>
+          <button type="button" class="booking-calendar__day">12</button>
+          <button type="button" class="booking-calendar__day">13</button>
+          <button type="button" class="booking-calendar__day">14</button>
+          <button type="button" class="booking-calendar__day is-selected">15</button>
+          <button type="button" class="booking-calendar__day">16</button>
+          <button type="button" class="booking-calendar__day">17</button>
+          <button type="button" class="booking-calendar__day">18</button>
+          <button type="button" class="booking-calendar__day">19</button>
+          <button type="button" class="booking-calendar__day">20</button>
+          <button type="button" class="booking-calendar__day">21</button>
+          <button type="button" class="booking-calendar__day">22</button>
+          <button type="button" class="booking-calendar__day">23</button>
+          <button type="button" class="booking-calendar__day">24</button>
+          <button type="button" class="booking-calendar__day">25</button>
+          <button type="button" class="booking-calendar__day">26</button>
+          <button type="button" class="booking-calendar__day">27</button>
+          <button type="button" class="booking-calendar__day">28</button>
+          <button type="button" class="booking-calendar__day">29</button>
+          <button type="button" class="booking-calendar__day">30</button>
+          <button type="button" class="booking-calendar__day">31</button>
+        </div>
+        <h3 style="font-size: 13px; margin: var(--space-4) 0 var(--space-2)">Time</h3>
+        <div class="time-slot-row">
+          <button type="button">Morning</button>
+          <button type="button" class="active">Afternoon</button>
+          <button type="button">Evening</button>
+        </div>
+        <h3 style="font-size: 13px; margin: var(--space-4) 0 var(--space-2)">Format</h3>
+        <div class="format-toggle-row">
+          <button type="button" class="btn-ghost active" style="border-radius: var(--radius-full)">In-Person</button>
+          <button type="button" class="btn-ghost" style="border-radius: var(--radius-full)">Online</button>
+        </div>
+        <label for="book-note" style="display: block; font-size: 12px; font-weight: 600; margin: var(--space-4) 0 6px">Note to tutor</label>
+        <textarea id="book-note" rows="3" style="width: 100%; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 10px; font-family: inherit"></textarea>
+        <p id="book-total-preview" style="font-weight: 700; color: var(--color-primary); margin: var(--space-4) 0">1 hr × $28 = $28</p>
+        <button type="button" class="btn-primary" id="btn-confirm-booking" style="width: 100%">Confirm Booking</button>
+      </div>
+    </div>
+
+    <!-- Become a tutor -->
+    <div class="modal-overlay" id="modal-become-tutor" role="dialog" aria-modal="true">
+      <div class="modal-box">
+        <button type="button" class="modal-close" data-modal-close aria-label="Close">&times;</button>
+        <h2>Become a Tutor</h2>
+        <p style="font-size: 14px; color: var(--color-text-muted)">Demo form — nothing is saved.</p>
+        <form class="modal-form" id="form-become-tutor">
+          <label for="bt-name">Name</label>
+          <input id="bt-name" type="text" required />
+          <label for="bt-subject">Subject / title</label>
+          <input id="bt-subject" type="text" required placeholder="Calculus, Organic Chem…" />
+          <label for="bt-rate">Hourly rate</label>
+          <input id="bt-rate" type="text" required placeholder="$25/hr" />
+          <label for="bt-bio">Bio</label>
+          <textarea id="bt-bio" required></textarea>
+          <div style="margin-top: var(--space-4); display: flex; justify-content: flex-end; gap: var(--space-2)">
+            <button type="button" class="btn-ghost" data-modal-close>Cancel</button>
+            <button type="submit" class="btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

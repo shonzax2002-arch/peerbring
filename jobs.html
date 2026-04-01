@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Board — Peer Bring</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+        <div class="sidebar__brand">
+          <div class="logo-owl" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20 6c-6 0-10 5-10 11 0 3 1 6 3 8-2 2-4 5-4 9h22c0-4-2-7-4-9 2-2 3-5 3-8 0-6-4-11-10-11z"
+                stroke="#E8704A"
+                stroke-width="2.2"
+                stroke-linejoin="round"
+                fill="#FDF0EC"
+              />
+              <circle cx="15" cy="16" r="2.2" fill="#E8704A" />
+              <circle cx="25" cy="16" r="2.2" fill="#E8704A" />
+              <path d="M18 21h4l-1 4-1-4z" fill="#E8704A" />
+            </svg>
+          </div>
+          <span class="sidebar__brand-text">PEER BRING</span>
+        </div>
+        <nav class="sidebar__nav">
+          <a href="index.html" class="nav-item">
+            <i data-lucide="layout-dashboard"></i>
+            <span class="nav-item__label">Home</span>
+          </a>
+          <a href="community.html" class="nav-item">
+            <i data-lucide="users"></i>
+            <span class="nav-item__label">Community</span>
+          </a>
+          <a href="events.html" class="nav-item">
+            <i data-lucide="calendar-days"></i>
+            <span class="nav-item__label">Events</span>
+          </a>
+          <a href="marketplace.html" class="nav-item">
+            <i data-lucide="shopping-bag"></i>
+            <span class="nav-item__label">Marketplace</span>
+          </a>
+          <a href="jobs.html" class="nav-item active">
+            <i data-lucide="briefcase"></i>
+            <span class="nav-item__label">Jobs</span>
+          </a>
+          <a href="tutors.html" class="nav-item">
+            <i data-lucide="graduation-cap"></i>
+            <span class="nav-item__label">Tutors</span>
+          </a>
+          <a href="roommates.html" class="nav-item">
+            <i data-lucide="home"></i>
+            <span class="nav-item__label">Roommates</span>
+          </a>
+          <a href="hagglit.html" class="nav-item">
+            <i data-lucide="bot"></i>
+            <span class="nav-item__label">Hagglit</span>
+            <span class="badge badge--ai">AI</span>
+          </a>
+          <a href="messages.html" class="nav-item">
+            <i data-lucide="message-circle"></i>
+            <span class="nav-item__label">Messages</span>
+            <span class="badge badge--nav-msg">2</span>
+          </a>
+          <a href="profile.html" class="nav-item">
+            <i data-lucide="user"></i>
+            <span class="nav-item__label">Profile</span>
+          </a>
+        </nav>
+        <div class="sidebar__footer">
+          <a href="#" class="settings-link">
+            <i data-lucide="settings" style="width: 18px; height: 18px"></i>
+            Settings
+          </a>
+          <div class="sidebar__footer-user">
+            <div class="sidebar__footer-avatar" aria-hidden="true">AJ</div>
+            <div class="sidebar__footer-meta">
+              <strong>Alex Johnson</strong>
+              <span>Brooklyn College</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="main-wrap">
+        <header class="top-bar">
+          <div class="top-bar__search">
+            <i data-lucide="search"></i>
+            <input type="search" placeholder="Search jobs…" aria-label="Search" />
+          </div>
+          <div class="top-bar__actions">
+            <button type="button" class="icon-btn" aria-label="Notifications">
+              <i data-lucide="bell"></i>
+            </button>
+            <button type="button" class="icon-btn" aria-label="Saved items">
+              <i data-lucide="bookmark"></i>
+            </button>
+          </div>
+        </header>
+
+        <main class="page-content job-page">
+          <div class="filter-backdrop" id="job-filter-backdrop" data-for-drawer="job-layout" aria-hidden="true"></div>
+
+          <button
+            type="button"
+            class="filters-mobile-toggle btn-ghost"
+            data-filters-toggle="job-layout"
+            data-filters-backdrop="job-filter-backdrop"
+            aria-expanded="false"
+          >
+            <i data-lucide="sliders-horizontal" style="width: 18px; height: 18px"></i>
+            Filters
+          </button>
+
+          <header class="job-page-header">
+            <div>
+              <h1>Job Board</h1>
+              <p>On-campus and local jobs for Brooklyn College students</p>
+            </div>
+            <button type="button" class="btn-primary" data-open-modal="modal-post-job">Post a Job</button>
+          </header>
+
+          <div class="job-layout" id="job-layout">
+            <aside class="filter-panel card" aria-label="Job filters">
+              <button
+                type="button"
+                class="filter-drawer-close btn-ghost"
+                data-filters-close="job-layout"
+                data-filters-backdrop="job-filter-backdrop"
+              >
+                Close filters
+              </button>
+
+              <div class="filter-group">
+                <h4>Job Type</h4>
+                <button type="button" class="filter-option active">All</button>
+                <button type="button" class="filter-option">On-Campus</button>
+                <button type="button" class="filter-option">Part-Time</button>
+                <button type="button" class="filter-option">Internship</button>
+                <button type="button" class="filter-option">Work-Study</button>
+                <button type="button" class="filter-option">Freelance</button>
+              </div>
+              <div class="filter-group">
+                <h4>Pay</h4>
+                <button type="button" class="filter-option active">Any</button>
+                <button type="button" class="filter-option">$15+/hr</button>
+                <button type="button" class="filter-option">$18+/hr</button>
+                <button type="button" class="filter-option">$20+/hr</button>
+              </div>
+              <div class="filter-group">
+                <h4>Hours/Week</h4>
+                <button type="button" class="filter-option active">Any</button>
+                <button type="button" class="filter-option">Under 10</button>
+                <button type="button" class="filter-option">10–20</button>
+                <button type="button" class="filter-option">20+</button>
+              </div>
+              <div class="filter-group">
+                <h4>Department/Field</h4>
+                <button type="button" class="filter-option active">All</button>
+                <button type="button" class="filter-option">Tech</button>
+                <button type="button" class="filter-option">Admin</button>
+                <button type="button" class="filter-option">Tutoring</button>
+                <button type="button" class="filter-option">Research</button>
+                <button type="button" class="filter-option">Food &amp; Service</button>
+                <button type="button" class="filter-option">Retail</button>
+              </div>
+            </aside>
+
+            <div class="jobs-grid">
+              <article class="card job-card" data-job-id="1">
+                <h3 style="font-size: 16px; margin: 0 0 6px">Library Assistant</h3>
+                <p style="margin: 0 0 6px; font-size: 14px">
+                  Brooklyn College Library
+                  <span class="employer-badge employer-badge--campus">On-Campus</span>
+                </p>
+                <p class="price-current" style="margin: 0 0 4px">$16/hr</p>
+                <p style="font-size: 13px; color: var(--color-text-muted); margin: 0 0 8px">10 hrs/wk</p>
+                <p style="font-size: 14px; color: var(--color-text-muted); margin: 0 0 10px">
+                  Help students find resources, shelve books, and assist at the circulation desk.
+                </p>
+                <p style="margin: 0 0 8px">
+                  <span class="tag tag-coral">Part-Time</span>
+                  <span class="tag">Flexible</span>
+                  <span class="tag tag-green">Work-Study</span>
+                </p>
+                <p style="font-size: 12px; color: var(--color-text-faint); margin: 0 0 12px">Posted Mar 10</p>
+                <div class="market-card__actions" style="margin: 0">
+                  <button type="button" class="btn-primary">Apply</button>
+                  <button type="button" class="save-btn" aria-label="Save job">♡</button>
+                </div>
+              </article>
+
+              <article class="card job-card" data-job-id="2">
+                <h3 style="font-size: 16px; margin: 0 0 6px">IT Help Desk Technician</h3>
+                <p style="margin: 0 0 6px; font-size: 14px">
+                  BC IT Department <span class="employer-badge employer-badge--campus">On-Campus</span>
+                </p>
+                <p class="price-current" style="margin: 0 0 4px">$18/hr</p>
+                <p style="font-size: 13px; color: var(--color-text-muted); margin: 0 0 8px">15 hrs/wk</p>
+                <p style="font-size: 14px; color: var(--color-text-muted); margin: 0 0 10px">
+                  Provide tech support to students and faculty. Basic troubleshooting required.
+                </p>
+                <p style="margin: 0 0 8px">
+                  <span class="tag tag-coral">Part-Time</span>
+                  <span class="tag">On-Campus</span>
+                </p>
+                <p style="font-size: 12px; color: var(--color-text-faint); margin: 0 0 12px">Posted Mar 8</p>
+                <div class="market-card__actions" style="margin: 0">
+                  <button type="button" class="btn-primary">Apply</button>
+                  <button type="button" class="save-btn" aria-label="Save job">♡</button>
+                </div>
+              </article>
+
+              <article class="card job-card" data-job-id="3">
+                <h3 style="font-size: 16px; margin: 0 0 6px">Research Assistant</h3>
+                <p style="margin: 0 0 6px; font-size: 14px">
+                  Psychology Dept <span class="employer-badge employer-badge--campus">On-Campus</span>
+                </p>
+                <p class="price-current" style="margin: 0 0 4px">$17/hr</p>
+                <p style="font-size: 13px; color: var(--color-text-muted); margin: 0 0 8px">12 hrs/wk</p>
+                <p style="font-size: 14px; color: var(--color-text-muted); margin: 0 0 10px">
+                  Assist Professor Chen with data collection and analysis for ongoing study.
+                </p>
+                <p style="margin: 0 0 8px">
+                  <span class="tag">Research</span>
+                  <span class="tag tag-coral">Part-Time</span>
+                </p>
+                <p style="font-size: 12px; color: var(--color-text-faint); margin: 0 0 12px">Posted Mar 5</p>
+                <div class="market-card__actions" style="margin: 0">
+                  <button type="button" class="btn-primary">Apply</button>
+                  <button type="button" class="save-btn" aria-label="Save job">♡</button>
+                </div>
+              </article>
+
+              <article class="card job-card" data-job-id="4">
+                <h3 style="font-size: 16px; margin: 0 0 6px">Barista</h3>
+                <p style="margin: 0 0 6px; font-size: 14px">
+                  Campus Coffee Co. <span class="employer-badge employer-badge--local">Local Business</span>
+                </p>
+                <p class="price-current" style="margin: 0 0 4px">$16/hr + tips</p>
+                <p style="font-size: 13px; color: var(--color-text-muted); margin: 0 0 8px">20 hrs/wk</p>
+                <p style="font-size: 14px; color: var(--color-text-muted); margin: 0 0 10px">
+                  Busy campus café looking for friendly baristas. Training provided.
+                </p>
+                <p style="margin: 0 0 8px">
+                  <span class="tag">Food &amp; Service</span>
+                  <span class="tag tag-coral">Flexible</span>
+                </p>
+                <p style="font-size: 12px; color: var(--color-text-faint); margin: 0 0 12px">Posted Mar 12</p>
+                <div class="market-card__actions" style="margin: 0">
+                  <button type="button" class="btn-primary">Apply</button>
+                  <button type="button" class="save-btn" aria-label="Save job">♡</button>
+                </div>
+              </article>
+
+              <article class="card job-card" data-job-id="5">
+                <h3 style="font-size: 16px; margin: 0 0 6px">Social Media Intern</h3>
+                <p style="margin: 0 0 6px; font-size: 14px">
+                  Student Affairs <span class="employer-badge employer-badge--campus">On-Campus</span>
+                </p>
+                <p class="price-current" style="margin: 0 0 4px">$15/hr</p>
+                <p style="font-size: 13px; color: var(--color-text-muted); margin: 0 0 8px">8 hrs/wk</p>
+                <p style="font-size: 14px; color: var(--color-text-muted); margin: 0 0 10px">
+                  Create content for BC's Instagram and TikTok. Must know Canva.
+                </p>
+                <p style="margin: 0 0 8px">
+                  <span class="tag tag-coral">Internship</span>
+                  <span class="tag">Part-Time</span>
+                </p>
+                <p style="font-size: 12px; color: var(--color-text-faint); margin: 0 0 12px">Posted Mar 11</p>
+                <div class="market-card__actions" style="margin: 0">
+                  <button type="button" class="btn-primary">Apply</button>
+                  <button type="button" class="save-btn" aria-label="Save job">♡</button>
+                </div>
+              </article>
+
+              <article class="card job-card" data-job-id="6">
+                <h3 style="font-size: 16px; margin: 0 0 6px">Math Tutor</h3>
+                <p style="margin: 0 0 6px; font-size: 14px">
+                  Academic Success Center <span class="employer-badge employer-badge--campus">On-Campus</span>
+                </p>
+                <p class="price-current" style="margin: 0 0 4px">$20/hr</p>
+                <p style="font-size: 13px; color: var(--color-text-muted); margin: 0 0 8px">Flexible hrs</p>
+                <p style="font-size: 14px; color: var(--color-text-muted); margin: 0 0 10px">
+                  Tutor students in Calculus I &amp; II. Strong math background required.
+                </p>
+                <p style="margin: 0 0 8px">
+                  <span class="tag">Tutoring</span>
+                  <span class="tag tag-coral">Flexible</span>
+                </p>
+                <p style="font-size: 12px; color: var(--color-text-faint); margin: 0 0 12px">Posted Mar 9</p>
+                <div class="market-card__actions" style="margin: 0">
+                  <button type="button" class="btn-primary">Apply</button>
+                  <button type="button" class="save-btn" aria-label="Save job">♡</button>
+                </div>
+              </article>
+
+              <article class="card job-card" data-job-id="7">
+                <h3 style="font-size: 16px; margin: 0 0 6px">Campus Tour Guide</h3>
+                <p style="margin: 0 0 6px; font-size: 14px">
+                  Admissions Office <span class="employer-badge employer-badge--campus">On-Campus</span>
+                </p>
+                <p class="price-current" style="margin: 0 0 4px">$16/hr</p>
+                <p style="font-size: 13px; color: var(--color-text-muted); margin: 0 0 8px">Weekends</p>
+                <p style="font-size: 14px; color: var(--color-text-muted); margin: 0 0 10px">
+                  Lead prospective students on tours. Must be enthusiastic and reliable.
+                </p>
+                <p style="margin: 0 0 8px">
+                  <span class="tag tag-coral">Part-Time</span>
+                  <span class="tag">On-Campus</span>
+                </p>
+                <p style="font-size: 12px; color: var(--color-text-faint); margin: 0 0 12px">Posted Mar 6</p>
+                <div class="market-card__actions" style="margin: 0">
+                  <button type="button" class="btn-primary">Apply</button>
+                  <button type="button" class="save-btn" aria-label="Save job">♡</button>
+                </div>
+              </article>
+
+              <article class="card job-card" data-job-id="8">
+                <h3 style="font-size: 16px; margin: 0 0 6px">Web Dev Intern</h3>
+                <p style="margin: 0 0 6px; font-size: 14px">
+                  BC StartupHub <span class="employer-badge employer-badge--local">Local Business</span>
+                </p>
+                <p class="price-current" style="margin: 0 0 4px">$22/hr</p>
+                <p style="font-size: 13px; color: var(--color-text-muted); margin: 0 0 8px">15 hrs/wk</p>
+                <p style="font-size: 14px; color: var(--color-text-muted); margin: 0 0 10px">
+                  Help build internal tools using React. Portfolio required.
+                </p>
+                <p style="margin: 0 0 8px">
+                  <span class="tag tag-coral">Tech</span>
+                  <span class="tag tag-coral">Internship</span>
+                </p>
+                <p style="font-size: 12px; color: var(--color-text-faint); margin: 0 0 12px">Posted Mar 7</p>
+                <div class="market-card__actions" style="margin: 0">
+                  <button type="button" class="btn-primary">Apply</button>
+                  <button type="button" class="save-btn" aria-label="Save job">♡</button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <nav class="mobile-nav mobile-nav--extended" aria-label="Mobile">
+      <a href="index.html"><i data-lucide="layout-dashboard"></i> Home</a>
+      <a href="community.html"><i data-lucide="users"></i> Community</a>
+      <a href="events.html"><i data-lucide="calendar-days"></i> Events</a>
+      <a href="marketplace.html"><i data-lucide="shopping-bag"></i> Market</a>
+      <a href="jobs.html" class="active"><i data-lucide="briefcase"></i> Jobs</a>
+      <a href="tutors.html"><i data-lucide="graduation-cap"></i> Tutors</a>
+      <a href="roommates.html"><i data-lucide="home"></i> Rooms</a>
+      <a href="hagglit.html"><i data-lucide="bot"></i> Hagglit</a>
+      <a href="messages.html"><i data-lucide="message-circle"></i> Msgs</a>
+      <a href="profile.html"><i data-lucide="user"></i> Profile</a>
+    </nav>
+
+    <!-- Job detail -->
+    <div class="modal-overlay" id="modal-job-detail" role="dialog" aria-modal="true" aria-labelledby="job-detail-title">
+      <div class="modal-box">
+        <button type="button" class="modal-close" data-modal-close aria-label="Close">&times;</button>
+        <h2 id="job-detail-title">Job Title</h2>
+        <p id="job-detail-employer" style="font-weight: 600; margin-bottom: 4px">Employer</p>
+        <p id="job-detail-meta" style="font-size: 14px; color: var(--color-text-muted); margin-top: 0">—</p>
+        <h3 style="font-size: 14px; margin: var(--space-4) 0 var(--space-2)">Description</h3>
+        <p id="job-detail-desc" style="font-size: 14px; color: var(--color-text-muted); line-height: 1.55">—</p>
+        <h3 style="font-size: 14px; margin: var(--space-4) 0 var(--space-2)">Requirements</h3>
+        <ul id="job-detail-reqs" style="margin: 0; padding-left: 1.2rem; color: var(--color-text-muted); font-size: 14px"></ul>
+        <p style="margin: var(--space-4) 0 0; font-size: 14px">
+          <strong>Application deadline:</strong> <span id="job-detail-deadline">—</span>
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6)">
+          <button type="button" class="btn-primary">Apply via Email</button>
+          <button type="button" class="btn-ghost">Ask Questions</button>
+          <button type="button" class="btn-ghost" id="job-modal-save">Save Job</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post a job -->
+    <div class="modal-overlay" id="modal-post-job" role="dialog" aria-modal="true">
+      <div class="modal-box">
+        <button type="button" class="modal-close" data-modal-close aria-label="Close">&times;</button>
+        <h2>Post a Job</h2>
+        <p style="font-size: 14px; color: var(--color-text-muted)">Demo form — nothing is saved.</p>
+        <form class="modal-form" id="form-post-job">
+          <label for="pj-name">Your name</label>
+          <input id="pj-name" name="name" type="text" required placeholder="Alex Johnson" />
+          <label for="pj-title">Job title</label>
+          <input id="pj-title" name="title" type="text" required placeholder="Library Assistant" />
+          <label for="pj-rate">Pay rate</label>
+          <input id="pj-rate" name="rate" type="text" required placeholder="$18/hr" />
+          <label for="pj-bio">Description</label>
+          <textarea id="pj-bio" name="bio" required placeholder="Describe the role…"></textarea>
+          <div style="margin-top: var(--space-4); display: flex; justify-content: flex-end; gap: var(--space-2)">
+            <button type="button" class="btn-ghost" data-modal-close>Cancel</button>
+            <button type="submit" class="btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
