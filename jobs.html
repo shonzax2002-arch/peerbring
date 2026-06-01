@@ -119,7 +119,10 @@
 
           <header class="job-page-header">
             <div>
-              <h1>Job Board</h1>
+              <div style="display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap">
+                <h1 style="margin: 0">Job Board</h1>
+                <span class="live-badge">🟢 Live from uOttawa</span>
+              </div>
               <p>On-campus and local jobs for Brooklyn College students</p>
             </div>
             <button type="button" class="btn-primary" data-open-modal="modal-post-job">Post a Job</button>
@@ -171,7 +174,7 @@
               </div>
             </aside>
 
-            <div class="jobs-grid">
+            <div id="jobs-grid" class="jobs-grid">
               <article class="card job-card" data-job-id="1">
                 <h3 style="font-size: 16px; margin: 0 0 6px">Library Assistant</h3>
                 <p style="margin: 0 0 6px; font-size: 14px">

@@ -327,6 +327,449 @@
     }
   }
 
+  function escapeHtml(str) {
+    if (!str) return "";
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  var jobsFallbackHtml = "";
+  var eventsFallbackHtml = "";
+
+  var LIVE_DATA_URLS = {
+    jobs: "https://uottawa.wd3.myworkdayjobs.com/uOttawa_External_Career_Site",
+    events: "https://www.uottawa.ca/campus-life/events-all",
+  };
+
+  function getLiveTestMode(section) {
+    if (typeof window === "undefined" || !window.location || !window.location.search) return null;
+    return new URLSearchParams(window.location.search).get("live_" + section);
+  }
+
+  function delay(ms) {
+    return new Promise(function (resolve) {
+      setTimeout(resolve, ms);
+    });
+  }
+
+  function buildLiveNotice(section, variant) {
+    var url = LIVE_DATA_URLS[section];
+    var copy = {
+      jobs: {
+        fail: "Could not load live uOttawa jobs right now. Your campus listings are shown below.",
+        empty: "No live uOttawa postings at the moment. Your campus listings are shown below.",
+        parse: "Live job listings could not be displayed. Your campus listings are shown below.",
+      },
+      events: {
+        fail: "Could not load live uOttawa events right now. Sample campus events are shown below.",
+        empty: "No live campus events were found. Sample campus events are shown below.",
+        parse: "Live events could not be parsed from uOttawa. Sample campus events are shown below.",
+      },
+    };
+    var message = (copy[section] && copy[section][variant]) || copy[section].fail;
+    return (
+      '<div class="live-data-notice" role="status">' +
+      '<i data-lucide="alert-circle" aria-hidden="true"></i>' +
+      "<p><span>" +
+      escapeHtml(message) +
+      '</span> <a href="' +
+      escapeHtml(url) +
+      '" target="_blank" rel="noopener noreferrer">Browse on uOttawa →</a></p>' +
+      "</div>"
+    );
+  }
+
+  function getFallbackFromTemplate(templateId) {
+    var tpl = document.getElementById(templateId);
+    return tpl && tpl.innerHTML.trim() ? tpl.innerHTML : "";
+  }
+
+  function ensureJobsFallback() {
+    if (jobsFallbackHtml) return jobsFallbackHtml;
+    var fromTemplate = getFallbackFromTemplate("jobs-fallback");
+    if (fromTemplate) {
+      jobsFallbackHtml = fromTemplate;
+      return jobsFallbackHtml;
+    }
+    var grid = document.getElementById("jobs-grid");
+    if (grid && grid.innerHTML.trim()) {
+      jobsFallbackHtml = grid.innerHTML;
+      var persist = document.getElementById("jobs-fallback");
+      if (!persist) {
+        persist = document.createElement("template");
+        persist.id = "jobs-fallback";
+        grid.insertAdjacentElement("afterend", persist);
+      }
+      if (!persist.innerHTML.trim()) persist.innerHTML = jobsFallbackHtml;
+    }
+    return jobsFallbackHtml;
+  }
+
+  function ensureEventsFallback() {
+    if (eventsFallbackHtml) return eventsFallbackHtml;
+    eventsFallbackHtml = getFallbackFromTemplate("events-fallback");
+    if (!eventsFallbackHtml) {
+      var list = document.getElementById("events-list");
+      if (list && list.innerHTML.trim()) eventsFallbackHtml = list.innerHTML;
+    }
+    return eventsFallbackHtml;
+  }
+
+  function seedEventsList() {
+    var list = document.getElementById("events-list");
+    var html = ensureEventsFallback();
+    if (list && html && !list.innerHTML.trim()) list.innerHTML = html;
+  }
+
+  function showGridSkeleton(container, count) {
+    container.innerHTML = Array(count || 6)
+      .fill(
+        '<div class="card skeleton-card">' +
+          '<div class="skeleton skeleton-heading"></div>' +
+          '<div class="skeleton skeleton-text"></div>' +
+          '<div class="skeleton skeleton-text"></div>' +
+          '<div class="skeleton skeleton-text" style="width:60%"></div>' +
+          "</div>"
+      )
+      .join("");
+  }
+
+  function restoreJobsFallback(container, variant) {
+    var html = ensureJobsFallback();
+    if (!container || !html) return;
+    container.innerHTML = buildLiveNotice("jobs", variant || "fail") + html;
+    initLucide();
+  }
+
+  function restoreEventsFallback(container, variant) {
+    var html = ensureEventsFallback();
+    if (!container || !html) return;
+    container.innerHTML = buildLiveNotice("events", variant || "fail") + html;
+    initLucide();
+  }
+
+  function restoreHomeEventsFallback(noticeVariant) {
+    var container = document.getElementById("home-upcoming-events");
+    var tpl = document.getElementById("home-events-fallback");
+    if (!container || !tpl) return;
+    var notice = noticeVariant
+      ? buildLiveNotice("events", noticeVariant)
+      : "";
+    container.innerHTML =
+      notice +
+      tpl.innerHTML +
+      '<a href="' +
+      escapeHtml(LIVE_DATA_URLS.events) +
+      '" target="_blank" rel="noopener noreferrer" class="see-all-link">View uOttawa events →</a>' +
+      '<a href="events.html" class="see-all-link">See all campus events →</a>';
+    initLucide();
+  }
+
+  function renderLiveJobs(container, jobs) {
+    container.innerHTML = jobs
+      .map(function (job) {
+        var title = job.title || "Untitled Position";
+        var location = job.locationsText || "Ottawa, ON";
+        var posted = job.postedOn || "";
+        var path = job.externalPath || "#";
+        var jobUrl = LIVE_DATA_URLS.jobs + path;
+
+        return (
+          '<div class="card job-card">' +
+          '<div class="job-card-header">' +
+          '<span class="badge badge-employer">uOttawa</span>' +
+          '<span class="job-posted">' +
+          escapeHtml(posted) +
+          "</span>" +
+          "</div>" +
+          '<h3 class="job-title">' +
+          escapeHtml(title) +
+          "</h3>" +
+          '<p class="job-location"><i data-lucide="map-pin"></i> ' +
+          escapeHtml(location) +
+          "</p>" +
+          '<div class="job-card-footer">' +
+          '<a href="' +
+          escapeHtml(jobUrl) +
+          '" target="_blank" rel="noopener noreferrer" class="btn-primary">Apply</a>' +
+          '<button type="button" class="btn-ghost" onclick="saveJob(' +
+          JSON.stringify(title) +
+          ')"><i data-lucide="heart"></i> Save</button>' +
+          "</div>" +
+          "</div>"
+        );
+      })
+      .join("");
+    initLucide();
+  }
+
+  function parseUOttawaEventsFromHtml(htmlString) {
+    var parser = new DOMParser();
+    var doc = parser.parseFromString(htmlString || "", "text/html");
+    var eventItems = doc.querySelectorAll(".views-row, article.event, .event-item");
+    if (eventItems.length === 0) {
+      eventItems = doc.querySelectorAll("article");
+    }
+    if (eventItems.length === 0) return [];
+
+    return Array.from(eventItems)
+      .slice(0, 10)
+      .map(function (item) {
+        var titleEl = item.querySelector("h2 a, h3 a, .field--name-title a, a");
+        var dateEl = item.querySelector("time, .field--name-field-date, .date-display-single");
+        var locationEl = item.querySelector(".field--name-field-location, .location");
+        var descEl = item.querySelector(".field--name-body, .description, p");
+
+        return {
+          title: (titleEl && titleEl.textContent.trim()) || "",
+          date:
+            (dateEl && dateEl.getAttribute("datetime")) ||
+            (dateEl && dateEl.textContent.trim()) ||
+            "",
+          location: (locationEl && locationEl.textContent.trim()) || "uOttawa Campus",
+          description: (descEl && descEl.textContent.trim().slice(0, 120)) || "",
+          url: (titleEl && titleEl.href) || LIVE_DATA_URLS.events,
+        };
+      })
+      .filter(function (e) {
+        return e.title.length > 0;
+      });
+  }
+
+  function renderLiveEvents(container, events) {
+    container.innerHTML = events
+      .map(function (event) {
+        return (
+          '<div class="card event-card">' +
+          '<div class="event-card-header">' +
+          '<span class="badge badge-event">Campus Event</span>' +
+          '<span class="badge-live">🟢 Live</span>' +
+          "</div>" +
+          '<h3 class="event-title">' +
+          escapeHtml(event.title) +
+          "</h3>" +
+          '<p class="event-meta"><i data-lucide="calendar"></i> ' +
+          escapeHtml(event.date || "Date TBA") +
+          "</p>" +
+          '<p class="event-meta"><i data-lucide="map-pin"></i> ' +
+          escapeHtml(event.location) +
+          "</p>" +
+          (event.description
+            ? '<p class="event-desc">' + escapeHtml(event.description) + "...</p>"
+            : "") +
+          '<div class="event-card-footer">' +
+          '<a href="' +
+          escapeHtml(event.url) +
+          '" target="_blank" rel="noopener noreferrer" class="btn-primary">View Event</a>' +
+          '<button type="button" class="btn-ghost" onclick="rsvpEvent(' +
+          JSON.stringify(event.title) +
+          ')"><i data-lucide="check-circle"></i> RSVP</button>' +
+          "</div>" +
+          "</div>"
+        );
+      })
+      .join("");
+    initLucide();
+  }
+
+  async function loadUOttawaJobs() {
+    var container = document.getElementById("jobs-grid");
+    if (!container) return;
+
+    ensureJobsFallback();
+    var testMode = getLiveTestMode("jobs");
+    showGridSkeleton(container, 6);
+
+    if (testMode === "loading") return;
+
+    try {
+      if (testMode === "fail") {
+        await delay(500);
+        restoreJobsFallback(container, "fail");
+        return;
+      }
+      if (testMode === "empty") {
+        await delay(500);
+        restoreJobsFallback(container, "empty");
+        return;
+      }
+      if (testMode === "success") {
+        await delay(500);
+        renderLiveJobs(container, [
+          {
+            title: "Test — Student Services Assistant",
+            locationsText: "Ottawa, ON",
+            postedOn: "Posted today",
+            externalPath: "/job/test",
+          },
+        ]);
+        return;
+      }
+
+      var res = await fetch(
+        "https://uottawa.wd3.myworkdayjobs.com/wday/cxs/uottawa/uOttawa_External_Career_Site/jobs",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ appliedFacets: {}, limit: 20, offset: 0, searchText: "" }),
+        }
+      );
+      if (!res.ok) throw new Error("Jobs request failed");
+      var data = await res.json();
+      var jobs = data.jobPostings || [];
+
+      if (!jobs.length) {
+        restoreJobsFallback(container, "empty");
+        return;
+      }
+
+      renderLiveJobs(container, jobs);
+    } catch (err) {
+      restoreJobsFallback(container, "fail");
+    }
+  }
+
+  async function loadUOttawaEvents() {
+    var container = document.getElementById("events-list");
+    if (!container) return;
+
+    seedEventsList();
+    ensureEventsFallback();
+    var testMode = getLiveTestMode("events");
+    showGridSkeleton(container, 4);
+
+    if (testMode === "loading") return;
+
+    try {
+      if (testMode === "fail") {
+        await delay(500);
+        restoreEventsFallback(container, "fail");
+        return;
+      }
+      if (testMode === "empty") {
+        await delay(500);
+        restoreEventsFallback(container, "empty");
+        return;
+      }
+      if (testMode === "success") {
+        await delay(500);
+        renderLiveEvents(container, [
+          {
+            title: "Test — uOttawa Open House",
+            date: "Saturday, September 12",
+            location: "uOttawa Campus",
+            description: "Preview day for prospective students.",
+            url: LIVE_DATA_URLS.events,
+          },
+        ]);
+        return;
+      }
+
+      var proxyUrl = "https://api.allorigins.win/get?url=";
+      var targetUrl = encodeURIComponent(LIVE_DATA_URLS.events);
+      var res = await fetch(proxyUrl + targetUrl);
+      if (!res.ok) throw new Error("Events request failed");
+      var data = await res.json();
+      if (!data || !data.contents) throw new Error("Events payload missing");
+
+      var events = parseUOttawaEventsFromHtml(data.contents);
+      if (!events.length) {
+        restoreEventsFallback(container, "parse");
+        return;
+      }
+
+      renderLiveEvents(container, events);
+    } catch (err) {
+      restoreEventsFallback(container, "fail");
+    }
+  }
+
+  async function loadHomeEvents() {
+    var container = document.getElementById("home-upcoming-events");
+    if (!container) return;
+
+    var testMode = getLiveTestMode("home");
+    container.innerHTML = '<div class="loading-text">Loading events from uOttawa...</div>';
+
+    if (testMode === "loading") return;
+
+    try {
+      if (testMode === "fail" || testMode === "empty" || testMode === "parse") {
+        await delay(400);
+        restoreHomeEventsFallback(testMode);
+        return;
+      }
+      if (testMode === "success") {
+        await delay(400);
+        container.innerHTML =
+          '<div class="reminder-item">' +
+          '<div class="reminder-content">' +
+          '<span class="reminder-title">Test — uOttawa Open House</span>' +
+          '<span class="reminder-time">Saturday, September 12</span>' +
+          "</div>" +
+          '<a href="' +
+          escapeHtml(LIVE_DATA_URLS.events) +
+          '" target="_blank" rel="noopener noreferrer" class="badge badge-event">View</a>' +
+          "</div>" +
+          '<a href="events.html" class="see-all-link">See all campus events →</a>';
+        initLucide();
+        return;
+      }
+
+      var proxyUrl = "https://api.allorigins.win/get?url=";
+      var targetUrl = encodeURIComponent(LIVE_DATA_URLS.events);
+      var res = await fetch(proxyUrl + targetUrl);
+      if (!res.ok) throw new Error("Home events request failed");
+      var data = await res.json();
+      if (!data || !data.contents) throw new Error("Home events payload missing");
+
+      var events = parseUOttawaEventsFromHtml(data.contents).slice(0, 3);
+      if (!events.length) {
+        restoreHomeEventsFallback("parse");
+        return;
+      }
+
+      container.innerHTML =
+        events
+          .map(function (e) {
+            return (
+              '<div class="reminder-item">' +
+              '<div class="reminder-content">' +
+              '<span class="reminder-title">' +
+              escapeHtml(e.title) +
+              "</span>" +
+              '<span class="reminder-time">' +
+              escapeHtml(e.date || "Upcoming") +
+              "</span>" +
+              "</div>" +
+              '<a href="' +
+              escapeHtml(e.url) +
+              '" target="_blank" rel="noopener noreferrer" class="badge badge-event">View</a>' +
+              "</div>"
+            );
+          })
+          .join("") +
+        '<a href="events.html" class="see-all-link">See all campus events →</a>';
+
+      initLucide();
+    } catch (err) {
+      restoreHomeEventsFallback("fail");
+    }
+  }
+
+  window.saveJob = function (title) {
+    showToast("Job saved: " + (title || "Listing"));
+  };
+
+  window.rsvpEvent = function (title) {
+    showToast("RSVP recorded: " + (title || "Event"));
+  };
+
+  window.parseUOttawaEventsFromHtml = parseUOttawaEventsFromHtml;
+
   /** Open / close modal overlays (uses .is-open for smooth transitions) */
   function openModalOverlay(el) {
     if (!el) return;
@@ -723,7 +1166,7 @@
   }
 
   function initJobBoardPage() {
-    var grid = document.querySelector(".jobs-grid");
+    var grid = document.getElementById("jobs-grid") || document.querySelector(".jobs-grid");
     var detailModal = document.getElementById("modal-job-detail");
     if (grid && detailModal) {
       grid.addEventListener("click", function (e) {
@@ -944,5 +1387,17 @@
     initRoommatesPage();
     initCompatibilityBars();
     initLucide();
+
+    seedEventsList();
+
+    if (document.getElementById("jobs-grid")) {
+      loadUOttawaJobs();
+    }
+    if (document.getElementById("events-list")) {
+      loadUOttawaEvents();
+    }
+    if (document.getElementById("home-upcoming-events")) {
+      loadHomeEvents();
+    }
   });
 })();

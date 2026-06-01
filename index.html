@@ -198,25 +198,30 @@
               <section style="margin-bottom: var(--space-8)">
                 <div class="section-header">
                   <h2>Upcoming Events</h2>
-                  <span style="font-size: 13px; color: var(--color-text-muted)">This week</span>
+                  <span class="live-badge">🟢 Live from uOttawa</span>
                 </div>
-                <div class="events-row">
-                  <article class="card event-card">
-                    <h3>Campus Fair 🎪</h3>
-                    <p style="font-size: 13px; color: var(--color-text-muted); margin: 0 0 12px">Thu, Mar 16 · 11am–3pm</p>
-                    <button type="button" class="btn-primary">RSVP</button>
-                  </article>
-                  <article class="card event-card">
-                    <h3>Housing Expo 🏠</h3>
-                    <p style="font-size: 13px; color: var(--color-text-muted); margin: 0 0 12px">Fri, Mar 17 · 10am–2pm</p>
-                    <button type="button" class="btn-primary">RSVP</button>
-                  </article>
-                  <article class="card event-card">
-                    <h3>End of Term Party 🎉</h3>
-                    <p style="font-size: 13px; color: var(--color-text-muted); margin: 0 0 12px">Sat, Mar 18 · 8pm</p>
-                    <button type="button" class="btn-primary">RSVP</button>
-                  </article>
+                <div id="home-upcoming-events" class="home-events-list">
+                  <div class="loading-text">Loading events...</div>
                 </div>
+                <template id="home-events-fallback">
+                  <div class="events-row">
+                    <article class="card event-card">
+                      <h3>Campus Fair 🎪</h3>
+                      <p style="font-size: 13px; color: var(--color-text-muted); margin: 0 0 12px">Thu, Mar 16 · 11am–3pm</p>
+                      <button type="button" class="btn-primary">RSVP</button>
+                    </article>
+                    <article class="card event-card">
+                      <h3>Housing Expo 🏠</h3>
+                      <p style="font-size: 13px; color: var(--color-text-muted); margin: 0 0 12px">Fri, Mar 17 · 10am–2pm</p>
+                      <button type="button" class="btn-primary">RSVP</button>
+                    </article>
+                    <article class="card event-card">
+                      <h3>End of Term Party 🎉</h3>
+                      <p style="font-size: 13px; color: var(--color-text-muted); margin: 0 0 12px">Sat, Mar 18 · 8pm</p>
+                      <button type="button" class="btn-primary">RSVP</button>
+                    </article>
+                  </div>
+                </template>
               </section>
 
               <!-- Friends activity -->
