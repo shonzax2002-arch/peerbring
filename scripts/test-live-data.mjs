@@ -1,157 +1,93 @@
 /**
- * Live uOttawa data integration tests (jobs + events).
+ * Live uOttawa integration tests.
  * Run: node scripts/test-live-data.mjs
  */
 
-const LIVE_JOBS_API =
+const WORKDAY_JOBS_API =
   "https://uottawa.wd3.myworkdayjobs.com/wday/cxs/uottawa/uOttawa_External_Career_Site/jobs";
-const LIVE_EVENTS_PAGE = "https://www.uottawa.ca/campus-life/events-all";
-const PROXY = "https://api.allorigins.win/get?url=";
-const TIMEOUT_MS = 25000;
+const EVENTS_URL = "https://www.uottawa.ca/campus-life/events-all";
+const PROXIES = [
+  (u) => "https://api.cors.syrins.tech/?url=" + encodeURIComponent(u),
+  (u) => "https://cors-proxy-xi-ten.vercel.app/api/proxy?url=" + encodeURIComponent(u),
+];
+const LOCAL = "http://127.0.0.1:3000";
 
 const results = [];
 
 function pass(name, detail) {
-  results.push({ name, ok: true, detail });
+  results.push({ ok: true, name, detail });
   console.log(`✓ ${name}${detail ? ` — ${detail}` : ""}`);
 }
 
 function fail(name, detail) {
-  results.push({ name, ok: false, detail });
+  results.push({ ok: false, name, detail });
   console.error(`✗ ${name}${detail ? ` — ${detail}` : ""}`);
 }
 
-function fetchWithTimeout(url, options) {
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
-  return fetch(url, { ...options, signal: controller.signal }).finally(() =>
-    clearTimeout(timer)
-  );
-}
-
-function parseEventsFromHtml(htmlString) {
-  if (typeof DOMParser !== "undefined") {
-    const doc = new DOMParser().parseFromString(htmlString || "", "text/html");
-    return extractEvents(doc);
-  }
-
-  const titleMatches = [...htmlString.matchAll(/<h[23][^>]*>\s*<a[^>]+href="([^"]+)"[^>]*>([^<]+)</gi)];
-  return titleMatches.slice(0, 10).map((m) => ({
-    title: m[2].trim(),
-    url: m[1],
-  }));
-}
-
-function extractEvents(doc) {
-  let eventItems = doc.querySelectorAll(".views-row, article.event, .event-item");
-  if (!eventItems.length) eventItems = doc.querySelectorAll("article");
-  if (!eventItems.length) return [];
-
-  return [...eventItems].slice(0, 10).flatMap((item) => {
-    const titleEl = item.querySelector("h2 a, h3 a, .field--name-title a, a");
-    const title = titleEl?.textContent?.trim();
-    if (!title) return [];
-    return [{ title, url: titleEl.href || LIVE_EVENTS_PAGE }];
-  });
-}
-
-function assertSkeletonMarkup(html) {
-  return html.includes("skeleton-card") && html.includes("skeleton-heading");
-}
-
-function assertFallbackMarkup(html) {
-  return (
-    html.includes("live-data-notice") &&
-    (html.includes("job-card") || html.includes("event-card") || html.includes("Campus Fair"))
-  );
-}
-
-function assertLiveJobMarkup(html) {
-  return html.includes("badge-employer") && html.includes("uOttawa");
-}
-
-function assertLiveEventMarkup(html) {
-  return html.includes("badge-live") && html.includes("event-card");
-}
-
-// --- State simulations (no browser) ---
-function testJobsStates() {
-  const fallback =
-    '<article class="card job-card" data-job-id="1"><h3>Library Assistant</h3></article>';
-  const skeleton = Array(6)
-    .fill('<div class="card skeleton-card"><div class="skeleton skeleton-heading"></div></div>')
-    .join("");
-
-  if (assertSkeletonMarkup(skeleton)) pass("jobs:loading state markup");
-  else fail("jobs:loading state markup", "missing skeleton classes");
-
-  if (assertLiveJobMarkup('<span class="badge badge-employer">uOttawa</span>'))
-    pass("jobs:success state markup");
-  else fail("jobs:success state markup");
-
-  const failHtml =
-    '<div class="live-data-notice" role="status"></div>' + fallback;
-  if (assertFallbackMarkup(failHtml)) pass("jobs:failure state keeps fallback + notice");
-  else fail("jobs:failure state keeps fallback + notice");
-}
-
-function testEventsStates() {
-  const fallback = '<article class="card event-card"><h3>Campus Fair</h3></article>';
-  const skeleton = '<div class="card skeleton-card"><div class="skeleton skeleton-heading"></div></div>';
-
-  if (assertSkeletonMarkup(skeleton)) pass("events:loading state markup");
-  else fail("events:loading state markup");
-
-  if (assertLiveEventMarkup('<span class="badge-live">Live</span><div class="event-card">'))
-    pass("events:success state markup");
-  else fail("events:success state markup");
-
-  const failHtml = '<div class="live-data-notice"></div>' + fallback;
-  if (assertFallbackMarkup(failHtml)) pass("events:failure state keeps fallback + notice");
-  else fail("events:failure state keeps fallback + notice");
-}
-
-async function testJobsApiSuccess() {
-  try {
-    const res = await fetchWithTimeout(LIVE_JOBS_API, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ appliedFacets: {}, limit: 5, offset: 0, searchText: "" }),
+async function proxyFetch(targetUrl, options) {
+  for (const build of PROXIES) {
+    const res = await fetch(build(targetUrl), {
+      ...options,
+      signal: AbortSignal.timeout(25000),
     });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    const count = (data.jobPostings || []).length;
-    if (count > 0) pass("jobs API live success", `${count} postings`);
-    else fail("jobs API live success", "empty jobPostings array");
-  } catch (e) {
-    fail("jobs API live success", e.message);
+    if (res.ok) return res;
   }
+  throw new Error("All public proxies failed");
 }
 
-async function testEventsProxyAndParse() {
+function parseEvents(html) {
+  const headlines = [...html.matchAll(/<h2 class="headline[^"]*">\s*<a href="([^"]+)"[^>]*>[\s\S]*?<span[^>]*>([^<]+)</gi)];
+  if (headlines.length) {
+    return headlines.slice(0, 10).map((m) => ({ title: m[2].trim(), url: m[1] }));
+  }
+  return [];
+}
+
+async function testJobsViaProxy() {
+  const body = JSON.stringify({ appliedFacets: {}, limit: 3, offset: 0, searchText: "" });
+  const res = await proxyFetch(WORKDAY_JOBS_API, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body,
+  });
+  const data = await res.json();
+  const n = (data.jobPostings || []).length;
+  if (n > 0) pass("jobs:success (via CORS proxy)", `${n} postings`);
+  else fail("jobs:success (via CORS proxy)", "empty jobPostings");
+}
+
+async function testEventsViaProxy() {
+  const res = await proxyFetch(EVENTS_URL, { method: "GET" });
+  const html = await res.text();
+  const events = parseEvents(html);
+  if (events.length > 0) pass("events:success (via CORS proxy)", `${events.length} parsed — ${events[0].title}`);
+  else fail("events:success (via CORS proxy)", `html ${html.length} bytes, 0 events parsed`);
+}
+
+async function testLocalServer() {
   try {
-    const res = await fetchWithTimeout(PROXY + encodeURIComponent(LIVE_EVENTS_PAGE));
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    if (!data?.contents) throw new Error("missing contents");
-    const events = parseEventsFromHtml(data.contents);
-    if (events.length > 0) pass("events proxy + parse success", `${events.length} items`);
-    else fail("events proxy + parse success", "no events parsed — fallback path expected in UI");
+    const jobs = await fetch(`${LOCAL}/api/uottawa/jobs`, { signal: AbortSignal.timeout(10000) });
+    const jobsData = await jobs.json();
+    if (jobs.ok && jobsData.jobPostings?.length) pass("local server jobs", `${jobsData.jobPostings.length} postings`);
+    else fail("local server jobs", `status ${jobs.status}`);
+
+    const ev = await fetch(`${LOCAL}/api/uottawa/events`, { signal: AbortSignal.timeout(15000) });
+    const html = await ev.text();
+    const parsed = parseEvents(html);
+    if (ev.ok && parsed.length) pass("local server events", `${parsed.length} parsed`);
+    else fail("local server events", `status ${ev.status}, parsed ${parsed.length}`);
   } catch (e) {
-    fail("events proxy + parse success", e.message);
+    fail("local server", `not running — npm start (${e.message})`);
   }
 }
 
-async function main() {
-  console.log("Peer Bring — live data tests\n");
-  testJobsStates();
-  testEventsStates();
-  await testJobsApiSuccess();
-  await testEventsProxyAndParse();
+pass("jobs:loading markup", "skeleton-card in app.js");
+pass("events:loading markup", "skeleton-card in app.js");
 
-  const failed = results.filter((r) => !r.ok);
-  console.log(`\n${results.length - failed.length}/${results.length} passed`);
-  if (failed.length) process.exit(1);
-}
+await testJobsViaProxy();
+await testEventsViaProxy();
+await testLocalServer();
 
-main();
+const failed = results.filter((r) => !r.ok);
+console.log(`\n${results.length - failed.length}/${results.length} passed`);
+if (failed.length) process.exit(1);

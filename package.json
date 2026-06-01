@@ -1,0 +1,8 @@
+{
+  "name": "peer-bring",
+  "private": true,
+  "scripts": {
+    "start": "node server.mjs",
+    "test:live": "node scripts/test-live-data.mjs"
+  }
+}

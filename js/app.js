@@ -344,6 +344,58 @@
     events: "https://www.uottawa.ca/campus-life/events-all",
   };
 
+  var WORKDAY_JOBS_API =
+    "https://uottawa.wd3.myworkdayjobs.com/wday/cxs/uottawa/uOttawa_External_Career_Site/jobs";
+
+  var CORS_PROXIES = [
+    function (url) {
+      return "https://api.cors.syrins.tech/?url=" + encodeURIComponent(url);
+    },
+    function (url) {
+      return "https://cors-proxy-xi-ten.vercel.app/api/proxy?url=" + encodeURIComponent(url);
+    },
+  ];
+
+  function isLocalDevServer() {
+    var host = window.location.hostname;
+    return host === "localhost" || host === "127.0.0.1";
+  }
+
+  /**
+   * Workday + uOttawa block browser CORS; route through local /api or public proxies.
+   */
+  async function fetchWithCorsProxy(targetUrl, options) {
+    var opts = options || {};
+    var method = opts.method || "GET";
+
+    if (isLocalDevServer()) {
+      if (targetUrl === WORKDAY_JOBS_API || targetUrl.indexOf("/wday/cxs/") !== -1) {
+        var localJobs = await fetch("/api/uottawa/jobs", { method: "GET" });
+        if (localJobs.ok) return localJobs;
+      }
+      if (targetUrl === LIVE_DATA_URLS.events) {
+        var localEvents = await fetch("/api/uottawa/events", { method: "GET" });
+        if (localEvents.ok) return localEvents;
+      }
+    }
+
+    var i;
+    for (i = 0; i < CORS_PROXIES.length; i++) {
+      try {
+        var proxied = await fetch(CORS_PROXIES[i](targetUrl), {
+          method: method,
+          headers: opts.headers || {},
+          body: opts.body,
+        });
+        if (proxied.ok) return proxied;
+      } catch (proxyErr) {
+        /* try next proxy */
+      }
+    }
+
+    throw new Error("Could not reach uOttawa (CORS). Run: npm start");
+  }
+
   function getLiveTestMode(section) {
     if (typeof window === "undefined" || !window.location || !window.location.search) return null;
     return new URLSearchParams(window.location.search).get("live_" + section);
@@ -509,8 +561,56 @@
   function parseUOttawaEventsFromHtml(htmlString) {
     var parser = new DOMParser();
     var doc = parser.parseFromString(htmlString || "", "text/html");
+
+    var teasers = doc.querySelectorAll("article.article-teaser");
+    if (teasers.length) {
+      return Array.from(teasers)
+        .slice(0, 10)
+        .map(function (article) {
+          var titleEl = article.querySelector("h2.headline a, h2 a");
+          var dateEl = article.querySelector(".article-teaser__item-body-wordwrap strong");
+          var descEl = article.querySelector(".article-teaser__item-text");
+          var metaBlocks = article.querySelectorAll(".article-teaser__item-body-wordwrap.body");
+          var location = "uOttawa Campus";
+          metaBlocks.forEach(function (block) {
+            var text = block.textContent.trim();
+            if (/person|campus|hall|complex|room|online/i.test(text) && text.length < 120) {
+              location = text;
+            }
+          });
+
+          return {
+            title: (titleEl && titleEl.textContent.trim()) || "",
+            date: (dateEl && dateEl.textContent.trim().replace(/\s+/g, " ")) || "",
+            location: location,
+            description: (descEl && descEl.textContent.trim().slice(0, 120)) || "",
+            url: (titleEl && titleEl.href) || LIVE_DATA_URLS.events,
+          };
+        })
+        .filter(function (e) {
+          return e.title.length > 0;
+        });
+    }
+
     var eventItems = doc.querySelectorAll(".views-row, article.event, .event-item");
     if (eventItems.length === 0) {
+      eventItems = doc.querySelectorAll("h2.headline a, h2.headline--three-up-articles-item a");
+      if (eventItems.length) {
+        return Array.from(eventItems)
+          .slice(0, 10)
+          .map(function (link) {
+            return {
+              title: link.textContent.trim(),
+              date: "",
+              location: "uOttawa Campus",
+              description: "",
+              url: link.href || LIVE_DATA_URLS.events,
+            };
+          })
+          .filter(function (e) {
+            return e.title.length > 0;
+          });
+      }
       eventItems = doc.querySelectorAll("article");
     }
     if (eventItems.length === 0) return [];
@@ -609,14 +709,11 @@
         return;
       }
 
-      var res = await fetch(
-        "https://uottawa.wd3.myworkdayjobs.com/wday/cxs/uottawa/uOttawa_External_Career_Site/jobs",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ appliedFacets: {}, limit: 20, offset: 0, searchText: "" }),
-        }
-      );
+      var res = await fetchWithCorsProxy(WORKDAY_JOBS_API, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ appliedFacets: {}, limit: 20, offset: 0, searchText: "" }),
+      });
       if (!res.ok) throw new Error("Jobs request failed");
       var data = await res.json();
       var jobs = data.jobPostings || [];
@@ -668,14 +765,12 @@
         return;
       }
 
-      var proxyUrl = "https://api.allorigins.win/get?url=";
-      var targetUrl = encodeURIComponent(LIVE_DATA_URLS.events);
-      var res = await fetch(proxyUrl + targetUrl);
+      var res = await fetchWithCorsProxy(LIVE_DATA_URLS.events, { method: "GET" });
       if (!res.ok) throw new Error("Events request failed");
-      var data = await res.json();
-      if (!data || !data.contents) throw new Error("Events payload missing");
+      var html = await res.text();
+      if (!html || html.length < 500) throw new Error("Events payload missing");
 
-      var events = parseUOttawaEventsFromHtml(data.contents);
+      var events = parseUOttawaEventsFromHtml(html);
       if (!events.length) {
         restoreEventsFallback(container, "parse");
         return;
@@ -719,14 +814,12 @@
         return;
       }
 
-      var proxyUrl = "https://api.allorigins.win/get?url=";
-      var targetUrl = encodeURIComponent(LIVE_DATA_URLS.events);
-      var res = await fetch(proxyUrl + targetUrl);
+      var res = await fetchWithCorsProxy(LIVE_DATA_URLS.events, { method: "GET" });
       if (!res.ok) throw new Error("Home events request failed");
-      var data = await res.json();
-      if (!data || !data.contents) throw new Error("Home events payload missing");
+      var homeHtml = await res.text();
+      if (!homeHtml || homeHtml.length < 500) throw new Error("Home events payload missing");
 
-      var events = parseUOttawaEventsFromHtml(data.contents).slice(0, 3);
+      var events = parseUOttawaEventsFromHtml(homeHtml).slice(0, 3);
       if (!events.length) {
         restoreHomeEventsFallback("parse");
         return;
