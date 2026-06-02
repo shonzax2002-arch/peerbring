@@ -50,6 +50,10 @@
             <i data-lucide="briefcase"></i>
             <span class="nav-item__label">Jobs</span>
           </a>
+          <a href="events.html" class="nav-item">
+            <i data-lucide="calendar"></i>
+            <span class="nav-item__label">Events</span>
+          </a>
           <a href="tutors.html" class="nav-item">
             <i data-lucide="graduation-cap"></i>
             <span class="nav-item__label">Tutors</span>
@@ -191,17 +195,49 @@
                     <p class="campus-service-card__stat">5 new listings</p>
                     <a class="campus-service-card__link" href="roommates.html">Browse →</a>
                   </article>
+                  <article class="campus-service-card">
+                    <span class="campus-service-card__icon" aria-hidden="true">📅</span>
+                    <h3>Campus Events</h3>
+                    <p class="campus-service-card__stat">Live uOttawa calendar</p>
+                    <a class="campus-service-card__link" href="events.html">Browse →</a>
+                  </article>
                 </div>
               </section>
 
-              <!-- Upcoming events -->
-              <section style="margin-bottom: var(--space-8)">
+              <!-- Interactive campus calendar -->
+              <section class="home-calendar-section" aria-labelledby="calendar-heading">
                 <div class="section-header">
-                  <h2>Upcoming Events</h2>
+                  <h2 id="calendar-heading">Campus Calendar</h2>
                   <span class="live-badge">🟢 Live from uOttawa</span>
+                  <a href="events.html" class="home-calendar-section__link">All events →</a>
                 </div>
-                <div id="home-upcoming-events" class="home-events-list">
-                  <div class="loading-text">Loading events...</div>
+                <div class="home-calendar-layout card">
+                  <div class="calendar-widget">
+                    <div class="calendar-widget__toolbar">
+                      <button type="button" class="btn-ghost calendar-widget__nav" id="cal-prev" aria-label="Previous month">
+                        <i data-lucide="chevron-left"></i>
+                      </button>
+                      <h3 class="calendar-widget__month" id="cal-month-label">—</h3>
+                      <button type="button" class="btn-ghost calendar-widget__nav" id="cal-next" aria-label="Next month">
+                        <i data-lucide="chevron-right"></i>
+                      </button>
+                      <button type="button" class="btn-ghost calendar-widget__today" id="cal-today">Today</button>
+                    </div>
+                    <div class="calendar-widget__weekdays" aria-hidden="true">
+                      <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+                    </div>
+                    <div id="home-calendar-grid" class="calendar-widget__days" role="grid" aria-label="Campus events calendar"></div>
+                  </div>
+                  <div class="calendar-widget__aside">
+                    <h3 class="calendar-widget__aside-title" id="cal-selected-label">Select a day</h3>
+                    <div id="home-calendar-day-events" class="calendar-day-events">
+                      <p class="loading-text">Loading events…</p>
+                    </div>
+                    <h4 class="calendar-widget__list-heading">Coming up</h4>
+                    <div id="home-upcoming-events" class="home-events-list home-events-list--compact">
+                      <div class="loading-text">Loading events…</div>
+                    </div>
+                  </div>
                 </div>
                 <template id="home-events-fallback">
                   <div class="events-row">
@@ -348,6 +384,7 @@
       <a href="community.html"><i data-lucide="users"></i> Community</a>
       <a href="marketplace.html"><i data-lucide="shopping-bag"></i> Market</a>
       <a href="jobs.html"><i data-lucide="briefcase"></i> Jobs</a>
+      <a href="events.html"><i data-lucide="calendar"></i> Events</a>
       <a href="tutors.html"><i data-lucide="graduation-cap"></i> Tutors</a>
       <a href="roommates.html"><i data-lucide="home"></i> Rooms</a>
       <a href="hagglit.html"><i data-lucide="bot"></i> Hagglit</a>

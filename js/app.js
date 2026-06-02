@@ -1006,12 +1006,297 @@
     }
   }
 
-  async function loadHomeEvents() {
-    var container = document.getElementById("home-upcoming-events");
+  var MONTH_NAMES = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  var homeCalendarState = {
+    events: [],
+    viewYear: 0,
+    viewMonth: 0,
+    selected: null,
+  };
+
+  function cleanEventDateString(str) {
+    return (str || "")
+      .replace(/&nbsp;/g, " ")
+      .replace(/&mdash;/g, "—")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function monthIndexFromName(name) {
+    var i = MONTH_NAMES.findIndex(function (m) {
+      return m.toLowerCase() === (name || "").toLowerCase();
+    });
+    return i >= 0 ? i : 0;
+  }
+
+  function parseEventDateRange(dateStr) {
+    var clean = cleanEventDateString(dateStr);
+    var range = clean.match(
+      /([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{4})\s+to\s+([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{4})/
+    );
+    if (range) {
+      return {
+        start: new Date(parseInt(range[3], 10), monthIndexFromName(range[1]), parseInt(range[2], 10)),
+        end: new Date(parseInt(range[6], 10), monthIndexFromName(range[4]), parseInt(range[5], 10)),
+      };
+    }
+    var single = clean.match(/([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{4})/);
+    if (single) {
+      var d = new Date(parseInt(single[3], 10), monthIndexFromName(single[1]), parseInt(single[2], 10));
+      return { start: d, end: d };
+    }
+    return null;
+  }
+
+  function eventOccursOnDay(event, year, month, day) {
+    var range = parseEventDateRange(event.date);
+    if (!range) return false;
+    var check = new Date(year, month, day, 12, 0, 0, 0);
+    var start = new Date(range.start.getFullYear(), range.start.getMonth(), range.start.getDate());
+    var end = new Date(range.end.getFullYear(), range.end.getMonth(), range.end.getDate());
+    return check >= start && check <= end;
+  }
+
+  function eventsOnDay(year, month, day) {
+    return homeCalendarState.events.filter(function (ev) {
+      return eventOccursOnDay(ev, year, month, day);
+    });
+  }
+
+  function formatDayKey(year, month, day) {
+    return year + "-" + month + "-" + day;
+  }
+
+  function parseDayKey(key) {
+    var p = key.split("-");
+    return { year: parseInt(p[0], 10), month: parseInt(p[1], 10), day: parseInt(p[2], 10) };
+  }
+
+  function renderHomeUpcomingList(events, container) {
     if (!container) return;
+    var slice = (events || []).slice(0, 4);
+    if (!slice.length) {
+      restoreHomeEventsFallback("parse");
+      return;
+    }
+    container.innerHTML =
+      slice
+        .map(function (e) {
+          return (
+            '<div class="reminder-item">' +
+            '<div class="reminder-content">' +
+            '<span class="reminder-title">' +
+            escapeHtml(e.title) +
+            "</span>" +
+            '<span class="reminder-time">' +
+            escapeHtml(cleanEventDateString(e.date) || "Upcoming") +
+            "</span>" +
+            "</div>" +
+            '<a href="' +
+            escapeHtml(e.url) +
+            '" target="_blank" rel="noopener noreferrer" class="badge badge-event">View</a>' +
+            "</div>"
+          );
+        })
+        .join("") +
+      '<a href="events.html" class="see-all-link">See all campus events →</a>';
+  }
+
+  function renderCalendarDayDetail(year, month, day) {
+    var detail = document.getElementById("home-calendar-day-events");
+    var label = document.getElementById("cal-selected-label");
+    if (!detail) return;
+
+    var dayEvents = eventsOnDay(year, month, day);
+    var dateLabel = MONTH_NAMES[month] + " " + day + ", " + year;
+    if (label) label.textContent = dateLabel;
+
+    if (!dayEvents.length) {
+      detail.innerHTML =
+        '<p class="calendar-day-events__empty">No campus events on this day. <a href="' +
+        escapeHtml(LIVE_DATA_URLS.events) +
+        '" target="_blank" rel="noopener noreferrer">Browse uOttawa events</a></p>';
+      return;
+    }
+
+    detail.innerHTML = dayEvents
+      .map(function (ev) {
+        return (
+          '<article class="calendar-day-event">' +
+          '<h4>' +
+          escapeHtml(ev.title) +
+          "</h4>" +
+          '<p class="calendar-day-event__meta">' +
+          escapeHtml(cleanEventDateString(ev.date)) +
+          "</p>" +
+          (ev.location
+            ? '<p class="calendar-day-event__loc">' + escapeHtml(ev.location) + "</p>"
+            : "") +
+          '<a href="' +
+          escapeHtml(ev.url) +
+          '" target="_blank" rel="noopener noreferrer" class="btn-primary btn-primary--sm">View event</a>' +
+          "</article>"
+        );
+      })
+      .join("");
+  }
+
+  function renderHomeCalendar() {
+    var grid = document.getElementById("home-calendar-grid");
+    var monthLabel = document.getElementById("cal-month-label");
+    if (!grid) return;
+
+    var y = homeCalendarState.viewYear;
+    var m = homeCalendarState.viewMonth;
+    if (monthLabel) monthLabel.textContent = MONTH_NAMES[m] + " " + y;
+
+    var first = new Date(y, m, 1);
+    var startPad = first.getDay();
+    var daysInMonth = new Date(y, m + 1, 0).getDate();
+    var today = new Date();
+    var cells = [];
+    var i;
+
+    for (i = 0; i < startPad; i++) {
+      cells.push('<span class="calendar-day calendar-day--pad" aria-hidden="true"></span>');
+    }
+
+    for (i = 1; i <= daysInMonth; i++) {
+      var count = eventsOnDay(y, m, i).length;
+      var isToday =
+        today.getFullYear() === y && today.getMonth() === m && today.getDate() === i;
+      var key = formatDayKey(y, m, i);
+      var isSelected = homeCalendarState.selected === key;
+      var cls = "calendar-day";
+      if (isToday) cls += " calendar-day--today";
+      if (isSelected) cls += " calendar-day--selected";
+      if (count) cls += " calendar-day--has-events";
+
+      cells.push(
+        '<button type="button" class="' +
+          cls +
+          '" data-cal-day="' +
+          key +
+          '" aria-label="' +
+          MONTH_NAMES[m] +
+          " " +
+          i +
+          (count ? ", " + count + " events" : "") +
+          '">' +
+          "<span class=\"calendar-day__num\">" +
+          i +
+          "</span>" +
+          (count ? '<span class="calendar-day__dots" aria-hidden="true"></span>' : "") +
+          "</button>"
+      );
+    }
+
+    grid.innerHTML = cells.join("");
+
+    grid.querySelectorAll("[data-cal-day]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var key = btn.getAttribute("data-cal-day");
+        if (!key) return;
+        homeCalendarState.selected = key;
+        var parts = parseDayKey(key);
+        renderHomeCalendar();
+        renderCalendarDayDetail(parts.year, parts.month, parts.day);
+      });
+    });
+
+    if (homeCalendarState.selected) {
+      var sel = parseDayKey(homeCalendarState.selected);
+      if (sel.year === y && sel.month === m) {
+        renderCalendarDayDetail(sel.year, sel.month, sel.day);
+      }
+    }
+  }
+
+  function initHomeCalendar(events) {
+    var grid = document.getElementById("home-calendar-grid");
+    if (!grid) return;
+
+    homeCalendarState.events = events || [];
+    var now = new Date();
+    homeCalendarState.viewYear = now.getFullYear();
+    homeCalendarState.viewMonth = now.getMonth();
+    homeCalendarState.selected = formatDayKey(now.getFullYear(), now.getMonth(), now.getDate());
+
+    var prev = document.getElementById("cal-prev");
+    var next = document.getElementById("cal-next");
+    var todayBtn = document.getElementById("cal-today");
+
+    if (prev) {
+      prev.onclick = function () {
+        homeCalendarState.viewMonth -= 1;
+        if (homeCalendarState.viewMonth < 0) {
+          homeCalendarState.viewMonth = 11;
+          homeCalendarState.viewYear -= 1;
+        }
+        renderHomeCalendar();
+      };
+    }
+    if (next) {
+      next.onclick = function () {
+        homeCalendarState.viewMonth += 1;
+        if (homeCalendarState.viewMonth > 11) {
+          homeCalendarState.viewMonth = 0;
+          homeCalendarState.viewYear += 1;
+        }
+        renderHomeCalendar();
+      };
+    }
+    if (todayBtn) {
+      todayBtn.onclick = function () {
+        var t = new Date();
+        homeCalendarState.viewYear = t.getFullYear();
+        homeCalendarState.viewMonth = t.getMonth();
+        homeCalendarState.selected = formatDayKey(t.getFullYear(), t.getMonth(), t.getDate());
+        renderHomeCalendar();
+        renderCalendarDayDetail(t.getFullYear(), t.getMonth(), t.getDate());
+      };
+    }
+
+    renderHomeCalendar();
+    var sel = parseDayKey(homeCalendarState.selected);
+    renderCalendarDayDetail(sel.year, sel.month, sel.day);
+    initLucide();
+  }
+
+  async function fetchHomeEventsList() {
+    var cached = await fetchCachedEvents();
+    if (cached && cached.length) return cached;
+    try {
+      var payload = await fetchWithCorsProxy(LIVE_DATA_URLS.events, { method: "GET" }, "html");
+      return parseUOttawaEventsFromHtml(payload.text);
+    } catch (e) {
+      return [];
+    }
+  }
+
+  async function loadHomePageEvents() {
+    var listEl = document.getElementById("home-upcoming-events");
+    var calGrid = document.getElementById("home-calendar-grid");
+    var dayDetail = document.getElementById("home-calendar-day-events");
+    if (!listEl && !calGrid) return;
 
     var testMode = getLiveTestMode("home");
-    container.innerHTML = '<div class="loading-text">Loading events from uOttawa...</div>';
+    if (listEl) listEl.innerHTML = '<div class="loading-text">Loading events…</div>';
+    if (dayDetail) dayDetail.innerHTML = '<p class="loading-text">Loading events…</p>';
 
     if (testMode === "loading") return;
 
@@ -1019,61 +1304,40 @@
       if (testMode === "fail" || testMode === "empty" || testMode === "parse") {
         await delay(400);
         restoreHomeEventsFallback(testMode);
+        initHomeCalendar([]);
         return;
       }
       if (testMode === "success") {
         await delay(400);
-        container.innerHTML =
-          '<div class="reminder-item">' +
-          '<div class="reminder-content">' +
-          '<span class="reminder-title">Test — uOttawa Open House</span>' +
-          '<span class="reminder-time">Saturday, September 12</span>' +
-          "</div>" +
-          '<a href="' +
-          escapeHtml(LIVE_DATA_URLS.events) +
-          '" target="_blank" rel="noopener noreferrer" class="badge badge-event">View</a>' +
-          "</div>" +
-          '<a href="events.html" class="see-all-link">See all campus events →</a>';
+        var demo = [
+          {
+            title: "Test — uOttawa Open House",
+            date: "Saturday, September 12, 2026",
+            location: "uOttawa Campus",
+            url: LIVE_DATA_URLS.events,
+          },
+        ];
+        initHomeCalendar(demo);
+        if (listEl) renderHomeUpcomingList(demo, listEl);
         initLucide();
         return;
       }
 
-      var events = await fetchCachedEvents();
-      if (!events) {
-        var payload = await fetchWithCorsProxy(LIVE_DATA_URLS.events, { method: "GET" }, "html");
-        events = parseUOttawaEventsFromHtml(payload.text);
-      }
-      events = (events || []).slice(0, 3);
+      var events = await fetchHomeEventsList();
       if (!events.length) {
         restoreHomeEventsFallback("parse");
+        initHomeCalendar([]);
         return;
       }
 
-      container.innerHTML =
-        events
-          .map(function (e) {
-            return (
-              '<div class="reminder-item">' +
-              '<div class="reminder-content">' +
-              '<span class="reminder-title">' +
-              escapeHtml(e.title) +
-              "</span>" +
-              '<span class="reminder-time">' +
-              escapeHtml(e.date || "Upcoming") +
-              "</span>" +
-              "</div>" +
-              '<a href="' +
-              escapeHtml(e.url) +
-              '" target="_blank" rel="noopener noreferrer" class="badge badge-event">View</a>' +
-              "</div>"
-            );
-          })
-          .join("") +
-        '<a href="events.html" class="see-all-link">See all campus events →</a>';
-
+      initHomeCalendar(events);
+      if (listEl) renderHomeUpcomingList(events, listEl);
       initLucide();
     } catch (err) {
+      console.warn("[Peer Bring] Home events load failed:", err.message);
       restoreHomeEventsFallback("fail");
+      initHomeCalendar([]);
+      initLucide();
     }
   }
 
@@ -1696,8 +1960,8 @@
     if (document.getElementById("events-live-list")) {
       loadUOttawaEvents();
     }
-    if (document.getElementById("home-upcoming-events")) {
-      loadHomeEvents();
+    if (document.getElementById("home-calendar-grid") || document.getElementById("home-upcoming-events")) {
+      loadHomePageEvents();
     }
 
     setActiveNav();
