@@ -1882,6 +1882,10 @@ h4 {
   align-items: start;
 }
 
+.job-layout__main {
+  min-width: 0;
+}
+
 .jobs-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

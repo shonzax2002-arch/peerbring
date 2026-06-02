@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "start": "node server.mjs",
+    "build:data": "node scripts/build-live-data.mjs",
     "test:live": "node scripts/test-live-data.mjs"
   }
 }
