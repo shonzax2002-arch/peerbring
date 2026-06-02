@@ -77,6 +77,18 @@ function serveStatic(req, res) {
       return;
     }
     const ext = path.extname(filePath).toLowerCase();
+    if (ext === ".html") {
+      let html = data.toString("utf8");
+      if (!html.includes('name="peer-bring-server"')) {
+        html = html.replace(
+          "</head>",
+          '    <meta name="peer-bring-server" content="1" />\n  </head>'
+        );
+      }
+      res.writeHead(200, { "Content-Type": MIME[ext] });
+      res.end(html);
+      return;
+    }
     res.writeHead(200, { "Content-Type": MIME[ext] || "application/octet-stream" });
     res.end(data);
   });

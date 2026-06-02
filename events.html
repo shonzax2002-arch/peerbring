@@ -114,6 +114,11 @@
             </div>
           </header>
 
+          <p id="events-live-status" class="live-status live-status--loading" aria-live="polite">
+            Loading live uOttawa events…
+          </p>
+          <div id="events-live-list" class="events-grid events-grid--live"></div>
+
           <template id="events-fallback">
             <article class="card event-card">
               <h3>Campus Fair 🎪</h3>
@@ -134,8 +139,11 @@
               <button type="button" class="btn-primary">RSVP</button>
             </article>
           </template>
-          <div id="events-list" class="events-grid">
-            <!-- Seeded from #events-fallback, then replaced by live data -->
+          <div id="events-fallback-section" hidden>
+            <p class="live-fallback-label">Sample campus events (offline fallback)</p>
+            <div id="events-list" class="events-grid">
+              <!-- Seeded from #events-fallback when live fetch fails -->
+            </div>
           </div>
         </main>
       </div>

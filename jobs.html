@@ -174,6 +174,13 @@
               </div>
             </aside>
 
+            <p id="jobs-live-status" class="live-status live-status--loading" aria-live="polite">
+              Loading live uOttawa jobs…
+            </p>
+            <div id="jobs-live-grid" class="jobs-grid jobs-grid--live"></div>
+
+            <div id="jobs-fallback-section" hidden>
+            <p class="live-fallback-label">Campus listings (offline fallback)</p>
             <div id="jobs-grid" class="jobs-grid">
               <article class="card job-card" data-job-id="1">
                 <h3 style="font-size: 16px; margin: 0 0 6px">Library Assistant</h3>
@@ -344,6 +351,7 @@
                   <button type="button" class="save-btn" aria-label="Save job">♡</button>
                 </div>
               </article>
+            </div>
             </div>
           </div>
         </main>

@@ -356,26 +356,36 @@
     },
   ];
 
-  function isLocalDevServer() {
+  function hasPeerBringServer() {
+    if (document.querySelector('meta[name="peer-bring-server"]')) return true;
     var host = window.location.hostname;
-    return host === "localhost" || host === "127.0.0.1";
+    return (
+      window.location.port === "3000" &&
+      (host === "localhost" || host === "127.0.0.1")
+    );
   }
 
-  /**
-   * Workday + uOttawa block browser CORS; route through local /api or public proxies.
-   */
-  async function fetchWithCorsProxy(targetUrl, options) {
-    var opts = options || {};
-    var method = opts.method || "GET";
+  function isJobsTarget(url) {
+    return url === WORKDAY_JOBS_API || url.indexOf("/wday/cxs/") !== -1;
+  }
 
-    if (isLocalDevServer()) {
-      if (targetUrl === WORKDAY_JOBS_API || targetUrl.indexOf("/wday/cxs/") !== -1) {
-        var localJobs = await fetch("/api/uottawa/jobs", { method: "GET" });
-        if (localJobs.ok) return localJobs;
-      }
-      if (targetUrl === LIVE_DATA_URLS.events) {
-        var localEvents = await fetch("/api/uottawa/events", { method: "GET" });
-        if (localEvents.ok) return localEvents;
+  async function fetchWithCorsProxy(targetUrl, options, responseKind) {
+    var opts = options || {};
+    var kind = responseKind || (isJobsTarget(targetUrl) ? "json" : "html");
+    var method = opts.method || "GET";
+    var errors = [];
+
+    if (hasPeerBringServer()) {
+      try {
+        var apiPath = isJobsTarget(targetUrl) ? "/api/uottawa/jobs" : "/api/uottawa/events";
+        var localRes = await fetch(apiPath, { method: "GET", cache: "no-store" });
+        var localText = await localRes.text();
+        if (localRes.ok && validateProxyPayload(localText, kind)) {
+          return { ok: true, text: localText, source: "local" };
+        }
+        errors.push("local API returned invalid " + kind);
+      } catch (localErr) {
+        errors.push("local API: " + localErr.message);
       }
     }
 
@@ -386,14 +396,66 @@
           method: method,
           headers: opts.headers || {},
           body: opts.body,
+          cache: "no-store",
         });
-        if (proxied.ok) return proxied;
+        var proxiedText = await proxied.text();
+        if (proxied.ok && validateProxyPayload(proxiedText, kind)) {
+          return { ok: true, text: proxiedText, source: "proxy" };
+        }
+        errors.push("proxy " + (i + 1) + ": HTTP " + proxied.status);
       } catch (proxyErr) {
-        /* try next proxy */
+        errors.push("proxy " + (i + 1) + ": " + proxyErr.message);
       }
     }
 
-    throw new Error("Could not reach uOttawa (CORS). Run: npm start");
+    throw new Error(errors.join(" | "));
+  }
+
+  function validateProxyPayload(text, kind) {
+    if (!text || text.length < 20) return false;
+    if (kind === "json") {
+      if (text.trim().charAt(0) === "<") return false;
+      try {
+        JSON.parse(text);
+        return true;
+      } catch (parseErr) {
+        return false;
+      }
+    }
+    return text.indexOf("<") !== -1 && text.length > 500;
+  }
+
+  function setLiveStatus(el, state, message) {
+    if (!el) return;
+    el.className = "live-status live-status--" + state;
+    el.textContent = message;
+  }
+
+  function showFallbackSection(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (section) section.hidden = false;
+  }
+
+  function hideFallbackSection(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (section) section.hidden = true;
+  }
+
+  function initLiveDataFallbacks() {
+    var jobsGrid = document.getElementById("jobs-grid");
+    if (jobsGrid && jobsGrid.innerHTML.trim() && !jobsFallbackHtml) {
+      jobsFallbackHtml = jobsGrid.innerHTML;
+    }
+
+    var eventsTpl = document.getElementById("events-fallback");
+    if (eventsTpl && eventsTpl.innerHTML.trim()) {
+      eventsFallbackHtml = eventsTpl.innerHTML;
+    }
+
+    var eventsList = document.getElementById("events-list");
+    if (eventsList && !eventsList.innerHTML.trim() && eventsFallbackHtml) {
+      eventsList.innerHTML = eventsFallbackHtml;
+    }
   }
 
   function getLiveTestMode(section) {
@@ -676,29 +738,42 @@
   }
 
   async function loadUOttawaJobs() {
-    var container = document.getElementById("jobs-grid");
-    if (!container) return;
+    var liveGrid = document.getElementById("jobs-live-grid");
+    var statusEl = document.getElementById("jobs-live-status");
+    if (!liveGrid) return;
 
     ensureJobsFallback();
+    hideFallbackSection("jobs-fallback-section");
     var testMode = getLiveTestMode("jobs");
-    showGridSkeleton(container, 6);
+    showGridSkeleton(liveGrid, 6);
+    setLiveStatus(statusEl, "loading", "Loading live uOttawa jobs…");
 
     if (testMode === "loading") return;
 
     try {
       if (testMode === "fail") {
         await delay(500);
-        restoreJobsFallback(container, "fail");
+        liveGrid.innerHTML = buildLiveNotice("jobs", "fail");
+        showFallbackSection("jobs-fallback-section");
+        var failGrid = document.getElementById("jobs-grid");
+        if (failGrid && jobsFallbackHtml) failGrid.innerHTML = jobsFallbackHtml;
+        setLiveStatus(statusEl, "error", "Live jobs unavailable — showing campus listings below.");
+        initLucide();
         return;
       }
       if (testMode === "empty") {
         await delay(500);
-        restoreJobsFallback(container, "empty");
+        liveGrid.innerHTML = buildLiveNotice("jobs", "empty");
+        showFallbackSection("jobs-fallback-section");
+        var emptyGrid = document.getElementById("jobs-grid");
+        if (emptyGrid && jobsFallbackHtml) emptyGrid.innerHTML = jobsFallbackHtml;
+        setLiveStatus(statusEl, "error", "No live uOttawa postings at the moment.");
+        initLucide();
         return;
       }
       if (testMode === "success") {
         await delay(500);
-        renderLiveJobs(container, [
+        renderLiveJobs(liveGrid, [
           {
             title: "Test — Student Services Assistant",
             locationsText: "Ottawa, ON",
@@ -706,54 +781,84 @@
             externalPath: "/job/test",
           },
         ]);
+        setLiveStatus(statusEl, "success", "🟢 1 live job from uOttawa (test mode)");
         return;
       }
 
-      var res = await fetchWithCorsProxy(WORKDAY_JOBS_API, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({ appliedFacets: {}, limit: 20, offset: 0, searchText: "" }),
-      });
-      if (!res.ok) throw new Error("Jobs request failed");
-      var data = await res.json();
+      var payload = await fetchWithCorsProxy(
+        WORKDAY_JOBS_API,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({ appliedFacets: {}, limit: 20, offset: 0, searchText: "" }),
+        },
+        "json"
+      );
+      var data = JSON.parse(payload.text);
       var jobs = data.jobPostings || [];
 
       if (!jobs.length) {
-        restoreJobsFallback(container, "empty");
+        liveGrid.innerHTML = buildLiveNotice("jobs", "empty");
+        showFallbackSection("jobs-fallback-section");
+        var noJobsGrid = document.getElementById("jobs-grid");
+        if (noJobsGrid && jobsFallbackHtml) noJobsGrid.innerHTML = jobsFallbackHtml;
+        setLiveStatus(statusEl, "error", "No live uOttawa postings at the moment.");
+        initLucide();
         return;
       }
 
-      renderLiveJobs(container, jobs);
+      renderLiveJobs(liveGrid, jobs);
+      hideFallbackSection("jobs-fallback-section");
+      setLiveStatus(statusEl, "success", "🟢 " + jobs.length + " live jobs from uOttawa");
     } catch (err) {
-      restoreJobsFallback(container, "fail");
+      console.warn("[Peer Bring] Jobs load failed:", err.message);
+      liveGrid.innerHTML = buildLiveNotice("jobs", "fail");
+      showFallbackSection("jobs-fallback-section");
+      var fallbackGrid = document.getElementById("jobs-grid");
+      if (fallbackGrid && jobsFallbackHtml) fallbackGrid.innerHTML = jobsFallbackHtml;
+      setLiveStatus(
+        statusEl,
+        "error",
+        "Live jobs unavailable — use npm start or see campus listings below."
+      );
+      initLucide();
     }
   }
 
   async function loadUOttawaEvents() {
-    var container = document.getElementById("events-list");
-    if (!container) return;
+    var liveList = document.getElementById("events-live-list");
+    var statusEl = document.getElementById("events-live-status");
+    if (!liveList) return;
 
-    seedEventsList();
+    initLiveDataFallbacks();
     ensureEventsFallback();
+    hideFallbackSection("events-fallback-section");
     var testMode = getLiveTestMode("events");
-    showGridSkeleton(container, 4);
+    showGridSkeleton(liveList, 4);
+    setLiveStatus(statusEl, "loading", "Loading live uOttawa events…");
 
     if (testMode === "loading") return;
 
     try {
       if (testMode === "fail") {
         await delay(500);
-        restoreEventsFallback(container, "fail");
+        liveList.innerHTML = buildLiveNotice("events", "fail");
+        showFallbackSection("events-fallback-section");
+        setLiveStatus(statusEl, "error", "Live events unavailable — showing sample events below.");
+        initLucide();
         return;
       }
       if (testMode === "empty") {
         await delay(500);
-        restoreEventsFallback(container, "empty");
+        liveList.innerHTML = buildLiveNotice("events", "empty");
+        showFallbackSection("events-fallback-section");
+        setLiveStatus(statusEl, "error", "No live campus events found.");
+        initLucide();
         return;
       }
       if (testMode === "success") {
         await delay(500);
-        renderLiveEvents(container, [
+        renderLiveEvents(liveList, [
           {
             title: "Test — uOttawa Open House",
             date: "Saturday, September 12",
@@ -762,23 +867,30 @@
             url: LIVE_DATA_URLS.events,
           },
         ]);
+        setLiveStatus(statusEl, "success", "🟢 1 live event from uOttawa (test mode)");
         return;
       }
 
-      var res = await fetchWithCorsProxy(LIVE_DATA_URLS.events, { method: "GET" });
-      if (!res.ok) throw new Error("Events request failed");
-      var html = await res.text();
-      if (!html || html.length < 500) throw new Error("Events payload missing");
+      var payload = await fetchWithCorsProxy(LIVE_DATA_URLS.events, { method: "GET" }, "html");
+      var events = parseUOttawaEventsFromHtml(payload.text);
 
-      var events = parseUOttawaEventsFromHtml(html);
       if (!events.length) {
-        restoreEventsFallback(container, "parse");
+        liveList.innerHTML = buildLiveNotice("events", "parse");
+        showFallbackSection("events-fallback-section");
+        setLiveStatus(statusEl, "error", "Could not parse live events — showing sample events below.");
+        initLucide();
         return;
       }
 
-      renderLiveEvents(container, events);
+      renderLiveEvents(liveList, events);
+      hideFallbackSection("events-fallback-section");
+      setLiveStatus(statusEl, "success", "🟢 " + events.length + " live events from uOttawa");
     } catch (err) {
-      restoreEventsFallback(container, "fail");
+      console.warn("[Peer Bring] Events load failed:", err.message);
+      liveList.innerHTML = buildLiveNotice("events", "fail");
+      showFallbackSection("events-fallback-section");
+      setLiveStatus(statusEl, "error", "Live events unavailable — use npm start or see listings below.");
+      initLucide();
     }
   }
 
@@ -814,12 +926,8 @@
         return;
       }
 
-      var res = await fetchWithCorsProxy(LIVE_DATA_URLS.events, { method: "GET" });
-      if (!res.ok) throw new Error("Home events request failed");
-      var homeHtml = await res.text();
-      if (!homeHtml || homeHtml.length < 500) throw new Error("Home events payload missing");
-
-      var events = parseUOttawaEventsFromHtml(homeHtml).slice(0, 3);
+      var payload = await fetchWithCorsProxy(LIVE_DATA_URLS.events, { method: "GET" }, "html");
+      var events = parseUOttawaEventsFromHtml(payload.text).slice(0, 3);
       if (!events.length) {
         restoreHomeEventsFallback("parse");
         return;
@@ -1464,6 +1572,18 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
+    initLiveDataFallbacks();
+
+    if (document.getElementById("jobs-live-grid")) {
+      loadUOttawaJobs();
+    }
+    if (document.getElementById("events-live-list")) {
+      loadUOttawaEvents();
+    }
+    if (document.getElementById("home-upcoming-events")) {
+      loadHomeEvents();
+    }
+
     setActiveNav();
     initProfileTabs();
     initMessages();
@@ -1480,17 +1600,5 @@
     initRoommatesPage();
     initCompatibilityBars();
     initLucide();
-
-    seedEventsList();
-
-    if (document.getElementById("jobs-grid")) {
-      loadUOttawaJobs();
-    }
-    if (document.getElementById("events-list")) {
-      loadUOttawaEvents();
-    }
-    if (document.getElementById("home-upcoming-events")) {
-      loadHomeEvents();
-    }
   });
 })();
