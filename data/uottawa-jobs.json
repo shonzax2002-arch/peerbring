@@ -1,11 +1,155 @@
 {
-  "updatedAt": "2026-06-03T16:53:49.153Z",
+  "updatedAt": "2026-06-04T15:20:53.232Z",
   "jobPostings": [
+    {
+      "title": "SCFP - Assistanat de recherche - été / Automne 2026 - Isabelle Bourgeois - 130h",
+      "externalPath": "/job/Ottawa-ON/SCFP---Assistanat-de-recherche---t---Automne-2026---Isabelle-Bourgeois---130h_JR35857",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR35857"
+      ]
+    },
+    {
+      "title": "APTPUO - Fall 2026 - ECH2308 A00",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---ECH2308-A00_JR34207",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR34207"
+      ]
+    },
+    {
+      "title": "APTPUO-Winter 2027-BPS4504-A00",
+      "externalPath": "/job/Main-Campus/APTPUO-Winter-2027-BPS4504-A00_JR35854",
+      "locationsText": "Other",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR35854"
+      ]
+    },
+    {
+      "title": "Lead Officer, Administrative Support",
+      "externalPath": "/job/Ottawa-ON/Lead-Officer--Administrative-Support_JR35844",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR35844"
+      ]
+    },
+    {
+      "title": "Intermediate Liaison, Student Recruitment",
+      "externalPath": "/job/Ottawa-ON/Intermediate-Liaison--Student-Recruitment_JR35818",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR35818"
+      ]
+    },
+    {
+      "title": "Intermediate Specialist, Admissions",
+      "externalPath": "/job/Ottawa-ON/Intermediate-Specialist--Admissions_JR35769",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR35769"
+      ]
+    },
+    {
+      "title": "Junior Software Developer, Information Technology",
+      "externalPath": "/job/Ottawa-ON/Junior-Software-Developer--Information-Technology_JR35754",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR35754"
+      ]
+    },
+    {
+      "title": "Intermediate Specialist, Digital Communications and Change Management",
+      "externalPath": "/job/Ottawa-ON/Intermediate-Specialist--Digital-Communications-and-Change-Management_JR35783",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR35783"
+      ]
+    },
+    {
+      "title": "Archivist II, Digital Resources",
+      "externalPath": "/job/Ottawa-ON/Archivist-II--Digital-Resources_JR35813",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR35813"
+      ]
+    },
+    {
+      "title": "Intermediate Information Officer, Customer Services",
+      "externalPath": "/job/Ottawa-ON/Intermediate-Information-Officer--Customer-Services_JR35779",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR35779"
+      ]
+    },
+    {
+      "title": "Intermediate Officer, Academic Administration",
+      "externalPath": "/job/Ottawa-ON/Intermediate-Officer--Academic-Administration_JR35834",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR35834"
+      ]
+    },
+    {
+      "title": "Lead Officer, Campus Maintenance and Operation Planning",
+      "externalPath": "/job/Ottawa-ON/Lead-Officer--Campus-Maintenance-and-Operation-Planning_JR35814",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR35814"
+      ]
+    },
+    {
+      "title": "APTPUO - Automne 2026 - FEM5700",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Automne-2026---FEM5700_JR35850",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR35850"
+      ]
+    },
+    {
+      "title": "APEUO-Automne 2025-REA5703 Pratiques professionnelles en réadaptation (volet LAB Physiothérapie)",
+      "externalPath": "/job/Lees-Campus/APEUO-Automne-2025-REA5703-Pratiques-professionnelles-en-radaptation--volet-LAB-Physiothrapie-_JR35841",
+      "locationsText": "200 Lees - FHS",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR35841"
+      ]
+    },
+    {
+      "title": "APEUO-Automne 2025-REA5703 Pratiques professionnelles en réadaptation (volet LAB Physiothérapie)",
+      "externalPath": "/job/Lees-Campus/APEUO-Automne-2025-REA5703-Pratiques-professionnelles-en-radaptation--volet-LAB-Physiothrapie-_JR35832",
+      "locationsText": "200 Lees - FHS",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR35832"
+      ]
+    },
+    {
+      "title": "APEUO-Automne 2025-REA5703 Pratiques professionnelles en réadaptation (volet Physiothérapie)",
+      "externalPath": "/job/Lees-Campus/APEUO-Automne-2025-REA5703-Pratiques-professionnelles-en-radaptation--volet-Physiothrapie-_JR35829",
+      "locationsText": "200 Lees - FHS",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR35829"
+      ]
+    },
     {
       "title": "APTPUO - PSY7108 A00 - FALL 2026",
       "externalPath": "/job/Ottawa-ON/APTPUO---PSY7108-A00---FALL-2026_JR33731",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR33731"
       ]
@@ -14,7 +158,7 @@
       "title": "APTPUO - PSY3174 A00 - WINTER 2027",
       "externalPath": "/job/Ottawa-ON/APTPUO---PSY3174-A00---WINTER-2027_JR33189-1",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR33189"
       ]
@@ -23,7 +167,7 @@
       "title": "Research Assistant",
       "externalPath": "/job/Ottawa-ON/Research-Assistant_JR35816",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR35816"
       ]
@@ -32,153 +176,9 @@
       "title": "Repost - ATPUO - Fall 2026 - ADM3319B - Cross-cultural Management",
       "externalPath": "/job/Main-Campus/APTPUO---Fall-2026---ADM3319B---Cross-cultural-Management_JR34095",
       "locationsText": "Ottawa, ON",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR34095"
-      ]
-    },
-    {
-      "title": "APTPUO- Fall 2026- BIM 4920 B00",
-      "externalPath": "/job/Ottawa-ON/APTPUO--Fall-2026--BIM-4920-B00_JR35708",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR35708"
-      ]
-    },
-    {
-      "title": "APTPUO- Fall 2026- BIO1141, Section A00",
-      "externalPath": "/job/Ottawa-ON/APTPUO--Fall-2026--BIO1141--Section-A00_JR35722-1",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR35722"
-      ]
-    },
-    {
-      "title": "APTPUO- Fall 2026- BIO2529, Section A00",
-      "externalPath": "/job/Ottawa-ON/APTPUO--Fall-2026--BIO2529--Section-A00_JR35725",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR35725"
-      ]
-    },
-    {
-      "title": "APTPUO- Winter 2027- BIO2535, Section A00",
-      "externalPath": "/job/Ottawa-ON/APTPUO--Winter-2027--BIO2535--Section-A00_JR35729",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR35729"
-      ]
-    },
-    {
-      "title": "APTPUO- Winter 2027- BIO3515, Section A00",
-      "externalPath": "/job/Ottawa-ON/APTPUO--Winter-2027--BIO3515--Section-A00_JR35734",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR35734"
-      ]
-    },
-    {
-      "title": "APTPUO- Winter 2027- BIO3517, Section A00",
-      "externalPath": "/job/Ottawa-ON/APTPUO--Winter-2027--BIO3517--Section-A00_JR35740",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR35740"
-      ]
-    },
-    {
-      "title": "APTPUO- Winter 2027- SCI4910 A00",
-      "externalPath": "/job/Ottawa-ON/APTPUO--Winter-2027--SCI4910-A00_JR35764",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR35764"
-      ]
-    },
-    {
-      "title": "APEUO-ATPUO - Fall 2026 -NUT 5106 A",
-      "externalPath": "/job/Lees-Campus/APEUO-ATPUO---Fall-2026--NUT-5106-A_JR35812",
-      "locationsText": "200 Lees - FHS",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR35812"
-      ]
-    },
-    {
-      "title": "APEUO-ATPUO - Fall 2026 -NUT 5105 A",
-      "externalPath": "/job/Lees-Campus/APEUO-ATPUO---Fall-2026--NUT-5105-A_JR35811-1",
-      "locationsText": "200 Lees - FHS",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR35811"
-      ]
-    },
-    {
-      "title": "APEUO-ATPUO  -Automne 2026 - NUT4585 A",
-      "externalPath": "/job/Lees-Campus/APEUO-ATPUO---Automne-2026---NUT4585-A_JR35810",
-      "locationsText": "200 Lees - FHS",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR35810"
-      ]
-    },
-    {
-      "title": "APEUO-ATPUO -  Automne 2026 - NUT4583 A",
-      "externalPath": "/job/Lees-Campus/APEUO-ATPUO----Automne-2026---NUT4583-A_JR35809",
-      "locationsText": "200 Lees - FHS",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR35809"
-      ]
-    },
-    {
-      "title": "APEUO-ATPUO - Automne 2026 - NUT4507 A",
-      "externalPath": "/job/Lees-Campus/APEUO-ATPUO---Automne-2026---NUT4507-A_JR35808",
-      "locationsText": "200 Lees - FHS",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR35808"
-      ]
-    },
-    {
-      "title": "APEUO-ATPUO - Automne 2026 - NUT4502 A",
-      "externalPath": "/job/Lees-Campus/APEUO-ATPUO---Automne-2026---NUT4502-A_JR35807",
-      "locationsText": "200 Lees - FHS",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR35807"
-      ]
-    },
-    {
-      "title": "APEUO-ATPUO - Fall 2026 - NUT42441 A01 (LAB)",
-      "externalPath": "/job/Lees-Campus/APEUO-ATPUO---Fall-2026---NUT42441-A01--LAB-_JR35806",
-      "locationsText": "200 Lees - FHS",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR35806"
-      ]
-    },
-    {
-      "title": "APEUO-ATPUO - Fall 2026 - NUT4185 A",
-      "externalPath": "/job/Lees-Campus/APEUO-ATPUO---Fall-2026---NUT4185-A_JR35805",
-      "locationsText": "200 Lees - FHS",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR35805"
-      ]
-    },
-    {
-      "title": "APEUO-ATPUO - Fall 2026 - NUT4183 A",
-      "externalPath": "/job/Lees-Campus/APEUO-ATPUO---Fall-2026---NUT4183-A_JR35804-1",
-      "locationsText": "200 Lees - FHS",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR35804"
       ]
     }
   ]
