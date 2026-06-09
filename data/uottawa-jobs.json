@@ -1,11 +1,56 @@
 {
-  "updatedAt": "2026-06-08T15:57:32.985Z",
+  "updatedAt": "2026-06-09T14:56:41.566Z",
   "jobPostings": [
+    {
+      "title": "Assistant de recherche / Research Assistant",
+      "externalPath": "/job/Lees-Campus/Assistant-de-recherche---Research-Assistant_JR36059",
+      "locationsText": "200 Lees - FHS",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36059"
+      ]
+    },
+    {
+      "title": "Assistant de recherche / Research Assistant",
+      "externalPath": "/job/Lees-Campus/Assistant-de-recherche---Research-Assistant_JR36045",
+      "locationsText": "200 Lees - FHS",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36045"
+      ]
+    },
+    {
+      "title": "APTPUO Winter 2027- MIA5150 D- (ONLINE)",
+      "externalPath": "/job/Ottawa-ON/APTPUO-Winter-2027--MIA5150-D---ONLINE-_JR36033",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36033"
+      ]
+    },
+    {
+      "title": "APTPUO Winter 2027- MIA5150 A- (ONLINE)",
+      "externalPath": "/job/Ottawa-ON/APTPUO-Winter-2027--MIA5150-A---ONLINE-_JR36024",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36024"
+      ]
+    },
+    {
+      "title": "APTPUO - 2026/2027 - GEG6000/60001/60002-A00",
+      "externalPath": "/job/Ottawa-ON/APTPUO---2026-2027---GEG6000-60001-60002-A00_JR36023",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36023"
+      ]
+    },
     {
       "title": "APTPUO - Winter 2027 - CRM3728 A00 (REPOST)",
       "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2026---CRM3728-A00_JR33461",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR33461"
       ]
@@ -14,7 +59,7 @@
       "title": "APTPUO - Winter 2027 - CRM2710 A00 (REPOST)",
       "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2026---CRM2710-A00_JR33457-1",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR33457"
       ]
@@ -23,7 +68,7 @@
       "title": "APTPUO - Fall 2026 - CRM4330 B00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---CRM4330-B00_JR35271",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR35271"
       ]
@@ -32,7 +77,7 @@
       "title": "Lead Officer, Administrative Support",
       "externalPath": "/job/Ottawa-ON/Lead-Officer--Administrative-Support_JR35918",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR35918"
       ]
@@ -41,7 +86,7 @@
       "title": "Lead Officer, Administrative Support",
       "externalPath": "/job/Ottawa-ON/Lead-Officer--Administrative-Support_JR35830",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR35830"
       ]
@@ -50,7 +95,7 @@
       "title": "APTPUO-Winter 2027-BPS4102-A00",
       "externalPath": "/job/Ottawa-ON/APTPUO-Winter-2027-BPS4102-A00_JR35964",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR35964"
       ]
@@ -59,7 +104,7 @@
       "title": "APTPUO - winter 2027 - ART2191A - Special Topics: Self Publishing and Artists’ Printed Matter",
       "externalPath": "/job/Ottawa-ON/APTPUO---winter-2027---ART2191A---Special-Topics--Self-Publishing-and-Artists--Printed-Matter_JR34986",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR34986"
       ]
@@ -68,7 +113,7 @@
       "title": "Director, Research Contracts and Agreements",
       "externalPath": "/job/Ottawa-ON/Director--Research-Contracts-and-Agreements_JR35826",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR35826"
       ]
@@ -77,7 +122,7 @@
       "title": "Lead Coordinator, Event Management",
       "externalPath": "/job/725-Parkdale---TOH-Civic/Lead-Coordinator--Event-Management_JR30490",
       "locationsText": "Roger Guindon Hall",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR30490"
       ]
@@ -86,7 +131,7 @@
       "title": "Senior Officer, Academic Administration",
       "externalPath": "/job/Ottawa-ON/Senior-Officer--Academic-Administration_JR35853",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR35853"
       ]
@@ -95,7 +140,7 @@
       "title": "Senior Officer, Academic Administration",
       "externalPath": "/job/Ottawa-ON/Senior-Officer--Academic-Administration_JR35884",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR35884"
       ]
@@ -104,7 +149,7 @@
       "title": "APTPUO - Automne 2026 - LTA/NLT",
       "externalPath": "/job/Ottawa-ON/APTPUO---Automne-2026---LTA-NLT_JR35926",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 3 Days Ago",
+      "postedOn": "Posted 4 Days Ago",
       "bulletFields": [
         "JR35926"
       ]
@@ -113,7 +158,7 @@
       "title": "APTPUO -Winter 2027 - ART3191A - Special Topics in Contemporary Art Practice - Art, Science and Wellness",
       "externalPath": "/job/Ottawa-ON/APTPUO--Winter-2027---ART3191A---Special-Topics-in-Contemporary-Art-Practice---Art--Science-and-Wellness_JR34985",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 3 Days Ago",
+      "postedOn": "Posted 4 Days Ago",
       "bulletFields": [
         "JR34985"
       ]
@@ -122,7 +167,7 @@
       "title": "APTPUO - Hiver 2027 - ART4518A/ART5518A - Thèmes choisis en art contemporain - Voyage mental et mémoire",
       "externalPath": "/job/Ottawa-ON/APTPUO---Hiver-2027---ART4518A-ART5518A---Thmes-choisis-en-art-contemporain---Voyage-mental-et-mmoire_JR34984",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 3 Days Ago",
+      "postedOn": "Posted 4 Days Ago",
       "bulletFields": [
         "JR34984"
       ]
@@ -131,54 +176,9 @@
       "title": "APTPUO - Automne 2026 - ART4515/5515- Thèmes choisis en histoire de l'art: L’art et identité",
       "externalPath": "/job/Ottawa-ON/APTPUO---Automne-2026---ART4515-5515--Thmes-choisis-en-histoire-de-l-art--L-art-et-identit_JR34983",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 3 Days Ago",
+      "postedOn": "Posted 4 Days Ago",
       "bulletFields": [
         "JR34983"
-      ]
-    },
-    {
-      "title": "APTPUO - Fall 2026 - ART4118A/ART5118 A- Special Topics in Contemporary Arts -Harlem & The Renaissance",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---ART4118A-ART5118-A--Special-Topics-in-Contemporary-Arts--Harlem---The-Renaissance_JR34982",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted 3 Days Ago",
-      "bulletFields": [
-        "JR34982"
-      ]
-    },
-    {
-      "title": "APTPUO - Winter 2027 - ART4115A/ART5115 - Special topics in art history: What is research in art today?",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---ART4115A-ART5115---Special-topics-in-art-history--What-is-research-in-art-today-_JR34621",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted 3 Days Ago",
-      "bulletFields": [
-        "JR34621"
-      ]
-    },
-    {
-      "title": "APTPUO - Aut./fall 2026 - ART4955A - Séminaire de recherche / Research seminar",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Aut-fall-2026---ART4955A---Sminaire-de-recherche---Research-seminar_JR34749-1",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted 3 Days Ago",
-      "bulletFields": [
-        "JR34749"
-      ]
-    },
-    {
-      "title": "APTPUO -  TRA 5965 A - Translation as a professional activity in Canada - Fall 2026",
-      "externalPath": "/job/Ottawa-ON/APTPUO----TRA-5965-A---Translation-as-a-professional-activity-in-Canada---Fall-2026_JR35944",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted 3 Days Ago",
-      "bulletFields": [
-        "JR35944"
-      ]
-    },
-    {
-      "title": "APTPUO - Automne 2026 - PED3545 T100 - ÉDUC. AU CYCLE PRÉPARATOIRE",
-      "externalPath": "/job/Toronto/APTPUO---Automne-2026---PED3545-T100---DUC-AU-CYCLE-PRPARATOIRE_JR35943",
-      "locationsText": "Other",
-      "postedOn": "Posted 3 Days Ago",
-      "bulletFields": [
-        "JR35943"
       ]
     }
   ]
