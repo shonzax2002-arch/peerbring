@@ -1,11 +1,146 @@
 {
-  "updatedAt": "2026-06-17T15:38:26.198Z",
+  "updatedAt": "2026-06-18T15:30:40.194Z",
   "jobPostings": [
+    {
+      "title": "Lead Coordinator, Event Management",
+      "externalPath": "/job/Ottawa-ON/Lead-Coordinator--Event-Management_JR36502",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR36502"
+      ]
+    },
+    {
+      "title": "Lead Officer, Purchasing",
+      "externalPath": "/job/Ottawa-ON/Lead-Officer--Purchasing_JR36539",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR36539"
+      ]
+    },
+    {
+      "title": "CUPE - Summer 2026 - Corrector - MBA5720",
+      "externalPath": "/job/Ottawa-ON/CUPE---Summer-2026---Corrector---MBA5720_JR36548",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR36548"
+      ]
+    },
+    {
+      "title": "ATPUO - Fall 2026 - ADM4312A - Management in the New Economy",
+      "externalPath": "/job/Main-Campus/ATPUO---Fall-2026---ADM4312A---Management-in-the-New-Economy_JR36544",
+      "locationsText": "Ottawa, ON",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR36544"
+      ]
+    },
+    {
+      "title": "Intermediate Administrative Assistant",
+      "externalPath": "/job/Lees-Campus/Intermediate-Administrative-Assistant_JR36501",
+      "locationsText": "Ottawa, ON",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR36501"
+      ]
+    },
+    {
+      "title": "Senior Officer, Human Resources Operations",
+      "externalPath": "/job/Ottawa-ON/Senior-Officer--Human-Resources-Operations_JR36513",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR36513"
+      ]
+    },
+    {
+      "title": "Administrative Assistant",
+      "externalPath": "/job/Ottawa-ON/Administrative-Assistant_JR36507",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR36507"
+      ]
+    },
+    {
+      "title": "Lead Advisor, Human Rights Office",
+      "externalPath": "/job/Ottawa-ON/Conseillre-responsable-ou-conseiller-responsable--Bureau-des-droits-de-la-personne_JR36503",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR36503"
+      ]
+    },
+    {
+      "title": "Intermediate Specialist, Academic Advising",
+      "externalPath": "/job/Ottawa-ON/Intermediate-Specialist--Academic-Advising_JR36464",
+      "locationsText": "Roger Guindon Hall",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR36464"
+      ]
+    },
+    {
+      "title": "Intermediate Specialist, Academic Delivery Support",
+      "externalPath": "/job/Ottawa-ON/Intermediate-Specialist--Academic-Delivery-Support_JR36391",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR36391"
+      ]
+    },
+    {
+      "title": "Lead Coordinator, Internship Placements",
+      "externalPath": "/job/Ottawa-ON/Lead-Coordinator--Internship-Placements_JR36493",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR36493"
+      ]
+    },
+    {
+      "title": "Senior Coordinator, Competency Assessment",
+      "externalPath": "/job/Ottawa-ON/Senior-Coordinator--Competency-Assessment_JR36498",
+      "locationsText": "Roger Guindon Hall",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR36498"
+      ]
+    },
+    {
+      "title": "Supervisor, Academic Administration",
+      "externalPath": "/job/Ottawa-ON/Supervisor--Academic-Administration_JR36480",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR36480"
+      ]
+    },
+    {
+      "title": "APTPUO-Fall 2026-EMP6362",
+      "externalPath": "/job/Ottawa-ON/APTPUO-Fall-2026-EMP6362_JR36511",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36511"
+      ]
+    },
+    {
+      "title": "Tenure-Track Position in Landscape Evolution (EES)",
+      "externalPath": "/job/Ottawa-ON/Tenure-Track-Position-in-Landscape-Evolution--EES-_JR36249",
+      "locationsText": "STEM",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36249"
+      ]
+    },
     {
       "title": "CUPE - Fall 2026 - PSY Intro Course Assistant",
       "externalPath": "/job/Ottawa-ON/CUPE---Fall-2026---PSY-Intro-Course-Assistant_JR35822",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR35822"
       ]
@@ -14,7 +149,7 @@
       "title": "CUPE - Fall 2026 - TA (Mentor)",
       "externalPath": "/job/Ottawa-ON/CUPE---Fall-2026---TA--Mentor-_JR35823",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR35823"
       ]
@@ -23,7 +158,7 @@
       "title": "CUPE - PSY1101 B00 - Fall 2026",
       "externalPath": "/job/Ottawa-ON/CUPE---PSY1101-B00---Fall-2026_JR36129",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR36129"
       ]
@@ -32,7 +167,7 @@
       "title": "CUPE - PSY1101 C00 - Fall 2026",
       "externalPath": "/job/Ottawa-ON/CUPE---PSY1101-C00---Fall-2026_JR36130",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR36130"
       ]
@@ -41,144 +176,9 @@
       "title": "CUPE - PSY1101 D00 - Fall 2026",
       "externalPath": "/job/Ottawa-ON/CUPE---PSY1101-D00---Fall-2026_JR36131",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR36131"
-      ]
-    },
-    {
-      "title": "CUPE - PSY1101 E00 - Fall 2026",
-      "externalPath": "/job/Ottawa-ON/CUPE---PSY1101-E00---Fall-2026_JR36132",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36132"
-      ]
-    },
-    {
-      "title": "CUPE - PSY1101 F00 - Fall 2026",
-      "externalPath": "/job/Ottawa-ON/CUPE---PSY1101-F00---Fall-2026_JR36134",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36134"
-      ]
-    },
-    {
-      "title": "CUPE - PSY1101 G00 - Winter 2027",
-      "externalPath": "/job/Ottawa-ON/CUPE---PSY1101-G00---Winter-2027_JR36335",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36335"
-      ]
-    },
-    {
-      "title": "CUPE - PSY1101 H00 - Winter 2027",
-      "externalPath": "/job/Ottawa-ON/CUPE---PSY1101-H00---Winter-2027_JR36336",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36336"
-      ]
-    },
-    {
-      "title": "CUPE - PSY1102 B00 - Fall 2026",
-      "externalPath": "/job/Ottawa-ON/CUPE---PSY1102-B00---Fall-2026_JR36135-1",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36135"
-      ]
-    },
-    {
-      "title": "CUPE - PSY1102 C00 - Fall 2026",
-      "externalPath": "/job/Ottawa-ON/CUPE---PSY1102-C00---Fall-2026_JR36136",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36136"
-      ]
-    },
-    {
-      "title": "CUPE - PSY1102 D00 - Winter 2027",
-      "externalPath": "/job/Ottawa-ON/CUPE---PSY1102-D00---Winter-2027_JR36338",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36338"
-      ]
-    },
-    {
-      "title": "CUPE - PSY1102 E00 - Winter 2027",
-      "externalPath": "/job/Ottawa-ON/CUPE---PSY1102-E00---Winter-2027_JR36339",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36339"
-      ]
-    },
-    {
-      "title": "CUPE - PSY1102 F00 - Winter 2027",
-      "externalPath": "/job/Ottawa-ON/CUPE---PSY1102-F00---Winter-2027_JR36341",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36341"
-      ]
-    },
-    {
-      "title": "CUPE - PSY1102 G00 - Winter 2027",
-      "externalPath": "/job/Ottawa-ON/CUPE---PSY1102-G00---Winter-2027_JR36342",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36342"
-      ]
-    },
-    {
-      "title": "CUPE - PSY1501 B00 - Automne 2026",
-      "externalPath": "/job/Ottawa-ON/CUPE---PSY1501-B00---Automne-2026_JR36137-1",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36137"
-      ]
-    },
-    {
-      "title": "CUPE - PSY1501 C00 - Automne 2026",
-      "externalPath": "/job/Ottawa-ON/CUPE---PSY1501-C00---Automne-2026_JR36138",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36138"
-      ]
-    },
-    {
-      "title": "CUPE - PSY1501 D00 - Hiver 2027",
-      "externalPath": "/job/Ottawa-ON/CUPE---PSY1501-D00---Hiver-2027_JR36343",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36343"
-      ]
-    },
-    {
-      "title": "CUPE - PSY1501 E00 - Hiver 2027",
-      "externalPath": "/job/Ottawa-ON/CUPE---PSY1501-E00---Hiver-2027_JR36344",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36344"
-      ]
-    },
-    {
-      "title": "CUPE - PSY1502 B00 - Automne 2026",
-      "externalPath": "/job/Ottawa-ON/CUPE---PSY1502-B00---Automne-2026_JR36139-1",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36139"
       ]
     }
   ]
