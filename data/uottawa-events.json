@@ -1,27 +1,6 @@
 {
-  "updatedAt": "2026-06-21T14:16:00.443Z",
+  "updatedAt": "2026-06-22T17:01:11.768Z",
   "events": [
-    {
-      "title": "Iron Inferno",
-      "date": "May 4, 2026 to Jun 21, 2026 &nbsp; &mdash; &nbsp;9 a.m. to 10 a.m.",
-      "location": "In person, Minto Sports Complex (MNO), Multipurpose room",
-      "description": "Get ready to start a whole new take on fitness with Iron Inferno, an exhilarating class that will push you to your limit. This 40-t",
-      "url": "https://www.uottawa.ca/campus-life/events-all/iron-inferno-4"
-    },
-    {
-      "title": "Power Surge",
-      "date": "May 4, 2026 to Jun 21, 2026 &nbsp; &mdash; &nbsp;9 a.m. to 9:45 a.m.",
-      "location": "In person, Minto Sports Complex (MNO), Multipurpose Room",
-      "description": "Welcome to our Power Surge class, where the only constant is the intensity! No two classes are ever the same – we keep things fresh",
-      "url": "https://www.uottawa.ca/campus-life/events-all/power-surge-4"
-    },
-    {
-      "title": "Zumba",
-      "date": "May 4, 2026 to Jun 21, 2026 &nbsp; &mdash; &nbsp;11 a.m. to 12 p.m.",
-      "location": "In person, Minto Sports Complex (MNO), Multipurpose Room",
-      "description": "Welcome to the rhythm-packed extravaganza that is our Zumba class! Get ready to dance, sweat and unleash your inner star as we emba",
-      "url": "https://www.uottawa.ca/campus-life/events-all/zumba-3"
-    },
     {
       "title": "Outdoor Abs, Butt and Thighs",
       "date": "May 4, 2026 to Aug 22, 2026 &nbsp; &mdash; &nbsp;12:10 p.m. to 12:50 p.m.",
@@ -58,18 +37,39 @@
       "url": "https://www.uottawa.ca/campus-life/events-all/outdoor-zumba"
     },
     {
-      "title": "Ride and Burn",
-      "date": "May 4, 2026 to Jun 21, 2026 &nbsp; &mdash; &nbsp;4 p.m. to 5 p.m.",
-      "location": "In person, Minto Sports Complex (MNO), Multipurpose Room",
-      "description": "Get ready to pedal your way to fitness in our exhilarating Indoor Cycling — Ride and Burn class!",
-      "url": "https://www.uottawa.ca/campus-life/events-all/ride-burn-4"
+      "title": "Let’s talk immigration (sessions in English)",
+      "date": "May 6, 2026 to Aug 26, 2026 &nbsp; &mdash; &nbsp;10 a.m. to 3:30 p.m.",
+      "location": "uOttawa Campus",
+      "description": "Weekly virtual Q&amp;A sessions to answer your immigration-related questions on Wednesdays&nbsp;from 10 a.m. to 11:30 a.m. or from",
+      "url": "https://www.uottawa.ca/campus-life/events-all/lets-talk-immigration"
     },
     {
-      "title": "Rolling to recovery",
-      "date": "May 4, 2026 to Jun 21, 2026 &nbsp; &mdash; &nbsp;4 p.m. to 5 p.m.",
+      "title": "Career Corner Drop-in Session (in-person)",
+      "date": "May 12, 2026 to Aug 31, 2026 &nbsp; &mdash; &nbsp;1 p.m. to 3 p.m.",
+      "location": "In person, University Centre (UCU), room 216, Career Corner",
+      "description": "Meet with a one of our Career Specialists to ask questions about career essentials.",
+      "url": "https://www.uottawa.ca/campus-life/events-all/career-corner-drop-session-person"
+    },
+    {
+      "title": "Virtual Career Corner Drop-in Session",
+      "date": "May 12, 2026 to Aug 31, 2026 &nbsp; &mdash; &nbsp;1 p.m. to 3 p.m.",
+      "location": "uOttawa Campus",
+      "description": "Meet with a one of our Career Specialists to ask questions about career essentials.",
+      "url": "https://www.uottawa.ca/campus-life/events-all/virtual-career-corner-drop-session"
+    },
+    {
+      "title": "Virtual Career Corner Drop-in Session - Thursday",
+      "date": "May 12, 2026 to Aug 28, 2026 &nbsp; &mdash; &nbsp;1 p.m. to 2 p.m.",
+      "location": "uOttawa Campus",
+      "description": "Meet with a one of our Career Specialists to ask questions about career essentials.",
+      "url": "https://www.uottawa.ca/campus-life/events-all/virtual-career-corner-drop-session-thursday"
+    },
+    {
+      "title": "Pilates",
+      "date": "Jun 22, 2026 to Aug 22, 2026 &nbsp; &mdash; &nbsp;11 a.m. to 12 p.m.",
       "location": "In person, Minto Sports Complex (MNO), Multipurpose room",
-      "description": "Experience the benefits of self-massage and myofascial release in our Rolling Out and Myofascial Release Techniques class. This cla",
-      "url": "https://www.uottawa.ca/campus-life/events-all/rolling-recovery-2"
+      "description": "This full-body Pilates mat class blends classic movements with modern variations to build strength, mobility and endurance.",
+      "url": "https://www.uottawa.ca/campus-life/events-all/pilates-4"
     }
   ]
 }
