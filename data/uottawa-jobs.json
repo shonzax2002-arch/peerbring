@@ -1,11 +1,173 @@
 {
-  "updatedAt": "2026-06-25T14:37:08.391Z",
+  "updatedAt": "2026-06-26T14:29:05.960Z",
   "jobPostings": [
+    {
+      "title": "APTPUO - Winter 2027 - CLA/SRS3333-A00",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---CLA-SRS3333-A00_JR37027",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37027"
+      ]
+    },
+    {
+      "title": "APTPUO - Fall 2026 - API5116 D00",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---API5116-D00_JR36973",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36973"
+      ]
+    },
+    {
+      "title": "Research Assistant",
+      "externalPath": "/job/Ottawa-ON/Research-Assistant_JR36967",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36967"
+      ]
+    },
+    {
+      "title": "APTPUO - Fall 2026 - API5105 D00",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---API5105-D00_JR36954",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36954"
+      ]
+    },
+    {
+      "title": "APTPUO-Hiver 2027-DCL-5501-Méthodologie de la recherche juridique",
+      "externalPath": "/job/Ottawa-ON/APTPUO-Hiver-2027-DCL-5501-Mthodologie-de-la-recherche-juridique_JR36938",
+      "locationsText": "Fauteux Hall",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36938"
+      ]
+    },
+    {
+      "title": "APTPUO - Hiver 2027 - CML1508 A00 - Droit des biens",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Hiver-2027---CML1508-A00---Droit-des-biens_JR36930-1",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36930"
+      ]
+    },
+    {
+      "title": "APTPUO - Automne 2026 - CML3503 A00 - Droit municipal",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Automne-2026---CML3503-A00---Droit-municipal_JR36926",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36926"
+      ]
+    },
+    {
+      "title": "APTPUO-2027 Winter-ELG3575A",
+      "externalPath": "/job/Ottawa-ON/APTPUO-2027-Winter-ELG3575A_JR36914",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36914"
+      ]
+    },
+    {
+      "title": "APTPUO Part Time Professor 2026 Fall ELG4176A",
+      "externalPath": "/job/Ottawa-ON/APTPUO-Part-Time-Professor-2026-Fall-ELG4176A_JR36911",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36911"
+      ]
+    },
+    {
+      "title": "APTPUO Part-Time Professor 2026 Fall SEG4105A",
+      "externalPath": "/job/Ottawa-ON/APTPUO-Part-Time-Professor-2026-Fall-SEG4105A_JR36917",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36917"
+      ]
+    },
+    {
+      "title": "APTPUO-2026 Fall ELG3106",
+      "externalPath": "/job/Ottawa-ON/APTPUO-2026-Fall-ELG3106_JR36909-1",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36909"
+      ]
+    },
+    {
+      "title": "Senior Officer, Academic Administration",
+      "externalPath": "/job/Ottawa-ON/Senior-Officer--Academic-Administration_JR36842",
+      "locationsText": "Simard Hall",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36842"
+      ]
+    },
+    {
+      "title": "APTPUO - Winter 2027 - CML4347 N00 - Property",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---CML4347-N00---Property_JR36919",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36919"
+      ]
+    },
+    {
+      "title": "Intermediate Administrative Assistant",
+      "externalPath": "/job/Ottawa-ON/Intermediate-Administrative-Assistant_JR36779",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36779"
+      ]
+    },
+    {
+      "title": "Electrotechnician",
+      "externalPath": "/job/Ottawa-ON/Electrotechnician_JR36877",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36877"
+      ]
+    },
+    {
+      "title": "APTPUO - Fall 2026 - CML3303 A00 - The Law of Evidence",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---CML3303-A00---The-Law-of-Evidence_JR36901",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36901"
+      ]
+    },
+    {
+      "title": "Manager, Animal Care Operations",
+      "externalPath": "/job/Ottawa-ON/Manager--Animal-Care-Operations_JR35516-1",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR35516"
+      ]
+    },
+    {
+      "title": "Director, Office of the President",
+      "externalPath": "/job/Ottawa-ON/Director--Office-of-the-President_JR36855",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR36855"
+      ]
+    },
     {
       "title": "APTPUO-Automne 2026-DCL-5535-Enjeux contemporains du droit",
       "externalPath": "/job/Ottawa-ON/APTPUO-Automne-2026-DCL-5535-Enjeux-contemporains-du-droit_JR36879",
       "locationsText": "Fauteux Hall",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR36879"
       ]
@@ -14,171 +176,9 @@
       "title": "APTPUO-Automne 2026-DCL-5511-Apprentissage appliqué : Séminaire d'exposé juridique",
       "externalPath": "/job/Ottawa-ON/APTPUO-Automne-2026-DCL-5511-Apprentissage-appliqu---Sminaire-d-expos-juridique_JR36878",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR36878"
-      ]
-    },
-    {
-      "title": "APTPUO - Automne 2025 - CML1707 A00 - Vérité, réconciliation et peuples autochtones",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Automne-2025---CML1707-A00---Vrit--rconciliation-et-peuples-autochtones_JR36872",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36872"
-      ]
-    },
-    {
-      "title": "APTPUO - Hiver 2027 - CML2713 M00 - Droit constitutionnel II",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Hiver-2027---CML2713-M00---Droit-constitutionnel-II_JR36876",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36876"
-      ]
-    },
-    {
-      "title": "Intermediate Software Developer, Information Technology",
-      "externalPath": "/job/Ottawa-ON/Intermediate-Software-Developer--Information-Technology_JR36825",
-      "locationsText": "Roger Guindon Hall",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36825"
-      ]
-    },
-    {
-      "title": "APTPUO - Hiver 2027 - CML3776 M00 - Responsabilité professionnelle",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Hiver-2027---CML3776-M00---Responsabilit-professionnelle_JR36875",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36875"
-      ]
-    },
-    {
-      "title": "APTPUO - Automne 2025 - CML1707 B00 - Vérité, réconciliation et peuples autochtones",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Automne-2025---CML1707-B00---Vrit--rconciliation-et-peuples-autochtones_JR36874",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36874"
-      ]
-    },
-    {
-      "title": "APTPUO - Winter 2027 - THE2123A - Script Study",
-      "externalPath": "/job/Main-Campus/APTPUO---Winter-2027---THE2123A---Script-Study_JR36873",
-      "locationsText": "Other",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36873"
-      ]
-    },
-    {
-      "title": "APTPUO - Automne 2026 - THE2505A - Les Arts vivants: tendances actuelles",
-      "externalPath": "/job/Main-Campus/APTPUO---Automne-2026---THE2505A---Les-Arts-vivants--tendances-actuelles_JR36871",
-      "locationsText": "Ottawa, ON",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36871"
-      ]
-    },
-    {
-      "title": "APTPUO - Automne 2026 - THE 2590A - Éclairages",
-      "externalPath": "/job/Main-Campus/APTPUO---Automne-2026---THE-2590A---clairages_JR34456",
-      "locationsText": "Other",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR34456"
-      ]
-    },
-    {
-      "title": "Senior Analyst, Application Support",
-      "externalPath": "/job/Ottawa-ON/Senior-Analyst--Application-Support_JR36819",
-      "locationsText": "Roger Guindon Hall",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36819"
-      ]
-    },
-    {
-      "title": "Senior Technologist, Laboratory Support",
-      "externalPath": "/job/Ottawa-ON/Senior-Technologist--Laboratory-Support_JR36751",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36751"
-      ]
-    },
-    {
-      "title": "Intermediate Analyst, IT Quality Assurance",
-      "externalPath": "/job/Ottawa-ON/Intermediate-Analyst--IT-Quality-Assurance_JR36734",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36734"
-      ]
-    },
-    {
-      "title": "APTPUO - Automne 2026 - POL4776 - A00",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Automne-2026---POL4776---A00_JR36870",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR36870"
-      ]
-    },
-    {
-      "title": "APTPUO - Automne 2026 - POL3502 - A00",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Automne-2026---POL3502---A00_JR36869",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR36869"
-      ]
-    },
-    {
-      "title": "APTPUO - Fall 2026 - POL3124 - A00",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---POL3124---A00_JR36867",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR36867"
-      ]
-    },
-    {
-      "title": "Tier 2 Canada Research Chair in Applied AI Innovation in Public Health",
-      "externalPath": "/job/Ottawa-ON/Tier-2-Canada-Research-Chair-in-Application-AI-Innovation-in-Public-Health_JR33417",
-      "locationsText": "Roger Guindon Hall",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR33417"
-      ]
-    },
-    {
-      "title": "CUPE-Automne 2026- TA-HSS6513A - EISS (25h)",
-      "externalPath": "/job/Lees-Campus/CUPE-Automne-2026--TA-HSS6513A---EISS--25h-_JR36845",
-      "locationsText": "Ottawa, ON",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR36845"
-      ]
-    },
-    {
-      "title": "CUPE-Automne 2026- TA-HSS6504A - EISS (25h)",
-      "externalPath": "/job/Lees-Campus/CUPE-Automne-2026--TA-HSS6504A---EISS--25h-_JR36835",
-      "locationsText": "Ottawa, ON",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR36835"
-      ]
-    },
-    {
-      "title": "CUPE - Spring/Summer 2026 - Researche Assistant - A.Levesque",
-      "externalPath": "/job/Ottawa-ON/CUPE---Spring-Summer-2026---Researche-Assistant---ALevesque_JR36817",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR36817"
       ]
     }
   ]
