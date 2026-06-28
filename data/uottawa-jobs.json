@@ -1,11 +1,155 @@
 {
-  "updatedAt": "2026-06-26T14:29:05.960Z",
+  "updatedAt": "2026-06-28T13:51:05.395Z",
   "jobPostings": [
+    {
+      "title": "Lead Advisor, Human Rights Office",
+      "externalPath": "/job/Ottawa-ON/Conseillre-responsable-ou-conseiller-responsable--Bureau-des-droits-de-la-personne_JR36503",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted 2 Days Ago",
+      "bulletFields": [
+        "JR36503"
+      ]
+    },
+    {
+      "title": "Legal Counsel",
+      "externalPath": "/job/Ottawa-ON/Conseillre-juridique--conseiller-juridique_JR36586",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted 2 Days Ago",
+      "bulletFields": [
+        "JR36586"
+      ]
+    },
+    {
+      "title": "Legal Counsel",
+      "externalPath": "/job/Ottawa-ON/Conseillre-juridique--conseiller-juridique_JR36557-1",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted 2 Days Ago",
+      "bulletFields": [
+        "JR36557"
+      ]
+    },
+    {
+      "title": "Legal Counsel",
+      "externalPath": "/job/Ottawa-ON/Conseillre-juridique--conseiller-juridique_JR36506",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted 2 Days Ago",
+      "bulletFields": [
+        "JR36506"
+      ]
+    },
+    {
+      "title": "APEUO - Automne 2026 - ERG5714  Principes généraux du processus de pratique ergothérapique (Examen pratique)",
+      "externalPath": "/job/Lees-Campus/APEUO---Automne-2026---ERG5714--Principes-gnraux-du-processus-de-pratique-ergothrapique--Examen-pratique-_JR37097",
+      "locationsText": "200 Lees - FHS",
+      "postedOn": "Posted 2 Days Ago",
+      "bulletFields": [
+        "JR37097"
+      ]
+    },
+    {
+      "title": "APEUO - Automne 2026 - ERG5714 Principes généraux du processus de pratique ergothérapique (Lab Aide technique et Fauteuil Roulant)",
+      "externalPath": "/job/Lees-Campus/APEUO---Automne-2026---ERG5714-Principes-gnraux-du-processus-de-pratique-ergothrapique--Lab-Aide-technique-et-Fauteuil-Roulant-_JR37083",
+      "locationsText": "200 Lees - FHS",
+      "postedOn": "Posted 2 Days Ago",
+      "bulletFields": [
+        "JR37083"
+      ]
+    },
+    {
+      "title": "APEUO - Automne 2026 - ERG5714 Principes généraux du processus de pratique ergothérapique (Lab Aide technique et fauteuil roulant)",
+      "externalPath": "/job/Lees-Campus/APEUO---Automne-2026---ERG5714-Principes-gnraux-du-processus-de-pratique-ergothrapique--Lab-Aide-technique-et-fauteuil-roulant-_JR37086",
+      "locationsText": "200 Lees - FHS",
+      "postedOn": "Posted 2 Days Ago",
+      "bulletFields": [
+        "JR37086"
+      ]
+    },
+    {
+      "title": "APEUO - Automne 2026 - ERG 5714 Principes généraux du processus de pratique ergothérapique (Lab Entrevue initiale et MCRO)",
+      "externalPath": "/job/Lees-Campus/APEUO---Automne-2026---ERG-5714-Principes-gnraux-du-processus-de-pratique-ergothrapique--Lab-Entrevue-initiale-et-MCRO-_JR37080",
+      "locationsText": "200 Lees - FHS",
+      "postedOn": "Posted 2 Days Ago",
+      "bulletFields": [
+        "JR37080"
+      ]
+    },
+    {
+      "title": "APTPUO Part Time Professor 2026 Fall-ITI1120D",
+      "externalPath": "/job/Ottawa-ON/APTPUO-Part-Time-Professor-2026-Fall-ITI1120D_JR34358",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted 2 Days Ago",
+      "bulletFields": [
+        "JR34358"
+      ]
+    },
+    {
+      "title": "CUPE-Été/Summer 2026 -Correcteur/Corrector-SEG Rapports Coop Reports",
+      "externalPath": "/job/Ottawa-ON/CUPE-t-Summer-2026--Correcteur-Corrector-SEG-Rapports-Coop-Reports_JR37067",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted 2 Days Ago",
+      "bulletFields": [
+        "JR37067"
+      ]
+    },
+    {
+      "title": "APTPUO - Fall 2026 - ENG1100 EF00",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---ENG1100-EF00_JR32820",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted 2 Days Ago",
+      "bulletFields": [
+        "JR32820"
+      ]
+    },
+    {
+      "title": "APTPUO - Fall 2026 - ENG1100 EE00",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---ENG1100-EE00_JR32819",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted 2 Days Ago",
+      "bulletFields": [
+        "JR32819"
+      ]
+    },
+    {
+      "title": "APTPUO - Fall 2026 - ENG1100 CD00",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---ENG1100-CD00_JR32655-1",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted 2 Days Ago",
+      "bulletFields": [
+        "JR32655"
+      ]
+    },
+    {
+      "title": "APTPUO - Fall 2026 - ENG1100 BB00",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---ENG1100-BB00_JR32608",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted 2 Days Ago",
+      "bulletFields": [
+        "JR32608"
+      ]
+    },
+    {
+      "title": "APTPUO - Fall 2026 - ENG1100 AH00",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---ENG1100-AH00_JR32570",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted 2 Days Ago",
+      "bulletFields": [
+        "JR32570"
+      ]
+    },
+    {
+      "title": "APTPUO - Fall 2026 - ENG1100 AB00",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---ENG1100-AB00_JR32558",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted 2 Days Ago",
+      "bulletFields": [
+        "JR32558"
+      ]
+    },
     {
       "title": "APTPUO - Winter 2027 - CLA/SRS3333-A00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---CLA-SRS3333-A00_JR37027",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted 2 Days Ago",
       "bulletFields": [
         "JR37027"
       ]
@@ -14,7 +158,7 @@
       "title": "APTPUO - Fall 2026 - API5116 D00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---API5116-D00_JR36973",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR36973"
       ]
@@ -23,7 +167,7 @@
       "title": "Research Assistant",
       "externalPath": "/job/Ottawa-ON/Research-Assistant_JR36967",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR36967"
       ]
@@ -32,153 +176,9 @@
       "title": "APTPUO - Fall 2026 - API5105 D00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---API5105-D00_JR36954",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR36954"
-      ]
-    },
-    {
-      "title": "APTPUO-Hiver 2027-DCL-5501-Méthodologie de la recherche juridique",
-      "externalPath": "/job/Ottawa-ON/APTPUO-Hiver-2027-DCL-5501-Mthodologie-de-la-recherche-juridique_JR36938",
-      "locationsText": "Fauteux Hall",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR36938"
-      ]
-    },
-    {
-      "title": "APTPUO - Hiver 2027 - CML1508 A00 - Droit des biens",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Hiver-2027---CML1508-A00---Droit-des-biens_JR36930-1",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR36930"
-      ]
-    },
-    {
-      "title": "APTPUO - Automne 2026 - CML3503 A00 - Droit municipal",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Automne-2026---CML3503-A00---Droit-municipal_JR36926",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR36926"
-      ]
-    },
-    {
-      "title": "APTPUO-2027 Winter-ELG3575A",
-      "externalPath": "/job/Ottawa-ON/APTPUO-2027-Winter-ELG3575A_JR36914",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR36914"
-      ]
-    },
-    {
-      "title": "APTPUO Part Time Professor 2026 Fall ELG4176A",
-      "externalPath": "/job/Ottawa-ON/APTPUO-Part-Time-Professor-2026-Fall-ELG4176A_JR36911",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR36911"
-      ]
-    },
-    {
-      "title": "APTPUO Part-Time Professor 2026 Fall SEG4105A",
-      "externalPath": "/job/Ottawa-ON/APTPUO-Part-Time-Professor-2026-Fall-SEG4105A_JR36917",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR36917"
-      ]
-    },
-    {
-      "title": "APTPUO-2026 Fall ELG3106",
-      "externalPath": "/job/Ottawa-ON/APTPUO-2026-Fall-ELG3106_JR36909-1",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR36909"
-      ]
-    },
-    {
-      "title": "Senior Officer, Academic Administration",
-      "externalPath": "/job/Ottawa-ON/Senior-Officer--Academic-Administration_JR36842",
-      "locationsText": "Simard Hall",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR36842"
-      ]
-    },
-    {
-      "title": "APTPUO - Winter 2027 - CML4347 N00 - Property",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---CML4347-N00---Property_JR36919",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR36919"
-      ]
-    },
-    {
-      "title": "Intermediate Administrative Assistant",
-      "externalPath": "/job/Ottawa-ON/Intermediate-Administrative-Assistant_JR36779",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR36779"
-      ]
-    },
-    {
-      "title": "Electrotechnician",
-      "externalPath": "/job/Ottawa-ON/Electrotechnician_JR36877",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR36877"
-      ]
-    },
-    {
-      "title": "APTPUO - Fall 2026 - CML3303 A00 - The Law of Evidence",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---CML3303-A00---The-Law-of-Evidence_JR36901",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR36901"
-      ]
-    },
-    {
-      "title": "Manager, Animal Care Operations",
-      "externalPath": "/job/Ottawa-ON/Manager--Animal-Care-Operations_JR35516-1",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR35516"
-      ]
-    },
-    {
-      "title": "Director, Office of the President",
-      "externalPath": "/job/Ottawa-ON/Director--Office-of-the-President_JR36855",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR36855"
-      ]
-    },
-    {
-      "title": "APTPUO-Automne 2026-DCL-5535-Enjeux contemporains du droit",
-      "externalPath": "/job/Ottawa-ON/APTPUO-Automne-2026-DCL-5535-Enjeux-contemporains-du-droit_JR36879",
-      "locationsText": "Fauteux Hall",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR36879"
-      ]
-    },
-    {
-      "title": "APTPUO-Automne 2026-DCL-5511-Apprentissage appliqué : Séminaire d'exposé juridique",
-      "externalPath": "/job/Ottawa-ON/APTPUO-Automne-2026-DCL-5511-Apprentissage-appliqu---Sminaire-d-expos-juridique_JR36878",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR36878"
       ]
     }
   ]
