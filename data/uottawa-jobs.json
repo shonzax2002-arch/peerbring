@@ -1,11 +1,119 @@
 {
-  "updatedAt": "2026-07-10T14:31:11.707Z",
+  "updatedAt": "2026-07-11T13:23:33.796Z",
   "jobPostings": [
+    {
+      "title": "APTPUO-PT--Fall 2026- HSS2102B",
+      "externalPath": "/job/Lees-Campus/APTPUO-PT--Fall-2026--HSS2102B_JR37695",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37695"
+      ]
+    },
+    {
+      "title": "CUPE - Assistant d'enseignement - Teaching assistant ENV4910 - Automne - Fall 2026",
+      "externalPath": "/job/Ottawa-ON/CUPE---Assistant-d-enseignement---Teaching-assistant-ENV4910---Automne---Fall-2026_JR37693",
+      "locationsText": "Province of Quebec",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37693"
+      ]
+    },
+    {
+      "title": "CUPE - Assistant d'enseignement - Teaching assistant GEG4921-A00 Fall 2026",
+      "externalPath": "/job/Ottawa-ON/CUPE---Assistant-d-enseignement---Teaching-assistant-GEG4921-A00-Fall-2026_JR37692",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37692"
+      ]
+    },
+    {
+      "title": "APEUO-ATPUO - Fall 2026 - NUT5122 A",
+      "externalPath": "/job/Lees-Campus/APEUO-ATPUO---Fall-2026---NUT5122-A_JR37691",
+      "locationsText": "200 Lees - FHS",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37691"
+      ]
+    },
+    {
+      "title": "CUPE - Assistant d'enseignement - Teaching assistant GEG4920  - Fall 2026",
+      "externalPath": "/job/Ottawa-ON/CUPE---Assistant-d-enseignement---Teaching-assistant-GEG4920----Fall-2026_JR37689",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37689"
+      ]
+    },
+    {
+      "title": "APEUO - Automne 2026 - ERG5528 Aspects sociopolitiques de la participation occupationnelle",
+      "externalPath": "/job/Lees-Campus/APEUO---Automne-2026---ERG5528-Aspects-sociopolitiques-de-la-participation-occupationnelle_JR37686",
+      "locationsText": "200 Lees - FHS",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37686"
+      ]
+    },
+    {
+      "title": "Research Assistant",
+      "externalPath": "/job/Ottawa-ON/Research-Assistant_JR37685",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37685"
+      ]
+    },
+    {
+      "title": "APTEUO - Automne 2026 - ERG5525 Exploration de la participation occupationnelle (volet fonction cognitive)",
+      "externalPath": "/job/Lees-Campus/APTEUO---Automne-2026---ERG5525-Exploration-de-la-participation-occupationnelle--volet-fonction-cognitive-_JR37684",
+      "locationsText": "200 Lees - FHS",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37684"
+      ]
+    },
+    {
+      "title": "APTPUO - Automne 2026- ERG5512- Anatomie et éléments du mouvement pour la participation occupationnelle",
+      "externalPath": "/job/Lees-Campus/APTPUO---Automne-2026--ERG5512--Anatomie-et-lments-du-mouvement-pour-la-participation-occupationnelle_JR37679",
+      "locationsText": "200 Lees - FHS",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37679"
+      ]
+    },
+    {
+      "title": "APTPUO - Automne 2026- ERG5512- Anatomie et éléments du mouvement pour la participation occupationnelle",
+      "externalPath": "/job/Lees-Campus/APTPUO---Automne-2026--ERG5512--Anatomie-et-lments-du-mouvement-pour-la-participation-occupationnelle_JR37680",
+      "locationsText": "200 Lees - FHS",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37680"
+      ]
+    },
+    {
+      "title": "CUPE-été 2026-Assistanat de recherche/Research assistant-Lili Dao",
+      "externalPath": "/job/Ottawa-ON/CUPE-t-2026-Assistanat-de-recherche-Research-assistant-Lili-Dao_JR37682",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37682"
+      ]
+    },
+    {
+      "title": "APEUO - Automne 2026 - ERG5512 Anatomie et éléments du mouvement pour la participation occupationnelle (volet système nerveux)",
+      "externalPath": "/job/Lees-Campus/APEUO---Automne-2026---ERG5512-Anatomie-et-lments-du-mouvement-pour-la-participation-occupationnelle--volet-systme-nerveux-_JR37681",
+      "locationsText": "200 Lees - FHS",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37681"
+      ]
+    },
     {
       "title": "Research Assistant",
       "externalPath": "/job/Ottawa-ON/Research-Assistant_JR37677",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR37677"
       ]
@@ -14,7 +122,7 @@
       "title": "APTPUO - Winter 2027 - POL1101 - D00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---POL1101---D00_JR37678",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR37678"
       ]
@@ -23,7 +131,7 @@
       "title": "CUPE-F2026- BIO3137-TA LAB DEM 130h",
       "externalPath": "/job/Ottawa-ON/CUPE-F2026--BIO3137-TA-LAB-DEM-130h_JR37676",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR37676"
       ]
@@ -32,7 +140,7 @@
       "title": "APTPUO_Automne-2026_MAT1720 D00",
       "externalPath": "/job/Ottawa-ON/APTPUO-Automne-2026-MAT1720-D00_JR33064",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR33064"
       ]
@@ -41,7 +149,7 @@
       "title": "APTPUO_Automne-2026_MAT1730 B00",
       "externalPath": "/job/Ottawa-ON/APTPUO-Automne-2026-MAT1730-B00_JR33033",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR33033"
       ]
@@ -50,7 +158,7 @@
       "title": "APTPUO_Automne-2026_MAT1739 A00",
       "externalPath": "/job/Ottawa-ON/APTPUO-Automne-2026-MAT1739-A00_JR33034",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR33034"
       ]
@@ -59,7 +167,7 @@
       "title": "APTPUO_Automne-2026_MAT1741 C00",
       "externalPath": "/job/Ottawa-ON/APTPUO-Automne-2026-MAT1741-C00_JR33065",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR33065"
       ]
@@ -68,117 +176,9 @@
       "title": "APTPUO_Automne-2026_MAT1762 A00",
       "externalPath": "/job/Ottawa-ON/APTPUO-Automne-2026-MAT1762-A00_JR33066",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR33066"
-      ]
-    },
-    {
-      "title": "APTPUO_Fall-2026_MAT1318 A00",
-      "externalPath": "/job/Ottawa-ON/APTPUO-Fall-2026-MAT1318-A00_JR33057",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR33057"
-      ]
-    },
-    {
-      "title": "APTPUO_Fall-2026_MAT1320 A00",
-      "externalPath": "/job/Ottawa-ON/APTPUO-Fall-2026-MAT1320-A00_JR33058-1",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR33058"
-      ]
-    },
-    {
-      "title": "APTPUO_Fall-2026_MAT1320 B00",
-      "externalPath": "/job/Ottawa-ON/APTPUO-Fall-2026-MAT1320-B00_JR33059",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR33059"
-      ]
-    },
-    {
-      "title": "APTPUO_Fall-2026_MAT1320 C00",
-      "externalPath": "/job/Ottawa-ON/APTPUO-Fall-2026-MAT1320-C00_JR33060",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR33060"
-      ]
-    },
-    {
-      "title": "APTPUO_Fall-2026_MAT1320 E00",
-      "externalPath": "/job/Ottawa-ON/APTPUO-Fall-2026-MAT1320-E00_JR33030",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR33030"
-      ]
-    },
-    {
-      "title": "APTPUO_Fall-2026_MAT1330 A00",
-      "externalPath": "/job/Ottawa-ON/APTPUO-Fall-2026-MAT1330-A00_JR33031",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR33031"
-      ]
-    },
-    {
-      "title": "APTPUO_Fall-2026_MAT1330 C00",
-      "externalPath": "/job/Ottawa-ON/APTPUO-Fall-2026-MAT1330-C00_JR33032",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR33032"
-      ]
-    },
-    {
-      "title": "APTPUO_Fall-2026_MAT1332 A00",
-      "externalPath": "/job/Ottawa-ON/APTPUO-Fall-2026-MAT1332-A00_JR36491",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR36491"
-      ]
-    },
-    {
-      "title": "APTPUO_Fall-2026_MAT1341 B00",
-      "externalPath": "/job/Ottawa-ON/APTPUO-Fall-2026-MAT1341-B00_JR33061-1",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR33061"
-      ]
-    },
-    {
-      "title": "APTPUO_Automne-2026_MAT1718 A00",
-      "externalPath": "/job/Ottawa-ON/APTPUO-Fall-2026-MAT1718-A00_JR33063",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR33063"
-      ]
-    },
-    {
-      "title": "APTPUO_Fall-2026_STA2391 C00",
-      "externalPath": "/job/Ottawa-ON/APTPUO-Fall-2026-STA2391-C00_JR33067",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR33067"
-      ]
-    },
-    {
-      "title": "APTPUO_Fall-2026_STA2392 B00",
-      "externalPath": "/job/Ottawa-ON/APTPUO-Fall-2026-STA2392-B00_JR33036",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR33036"
       ]
     }
   ]
