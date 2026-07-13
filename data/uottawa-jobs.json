@@ -1,11 +1,83 @@
 {
-  "updatedAt": "2026-07-12T13:23:53.205Z",
+  "updatedAt": "2026-07-13T14:38:20.317Z",
   "jobPostings": [
+    {
+      "title": "APTPUO-PT-aut 2026-HSS1500-OH00",
+      "externalPath": "/job/Lees-Campus/APTPUO-PT-aut-2026-HSS1500-OH00_JR37705",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37705"
+      ]
+    },
+    {
+      "title": "TA - GEG/ENV2918 A00 Introduction to Field Research - Fall 2026",
+      "externalPath": "/job/Ottawa-ON/TA---GEG-ENV2918-A00-Introduction-to-Field-Research---Fall-2026_JR37703",
+      "locationsText": "Province of Quebec",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37703"
+      ]
+    },
+    {
+      "title": "APEUO-Automne 2026-ERG6741-Intervention de l'ergothérapeute auprès des enfants",
+      "externalPath": "/job/Ottawa-ON/APEUO-Automne-2026-ERG6741-Intervention-de-l-ergothrapeute-auprs-des-enfants_JR37702",
+      "locationsText": "Lees Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37702"
+      ]
+    },
+    {
+      "title": "APTPUO - Fall 2026 - EDU 5271 - C00 - Counselling and Psychotherapy: Theories and Practices I",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---EDU-5271---C00---Counselling-and-Psychotherapy--Theories-and-Practices-I_JR37698",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37698"
+      ]
+    },
+    {
+      "title": "Senior Technologist, Laboratory Support",
+      "externalPath": "/job/Ottawa-ON/Senior-Technologist--Laboratory-Support_JR36751",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR36751"
+      ]
+    },
+    {
+      "title": "CUPE - Fall 2026 - TA - FSS1150 A00",
+      "externalPath": "/job/Ottawa-ON/CUPE---Fall-2026---TA---FSS1150-A00_JR37696",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37696"
+      ]
+    },
+    {
+      "title": "Intermediate Technician, Audiovisual and Educational Technologies",
+      "externalPath": "/job/Ottawa-ON/Intermediate-Technician--Audiovisual-and-Educational-Technologies_JR37668",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37668"
+      ]
+    },
+    {
+      "title": "SCFP - Automne 2026 - AE - FSS1550 A00",
+      "externalPath": "/job/Ottawa-ON/SCFP---Automne-2026---AE---FSS1550-A00_JR37697",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37697"
+      ]
+    },
     {
       "title": "APTPUO-PT--Fall 2026- HSS2102B",
       "externalPath": "/job/Lees-Campus/APTPUO-PT--Fall-2026--HSS2102B_JR37695",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR37695"
       ]
@@ -14,7 +86,7 @@
       "title": "CUPE - Assistant d'enseignement - Teaching assistant ENV4910 - Automne - Fall 2026",
       "externalPath": "/job/Ottawa-ON/CUPE---Assistant-d-enseignement---Teaching-assistant-ENV4910---Automne---Fall-2026_JR37693",
       "locationsText": "Province of Quebec",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR37693"
       ]
@@ -23,7 +95,7 @@
       "title": "CUPE - Assistant d'enseignement - Teaching assistant GEG4921-A00 Fall 2026",
       "externalPath": "/job/Ottawa-ON/CUPE---Assistant-d-enseignement---Teaching-assistant-GEG4921-A00-Fall-2026_JR37692",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR37692"
       ]
@@ -32,7 +104,7 @@
       "title": "APEUO-ATPUO - Fall 2026 - NUT5122 A",
       "externalPath": "/job/Lees-Campus/APEUO-ATPUO---Fall-2026---NUT5122-A_JR37691",
       "locationsText": "200 Lees - FHS",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR37691"
       ]
@@ -41,7 +113,7 @@
       "title": "CUPE - Assistant d'enseignement - Teaching assistant GEG4920  - Fall 2026",
       "externalPath": "/job/Ottawa-ON/CUPE---Assistant-d-enseignement---Teaching-assistant-GEG4920----Fall-2026_JR37689",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR37689"
       ]
@@ -50,7 +122,7 @@
       "title": "APEUO - Automne 2026 - ERG5528 Aspects sociopolitiques de la participation occupationnelle",
       "externalPath": "/job/Lees-Campus/APEUO---Automne-2026---ERG5528-Aspects-sociopolitiques-de-la-participation-occupationnelle_JR37686",
       "locationsText": "200 Lees - FHS",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR37686"
       ]
@@ -59,7 +131,7 @@
       "title": "Research Assistant",
       "externalPath": "/job/Ottawa-ON/Research-Assistant_JR37685",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR37685"
       ]
@@ -68,7 +140,7 @@
       "title": "APTEUO - Automne 2026 - ERG5525 Exploration de la participation occupationnelle (volet fonction cognitive)",
       "externalPath": "/job/Lees-Campus/APTEUO---Automne-2026---ERG5525-Exploration-de-la-participation-occupationnelle--volet-fonction-cognitive-_JR37684",
       "locationsText": "200 Lees - FHS",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR37684"
       ]
@@ -77,7 +149,7 @@
       "title": "APTPUO - Automne 2026- ERG5512- Anatomie et éléments du mouvement pour la participation occupationnelle",
       "externalPath": "/job/Lees-Campus/APTPUO---Automne-2026--ERG5512--Anatomie-et-lments-du-mouvement-pour-la-participation-occupationnelle_JR37679",
       "locationsText": "200 Lees - FHS",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR37679"
       ]
@@ -86,7 +158,7 @@
       "title": "APTPUO - Automne 2026- ERG5512- Anatomie et éléments du mouvement pour la participation occupationnelle",
       "externalPath": "/job/Lees-Campus/APTPUO---Automne-2026--ERG5512--Anatomie-et-lments-du-mouvement-pour-la-participation-occupationnelle_JR37680",
       "locationsText": "200 Lees - FHS",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR37680"
       ]
@@ -95,7 +167,7 @@
       "title": "CUPE-été 2026-Assistanat de recherche/Research assistant-Lili Dao",
       "externalPath": "/job/Ottawa-ON/CUPE-t-2026-Assistanat-de-recherche-Research-assistant-Lili-Dao_JR37682",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR37682"
       ]
@@ -104,81 +176,9 @@
       "title": "APEUO - Automne 2026 - ERG5512 Anatomie et éléments du mouvement pour la participation occupationnelle (volet système nerveux)",
       "externalPath": "/job/Lees-Campus/APEUO---Automne-2026---ERG5512-Anatomie-et-lments-du-mouvement-pour-la-participation-occupationnelle--volet-systme-nerveux-_JR37681",
       "locationsText": "200 Lees - FHS",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR37681"
-      ]
-    },
-    {
-      "title": "Research Assistant",
-      "externalPath": "/job/Ottawa-ON/Research-Assistant_JR37677",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
-      "bulletFields": [
-        "JR37677"
-      ]
-    },
-    {
-      "title": "APTPUO - Winter 2027 - POL1101 - D00",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---POL1101---D00_JR37678",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
-      "bulletFields": [
-        "JR37678"
-      ]
-    },
-    {
-      "title": "CUPE-F2026- BIO3137-TA LAB DEM 130h",
-      "externalPath": "/job/Ottawa-ON/CUPE-F2026--BIO3137-TA-LAB-DEM-130h_JR37676",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
-      "bulletFields": [
-        "JR37676"
-      ]
-    },
-    {
-      "title": "APTPUO_Automne-2026_MAT1720 D00",
-      "externalPath": "/job/Ottawa-ON/APTPUO-Automne-2026-MAT1720-D00_JR33064",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
-      "bulletFields": [
-        "JR33064"
-      ]
-    },
-    {
-      "title": "APTPUO_Automne-2026_MAT1730 B00",
-      "externalPath": "/job/Ottawa-ON/APTPUO-Automne-2026-MAT1730-B00_JR33033",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
-      "bulletFields": [
-        "JR33033"
-      ]
-    },
-    {
-      "title": "APTPUO_Automne-2026_MAT1739 A00",
-      "externalPath": "/job/Ottawa-ON/APTPUO-Automne-2026-MAT1739-A00_JR33034",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
-      "bulletFields": [
-        "JR33034"
-      ]
-    },
-    {
-      "title": "APTPUO_Automne-2026_MAT1741 C00",
-      "externalPath": "/job/Ottawa-ON/APTPUO-Automne-2026-MAT1741-C00_JR33065",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
-      "bulletFields": [
-        "JR33065"
-      ]
-    },
-    {
-      "title": "APTPUO_Automne-2026_MAT1762 A00",
-      "externalPath": "/job/Ottawa-ON/APTPUO-Automne-2026-MAT1762-A00_JR33066",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
-      "bulletFields": [
-        "JR33066"
       ]
     }
   ]
