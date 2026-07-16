@@ -1,184 +1,184 @@
 {
-  "updatedAt": "2026-07-15T13:47:02.745Z",
+  "updatedAt": "2026-07-16T13:56:54.252Z",
   "jobPostings": [
+    {
+      "title": "Senior Officer, Administrative Support",
+      "externalPath": "/job/Ottawa-ON/Senior-Officer--Administrative-Support_JR37742",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37742"
+      ]
+    },
+    {
+      "title": "CUPE-F2026- BIO1531-TA Corr 83H",
+      "externalPath": "/job/Ottawa-ON/CUPE-F2026--BIO1531-TA-CRS-65H_JR37756-1",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37756"
+      ]
+    },
+    {
+      "title": "CUPE-F2026-BIO3124-CRS TA -65H",
+      "externalPath": "/job/Ottawa-ON/CUPE-F2026-BIO3124-CRS-TA--65H_JR37855",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37855"
+      ]
+    },
+    {
+      "title": "APTPUO - Winter 2027 - ECO3525 A00 (Reposted)",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---ECO3525-A00_JR34023",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR34023"
+      ]
+    },
+    {
+      "title": "Intermediate Information Officer, Student Accounts",
+      "externalPath": "/job/Ottawa-ON/Intermediate-Information-Officer--Student-Accounts_JR37801",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37801"
+      ]
+    },
+    {
+      "title": "Intermediate Administrative Coordinator",
+      "externalPath": "/job/Ottawa-ON/Intermediate-Administrative-Coordinator_JR37687-1",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37687"
+      ]
+    },
+    {
+      "title": "Intermediate Analyst, Application Support",
+      "externalPath": "/job/Ottawa-ON/Intermediate-Analyst--Application-Support_JR37804",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37804"
+      ]
+    },
+    {
+      "title": "Intermediate Specialist, Animal Care Training and Compliance",
+      "externalPath": "/job/Ottawa-ON/Intermediate-Specialist--Animal-Care-Training-and-Compliance_JR37672",
+      "locationsText": "Roger Guindon Hall",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37672"
+      ]
+    },
+    {
+      "title": "Lead Coordinator, Accreditation and Program Evaluation",
+      "externalPath": "/job/Ottawa-ON/Lead-Coordinator--Accreditation-and-Program-Evaluation_JR34283",
+      "locationsText": "Roger Guindon Hall",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR34283"
+      ]
+    },
+    {
+      "title": "Nurse Practitioner - Mental Health",
+      "externalPath": "/job/Ottawa-ON/Nurse-Practitioner---Mental-Health_JR37829",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37829"
+      ]
+    },
+    {
+      "title": "Senior Analyst, Data and Analytics",
+      "externalPath": "/job/Ottawa-ON/Senior-Analyst--Data-and-Analytics_JR37794",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37794"
+      ]
+    },
+    {
+      "title": "Senior Specialist, Business Operations",
+      "externalPath": "/job/Ottawa-ON/Senior-Specialist--Business-Operations_JR37836",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37836"
+      ]
+    },
+    {
+      "title": "Senior Specialist, Statistics Laboratory",
+      "externalPath": "/job/Ottawa-ON/Senior-Specialist--Statistics-Laboratory_JR37841-1",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37841"
+      ]
+    },
+    {
+      "title": "CUPE - Fall 2026 - TA - ADM4717",
+      "externalPath": "/job/Ottawa-ON/CUPE---Fall-2026---TA---ADM4717_JR37844",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37844"
+      ]
+    },
+    {
+      "title": "APTPUO - PSY3526 A00 - FALL 2026",
+      "externalPath": "/job/Ottawa-ON/APTPUO---PSY3526-A00---FALL-2026_JR32514",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR32514"
+      ]
+    },
+    {
+      "title": "APTPUO - Automne 2026 - AHL2550-A00 (Réaffichage)",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Automne-2026---AHL2550-A00_JR35657",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR35657"
+      ]
+    },
+    {
+      "title": "APTPUO - Hiver 2027 - POL4720 - A00",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Hiver-2027---POL4720---A00_JR37838",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37838"
+      ]
+    },
+    {
+      "title": "APTPUO - Winter 2027 - HIS4186-A00 (Reposting)",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---HIS4186-A00_JR34921",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR34921"
+      ]
+    },
+    {
+      "title": "APTPUO - Winter 2027 - HIS2310-A00 (Reposting)",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2026---HIS2310-A00_JR34872",
+      "locationsText": "Social Sciences Building",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR34872"
+      ]
+    },
     {
       "title": "APTPUO - Hiver 2027 - HIS2560-A00 (Réaffichage)",
       "externalPath": "/job/Ottawa-ON/APTPUO---Hiver-2027---HIS2560-A00_JR34873",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR34873"
-      ]
-    },
-    {
-      "title": "APTPUO - Winter 2027 - HIS1501A00 (Réaffichage)",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---HIS1501A00_JR34862",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR34862"
-      ]
-    },
-    {
-      "title": "CUPE - Fall 2026- Teaching Assistant - ADM2720",
-      "externalPath": "/job/Ottawa-ON/CUPE---Fall-2026--Teaching-Assistant---ADM2720_JR37831",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR37831"
-      ]
-    },
-    {
-      "title": "Professor in Accounting at the rank of Assistant or Associate",
-      "externalPath": "/job/Ottawa-ON/Professor-in-Accounting-at-the-rank-of-Assistant-or-Associate_JR37760",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR37760"
-      ]
-    },
-    {
-      "title": "Professor in Accounting (open rank)",
-      "externalPath": "/job/Ottawa-ON/Professor-in-Accounting--open-rank-_JR37755-1",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR37755"
-      ]
-    },
-    {
-      "title": "APEUO- Automne 2026 - ERG5754 La recherche en ergothérapie (Volet partie méthodologie quantitative)",
-      "externalPath": "/job/Lees-Campus/APEUO--Automne-2026---ERG5754-La-recherche-en-ergothrapie_JR37827",
-      "locationsText": "200 Lees - FHS",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR37827"
-      ]
-    },
-    {
-      "title": "Professor of Finance at the rank of Assistant or Associate Professor",
-      "externalPath": "/job/Ottawa-ON/Professor-of-Finance-at-the-rank-of-Assistant-or-Associate-Professor_JR37683",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR37683"
-      ]
-    },
-    {
-      "title": "APTPUO - Automne 2026 - APA 2534 - Administration des services de loisir, de sport et d'activité physique",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Automne-2026---APA-2534---Administration-des-services-de-loisir--de-sport-et-d-activit-physique_JR37790",
-      "locationsText": "Montpetit Hall",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR37790"
-      ]
-    },
-    {
-      "title": "APTPUO - Fall 2026 - APA 2134 - Administration of Leisure, Sport and Physical Activity Services",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---APA-2134---Administration-of-Leisure--Sport-and-Physical-Activity-Services_JR37758",
-      "locationsText": "Montpetit Hall",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR37758"
-      ]
-    },
-    {
-      "title": "APTPUO - Fall 2026 - APA 3146 - Sport and Recreation Marketing",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---APA-3146---Sport-and-Recreation-Marketing_JR37828-1",
-      "locationsText": "Montpetit Hall",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR37828"
-      ]
-    },
-    {
-      "title": "APTPUO - Fall 2026 - APA 5303 - Marketing and Sponsorship of Sport and Physical Activity",
-      "externalPath": "/job/Main-Campus/APTPUO---Fall-2026---APA-5303---Marketing-and-Sponsorship-of-Sport-and-Physical-Activity_JR37799",
-      "locationsText": "Ottawa, ON",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR37799"
-      ]
-    },
-    {
-      "title": "APTPUO- Automne 2026- BIO 4922 D00 Évaluer et développer la science",
-      "externalPath": "/job/Ottawa-ON/APTPUO--Automne-2026--BIO-4922-D00-valuer-et-dvelopper-la-science_JR37777",
-      "locationsText": "Gendron Hall",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR37777"
-      ]
-    },
-    {
-      "title": "APTPUO- Fall 2026- BIO2129, Section A00",
-      "externalPath": "/job/Ottawa-ON/APTPUO--Fall-2026--BIO2129--Section-A00_JR37807",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR37807"
-      ]
-    },
-    {
-      "title": "APTPUO- Fall 2026- BIO2137, Section A00",
-      "externalPath": "/job/Ottawa-ON/APTPUO--Fall-2026--BIO2137--Section-A00_JR37814",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
-      "bulletFields": [
-        "JR37814"
-      ]
-    },
-    {
-      "title": "APEUO- Automne 2026 - ERG5754 La recherche en ergothérapie",
-      "externalPath": "/job/Lees-Campus/APEUO--Automne-2026---ERG5754-La-recherche-en-ergothrapie_JR37825",
-      "locationsText": "200 Lees - FHS",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR37825"
-      ]
-    },
-    {
-      "title": "CVG 6305",
-      "externalPath": "/job/Ottawa-ON/CVG-6305_JR37826",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR37826"
-      ]
-    },
-    {
-      "title": "CUPE - CVG 5314 - Fall 26",
-      "externalPath": "/job/Ottawa-ON/CUPE---CVG-5314---Fall-26_JR37824",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR37824"
-      ]
-    },
-    {
-      "title": "CUPE - CVG 4188/6301 - Fall 26",
-      "externalPath": "/job/Ottawa-ON/CUPE---CVG-4188-6301---Fall-26_JR37823",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR37823"
-      ]
-    },
-    {
-      "title": "APEUO - Automne 2026 - ERG5741 Atteintes à la santé des enfants et approches d'intervention (Simulation entrevue de la famille)",
-      "externalPath": "/job/Lees-Campus/APEUO---Automne-2026---ERG5741-Atteintes--la-sant-des-enfants-et-approches-d-intervention--Simulation-entrevue-de-la-famille-_JR37821",
-      "locationsText": "200 Lees - FHS",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR37821"
-      ]
-    },
-    {
-      "title": "CUPE - CVG 5189 - Fall 26",
-      "externalPath": "/job/Ottawa-ON/CUPE---CVG-5189---Fall-26_JR37822",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR37822"
       ]
     }
   ]
