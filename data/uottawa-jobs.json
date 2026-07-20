@@ -1,11 +1,56 @@
 {
-  "updatedAt": "2026-07-19T13:21:02.410Z",
+  "updatedAt": "2026-07-20T14:09:36.119Z",
   "jobPostings": [
+    {
+      "title": "CUPE - PSY5121 A00 - Winter 2027",
+      "externalPath": "/job/Ottawa-ON/CUPE---PSY5121-A00---Winter-2027_JR36348",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR36348"
+      ]
+    },
+    {
+      "title": "CUPE - PSY7103 A00 - Fall 2026",
+      "externalPath": "/job/Ottawa-ON/CUPE---PSY7103-A00---Fall-2026_JR36128",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR36128"
+      ]
+    },
+    {
+      "title": "Intermediate Administrator, Human Resources Operations",
+      "externalPath": "/job/Ottawa-ON/Intermediate-Administrator--Human-Resources-Operations_JR37898",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37898"
+      ]
+    },
+    {
+      "title": "Senior Executive Assistant and IT Governance Coordinator",
+      "externalPath": "/job/Ottawa-ON/Senior-Executive-Assistant-and-IT-Governance-Coordinator_JR37669",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37669"
+      ]
+    },
+    {
+      "title": "Senior Technician, IT Support",
+      "externalPath": "/job/Ottawa-ON/Senior-Technician--IT-Support_JR37875",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37875"
+      ]
+    },
     {
       "title": "APTPUO - Automne 2026 - AUD5710 Concepts d'orthophonie pertinents à l'audiologie",
       "externalPath": "/job/Lees-Campus/APTPUO---Automne-2026---AUD5710-Concepts-d-orthophonie-pertinents--l-audiologie_JR37906",
       "locationsText": "200 Lees - FHS",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR37906"
       ]
@@ -14,7 +59,7 @@
       "title": "Research Assistant",
       "externalPath": "/job/Ottawa-ON/Research-Assistant_JR37903",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR37903"
       ]
@@ -23,7 +68,7 @@
       "title": "Proctor - Adapted Exam Centre",
       "externalPath": "/job/Ottawa-ON/Proctor---Adapted-Exam-Centre_JR37902",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR37902"
       ]
@@ -32,7 +77,7 @@
       "title": "CUPE-F2026- SCI3101-TA CRS 65h",
       "externalPath": "/job/Ottawa-ON/CUPE-F2026--SCI3101-TA-CRS-65h_JR37901",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR37901"
       ]
@@ -41,7 +86,7 @@
       "title": "APTPUO - Winter 2027 - ENG1131 K00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---ENG1131-K00_JR36740",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR36740"
       ]
@@ -50,7 +95,7 @@
       "title": "APTPUO - Winter 2027 - ENG1131 J00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---ENG1131-J00_JR36739",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR36739"
       ]
@@ -59,7 +104,7 @@
       "title": "APTPUO - Winter 2027 - ENG1131 H00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---ENG1131-H00_JR36736",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR36736"
       ]
@@ -68,7 +113,7 @@
       "title": "APTPUO - Winter 2027 - ENG1131 I00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---ENG1131-I00_JR36738",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR36738"
       ]
@@ -77,7 +122,7 @@
       "title": "APTPUO - Winter 2027 - ENG1112 P00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---ENG1112-P00_JR36708",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR36708"
       ]
@@ -86,7 +131,7 @@
       "title": "APTPUO - Winter 2027 - ENG1112 O00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---ENG1112-O00_JR36706",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR36706"
       ]
@@ -95,7 +140,7 @@
       "title": "APTPUO - Winter 2027 - ENG1112 N00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---ENG1112-N00_JR36705",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR36705"
       ]
@@ -104,7 +149,7 @@
       "title": "APTPUO - Winter 2027 - ENG1112 M00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---ENG1112-M00_JR36703",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR36703"
       ]
@@ -113,7 +158,7 @@
       "title": "APTPUO - Winter 2027 - ENG1112 L00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---ENG1112-L00_JR36700-1",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR36700"
       ]
@@ -122,7 +167,7 @@
       "title": "APTPUO - Winter 2027 - ENG1112 K00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---ENG1112-K00_JR36699",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR36699"
       ]
@@ -131,54 +176,9 @@
       "title": "APTPUO - Winter 2027 - ENG1100 MU00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---ENG1100-MU00_JR36537-1",
       "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
+      "postedOn": "Posted 3 Days Ago",
       "bulletFields": [
         "JR36537"
-      ]
-    },
-    {
-      "title": "APTPUO - Winter 2027 - ENG1100 MT00",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---ENG1100-MT00_JR36536",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
-      "bulletFields": [
-        "JR36536"
-      ]
-    },
-    {
-      "title": "APTPUO - Winter 2027 - ENG1100 MS00",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---ENG1100-MS00_JR36532",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
-      "bulletFields": [
-        "JR36532"
-      ]
-    },
-    {
-      "title": "APTPUO - Winter 2027 - ENG1100 MQ00",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---ENG1100-MQ00_JR36499",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
-      "bulletFields": [
-        "JR36499"
-      ]
-    },
-    {
-      "title": "APTPUO - Winter 2027 - ENG1100 MP00",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---ENG1100-MP00_JR36497",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
-      "bulletFields": [
-        "JR36497"
-      ]
-    },
-    {
-      "title": "APTPUO - Winter 2027 - ENG1100 MM00",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---ENG1100-MM00_JR36495",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted 2 Days Ago",
-      "bulletFields": [
-        "JR36495"
       ]
     }
   ]
