@@ -1,11 +1,128 @@
 {
-  "updatedAt": "2026-07-21T13:55:27.620Z",
+  "updatedAt": "2026-07-22T14:00:08.085Z",
   "jobPostings": [
+    {
+      "title": "APTPUO Fall 2026- MIA5150-REPOST (ONLINE) Topic (Generative AI and (LLMs)",
+      "externalPath": "/job/Ottawa-ON/APTPUO-Fall-2026--MIA5150-Topic--Generative-AI-and--LLMs-_JR35535",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR35535"
+      ]
+    },
+    {
+      "title": "CUPE - Fall 2026 - Correction of Co-op internships",
+      "externalPath": "/job/Ottawa-ON/CUPE---Fall-2026---Correction-of-Co-op-internships_JR37978",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37978"
+      ]
+    },
+    {
+      "title": "CUPE RA - Fall 2026 - Prof. C Gibb",
+      "externalPath": "/job/Ottawa-ON/CUPE-RA---Fall-2026---Prof-C-Gibb_JR37954",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR37954"
+      ]
+    },
+    {
+      "title": "Assistant or Associate Professor - French Common Law Program (PCLF) - 2 positions",
+      "externalPath": "/job/Ottawa-ON/Professeure-ou-Professeur----Programme-de-Common-Law-en-franais--PCLF----2-postes_JR37834",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37834"
+      ]
+    },
+    {
+      "title": "APTPUO - Winter 2027 - M00 - APA2312 Physiology of Physical Activity",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---M00---APA2312-Physiology-of-Physical-Activity_JR37971",
+      "locationsText": "Montpetit Hall",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37971"
+      ]
+    },
+    {
+      "title": "APTPUO - Fall 2026 - EDU 6473 - DS00-  Practicum in Counselling Psychology I",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---EDU-6473---DS00---Practicum-in-Counselling-Psychology-I_JR37969",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37969"
+      ]
+    },
+    {
+      "title": "APTPUO - Fall 2026 - EDU 5270 - C00 -  Professional Ethics in Counselling Psychology",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---EDU-5270---C00----Professional-Ethics-in-Counselling-Psychology_JR37967",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37967"
+      ]
+    },
+    {
+      "title": "APTPUO - Winter 2027 - API5126C",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---API5126C_JR37961",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37961"
+      ]
+    },
+    {
+      "title": "APTPUO - Winter 2027 - API5135D",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---API5135D_JR37962",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37962"
+      ]
+    },
+    {
+      "title": "APTPUO - FRA1518 C - Hiver 2027",
+      "externalPath": "/job/Ottawa-ON/APTPUO---FRA1518-C---Hiver-2027_JR37959",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37959"
+      ]
+    },
+    {
+      "title": "Senior Manager, Business Development",
+      "externalPath": "/job/Ottawa-ON/Senior-Manager--Business-Development_JR37932",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37932"
+      ]
+    },
+    {
+      "title": "APTPUO - Winter 2027 - ENG1140 B00",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---ENG1140-B00_JR37950",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37950"
+      ]
+    },
+    {
+      "title": "APTPUO - Fall 2026 - ENG1140 A00",
+      "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---ENG1140-A00_JR37948",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR37948"
+      ]
+    },
     {
       "title": "CUPE - Fall 2026 - Corrector - ADM4319",
       "externalPath": "/job/Ottawa-ON/CUPE---Fall-2026---Corrector---ADM4319_JR37949",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR37949"
       ]
@@ -14,7 +131,7 @@
       "title": "MÉTH. AVAN. TECHN. & INN. RECH",
       "externalPath": "/job/Lees-Campus/MTH-AVAN-TECHN---INN-RECH_JR34936",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR34936"
       ]
@@ -23,7 +140,7 @@
       "title": "APTPUO-ST-PT-HSS6513A-Automne 2026",
       "externalPath": "/job/Lees-Campus/APTPUO-ST-PT-HSS6513A-Automne-2026_JR37946",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR37946"
       ]
@@ -32,7 +149,7 @@
       "title": "APTPUO-ST-PT-HSS6113A-Fall 2026",
       "externalPath": "/job/Lees-Campus/APTPUO-ST-PT-HSS6113A-Fall-2026_JR37944",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR37944"
       ]
@@ -41,7 +158,7 @@
       "title": "APTPUO - Hiver 2027 - LSR2518 - Développement et évaluation de programmes récréatifs - A00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Hiver-2027---LSR2518---Dveloppement-et-valuation-de-programmes-rcratifs---A00_JR37942",
       "locationsText": "Montpetit Hall",
-      "postedOn": "Posted Today",
+      "postedOn": "Posted Yesterday",
       "bulletFields": [
         "JR37942"
       ]
@@ -50,7 +167,7 @@
       "title": "(RÉAFFICHAGE) APTPUO - Automne 2026 - ENV/GEG3502-A00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Automne-2026---ENV-GEG3502-A00_JR34908",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
+      "postedOn": "Posted 2 Days Ago",
       "bulletFields": [
         "JR34908"
       ]
@@ -59,126 +176,9 @@
       "title": "APTPUO - Automne 2026- Clinique - NSG3723 Stage clinique en santé communautaire",
       "externalPath": "/job/Lees-Campus/APTPUO---Automne-2026--Clinique---NSG3723-Stage-clinique-en-sant-communautaire_JR33869",
       "locationsText": "Ottawa, ON",
-      "postedOn": "Posted Yesterday",
+      "postedOn": "Posted 2 Days Ago",
       "bulletFields": [
         "JR33869"
-      ]
-    },
-    {
-      "title": "APTPUO - Automne 2026 - PED4727 G00 - DIDA D'INFORMATIQUE AU CYC SUP",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Automne-2026---PED4727-G00---DIDA-D-INFORMATIQUE-AU-CYC-SUP_JR37941",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR37941"
-      ]
-    },
-    {
-      "title": "CUPE - Fall 2026 - TA - EPI 7108",
-      "externalPath": "/job/Ottawa-ON/CUPE---Fall-2026---TA---EPI-7108_JR37940",
-      "locationsText": "Smyth, Alta Vista, General Hospital, CHEO Campuses",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR37940"
-      ]
-    },
-    {
-      "title": "Tier 2 Canada Research Chair In Neuromuscular Disease",
-      "externalPath": "/job/Ottawa-ON/Tier-2-Canada-Research-Chair-In-Neuromuscular-Disease_JR35266",
-      "locationsText": "Smyth, Alta Vista, General Hospital, CHEO Campuses",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR35266"
-      ]
-    },
-    {
-      "title": "CUPE - Fall 2026 - TA - TMM 4911",
-      "externalPath": "/job/Ottawa-ON/CUPE---Fall-2026---TA---TMM-4911_JR37935",
-      "locationsText": "Smyth, Alta Vista, General Hospital, CHEO Campuses",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR37935"
-      ]
-    },
-    {
-      "title": "CUPE - Fall 2026 - Corrector - TMM 3104",
-      "externalPath": "/job/Ottawa-ON/CUPE---Fall-2026---Corrector---TMM-3104_JR37934",
-      "locationsText": "Smyth, Alta Vista, General Hospital, CHEO Campuses",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR37934"
-      ]
-    },
-    {
-      "title": "(RÉAFFICHAGE) APTPUO - Hiver 2027 - PHI2500-A00",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Hiver-2027---PHI2500-A00_JR35230",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR35230"
-      ]
-    },
-    {
-      "title": "CUPE - Fall 2026 - Corrector - TMM 3102",
-      "externalPath": "/job/Ottawa-ON/CUPE---Fall-2026---Corrector---TMM-3102_JR37933",
-      "locationsText": "Smyth, Alta Vista, General Hospital, CHEO Campuses",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR37933"
-      ]
-    },
-    {
-      "title": "Research Assistant",
-      "externalPath": "/job/Ottawa-ON/Research-Assistant_JR37925",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR37925"
-      ]
-    },
-    {
-      "title": "APTPUO - Automne 2026 - PED4600 V05 - STAGE II MILIEU SCOL. ÉLÉMENT.",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Automne-2026---PED4600-V05---STAGE-II-MILIEU-SCOL-LMENT_JR37930",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR37930"
-      ]
-    },
-    {
-      "title": "APTPUO - Automne 2026 - PED4600 V06 - STAGE II MILIEU SCOL. ÉLÉMENT.",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Automne-2026---PED4600-V06---STAGE-II-MILIEU-SCOL-LMENT_JR37931",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR37931"
-      ]
-    },
-    {
-      "title": "APTPUO - Automne 2026 - PED4600 V04 - STAGE II MILIEU SCOL. ÉLÉMENT.",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Automne-2026---PED4600-V04---STAGE-II-MILIEU-SCOL-LMENT_JR37929",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR37929"
-      ]
-    },
-    {
-      "title": "Research Assistant",
-      "externalPath": "/job/Ottawa-ON/Research-Assistant_JR37926",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR37926"
-      ]
-    },
-    {
-      "title": "APTPUO - Automne 2026 - PED4600 V03 - STAGE II MILIEU SCOL. ÉLÉMENT.",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Automne-2026---PED4600-V03---STAGE-II-MILIEU-SCOL-LMENT_JR37928",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR37928"
       ]
     }
   ]
