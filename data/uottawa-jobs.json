@@ -1,11 +1,38 @@
 {
-  "updatedAt": "2026-07-25T13:38:00.072Z",
+  "updatedAt": "2026-07-26T13:26:16.610Z",
   "jobPostings": [
+    {
+      "title": "CUPE – Fall 2026 – TA – PHI1101-C00",
+      "externalPath": "/job/Ottawa-ON/CUPE---Fall-2026---TA---PHI1101-C00_JR38008",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR38008"
+      ]
+    },
+    {
+      "title": "CUPE – Fall 2026 – TA – PHI1101-D00",
+      "externalPath": "/job/Ottawa-ON/CUPE---Fall-2026---TA---PHI1101-D00_JR38010",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR38010"
+      ]
+    },
+    {
+      "title": "CUPE – Fall 2026 – TA – PHI2394-B00",
+      "externalPath": "/job/Ottawa-ON/CUPE---Fall-2026---TA---PHI2394-B00_JR38026",
+      "locationsText": "Main Campus",
+      "postedOn": "Posted Today",
+      "bulletFields": [
+        "JR38026"
+      ]
+    },
     {
       "title": "SCFP - Automne 2026 - AE - Cours théoriques en sciences infirmières",
       "externalPath": "/job/Lees-Campus/SCFP---Automne-2026---AE---Cours-thoriques-en-sciences-infirmires_JR38092",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
+      "postedOn": "Posted 2 Days Ago",
       "bulletFields": [
         "JR38092"
       ]
@@ -14,7 +41,7 @@
       "title": "SCFP - Fall 2026 - TA - Cours cliniques en sciences infirmières",
       "externalPath": "/job/Lees-Campus/SCFP---Fall-2026---TA---Cours-cliniques-en-sciences-infirmires_JR38091",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
+      "postedOn": "Posted 2 Days Ago",
       "bulletFields": [
         "JR38091"
       ]
@@ -23,7 +50,7 @@
       "title": "CUPE - Fall 2026 - TA - Nursing theory courses",
       "externalPath": "/job/Lees-Campus/CUPE---Fall-2026---TA---Nursing-theory-courses_JR38090",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
+      "postedOn": "Posted 2 Days Ago",
       "bulletFields": [
         "JR38090"
       ]
@@ -32,7 +59,7 @@
       "title": "CUPE - Fall 2026 - TA - Clinical Nursing Courses",
       "externalPath": "/job/Lees-Campus/CUPE---Fall-2026---TA---Clinical-Nursing-Courses_JR38089",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
+      "postedOn": "Posted 2 Days Ago",
       "bulletFields": [
         "JR38089"
       ]
@@ -41,7 +68,7 @@
       "title": "CUPE - Fall 2026 - TA for Technical support Nursing Courses",
       "externalPath": "/job/Lees-Campus/CUPE---Fall-2026---TA-for-Technical-support-Nursing-Courses_JR38088",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
+      "postedOn": "Posted 2 Days Ago",
       "bulletFields": [
         "JR38088"
       ]
@@ -50,7 +77,7 @@
       "title": "APTPUO - Automne 2026 - PED4527 G00 - DID. ANG LANG MAT (11E-12E)",
       "externalPath": "/job/Ottawa-ON/APTPUO---Automne-2026---PED4527-G00---DID-ANG-LANG-MAT--11E-12E-_JR38087",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
+      "postedOn": "Posted 2 Days Ago",
       "bulletFields": [
         "JR38087"
       ]
@@ -59,7 +86,7 @@
       "title": "APTPUO - Winter 2027 - GEG4101-A00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---GEG4101-A00_JR38086",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
+      "postedOn": "Posted 2 Days Ago",
       "bulletFields": [
         "JR38086"
       ]
@@ -68,7 +95,7 @@
       "title": "APTPUO - Fall 2026 - GEG5105-A00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---GEG5105-A00_JR38085",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
+      "postedOn": "Posted 2 Days Ago",
       "bulletFields": [
         "JR38085"
       ]
@@ -77,7 +104,7 @@
       "title": "APTPUO - Automne 2026 - GEG5505 A00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Automne-2026---GEG5505-A00_JR38083-1",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
+      "postedOn": "Posted 2 Days Ago",
       "bulletFields": [
         "JR38083"
       ]
@@ -86,7 +113,7 @@
       "title": "APTPUO - Automne 2026 - EAS2510-A00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Automne-2026---EAS2510-A00_JR38077",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
+      "postedOn": "Posted 2 Days Ago",
       "bulletFields": [
         "JR38077"
       ]
@@ -95,7 +122,7 @@
       "title": "CUPE/SCFP - Fall/ Automne 2026 - TA/AE - Simulation laboratory/Lab. de simulation",
       "externalPath": "/job/Lees-Campus/CUPE-SCFP---Fall--Automne-2026---TA-AE---Simulation-laboratory-Lab-de-simulation_JR38082-1",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
+      "postedOn": "Posted 2 Days Ago",
       "bulletFields": [
         "JR38082"
       ]
@@ -104,7 +131,7 @@
       "title": "APTPUO - Fall 2026 - EDU 5473 - C00 - THEORIES OF CAREER DEVELOPMENT",
       "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026---EDU-5473---C00---THEORIES-OF-CAREER-DEVELOPMENT_JR38081",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
+      "postedOn": "Posted 2 Days Ago",
       "bulletFields": [
         "JR38081"
       ]
@@ -113,7 +140,7 @@
       "title": "Replacement Professor - Sociology and Anthropology",
       "externalPath": "/job/Ottawa-ON/Replacement-Professor---Sociology-and-Anthropology_JR38076-1",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
+      "postedOn": "Posted 2 Days Ago",
       "bulletFields": [
         "JR38076"
       ]
@@ -122,7 +149,7 @@
       "title": "CUPE - Academic Year 2026-2027 - Indigenous Academic Tutor - T.Simon",
       "externalPath": "/job/Ottawa-ON/CUPE---Academic-Year-2026-2027---Indigenous-Academic-Tutor---TSimon_JR38080",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
+      "postedOn": "Posted 2 Days Ago",
       "bulletFields": [
         "JR38080"
       ]
@@ -131,7 +158,7 @@
       "title": "APTPUO - CVG2507",
       "externalPath": "/job/Ottawa-ON/APTPUO---CVG2507_JR7500",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
+      "postedOn": "Posted 2 Days Ago",
       "bulletFields": [
         "JR7500"
       ]
@@ -140,7 +167,7 @@
       "title": "CUPE - Winter 2026 - Teaching Assistant - ADM1305",
       "externalPath": "/job/Ottawa-ON/CUPE---Winter-2026---Teaching-Assistant---ADM1305_JR28529-1",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
+      "postedOn": "Posted 2 Days Ago",
       "bulletFields": [
         "JR28529"
       ]
@@ -149,36 +176,9 @@
       "title": "APTPUO - Winter 2027 - CRM3734 C00",
       "externalPath": "/job/Ottawa-ON/APTPUO---Winter-2027---CRM3734-C00_JR37611",
       "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
+      "postedOn": "Posted 2 Days Ago",
       "bulletFields": [
         "JR37611"
-      ]
-    },
-    {
-      "title": "Assistant Professor - Public Law including Constitutional and Administrative Law",
-      "externalPath": "/job/Ottawa-ON/Assistant-Professor---international-and-economic-and-trade-law_JR20307",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR20307"
-      ]
-    },
-    {
-      "title": "CUPE- Été - TA- EAS6503-A00",
-      "externalPath": "/job/Ottawa-ON/CUPE--t---TA--EAS6503-A00_JR38075-1",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR38075"
-      ]
-    },
-    {
-      "title": "APTPUO - Fall 2026/Winter 2027 - PED31501/31502 - U100 -  BECOMING TCHR IN PRAC",
-      "externalPath": "/job/Ottawa-ON/APTPUO---Fall-2026-Winter-2027---PED31501-31502---U100----BECOMING-TCHR-IN-PRAC_JR38063",
-      "locationsText": "Main Campus",
-      "postedOn": "Posted Yesterday",
-      "bulletFields": [
-        "JR38063"
       ]
     }
   ]
